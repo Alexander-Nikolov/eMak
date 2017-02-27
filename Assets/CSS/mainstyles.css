@@ -1,0 +1,54 @@
+/*Нека почнем за телефон първо*/
+
+/*************************
+GENERAL
+*************************/
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/*************************
+HEADER
+*************************/
+#logo {
+    border: 1px solid black;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+}
+
+#logoImg {
+    display: inline-block;
+}
+
+#homePage {
+    display: inline-block;
+    width: 100%;
+}
+
+#homePage a {
+    float: left;
+    margin: 0 0 15px 15px;
+    color: white;
+    background: black;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+#homePage a:hover {
+    color: black;
+    background: white;
+}
+
+#homePage a span {
+    font-size: 0.7em;
+    margin-right: 5px;
+}
