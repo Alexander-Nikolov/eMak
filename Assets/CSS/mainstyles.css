@@ -12,10 +12,19 @@ a {
 	text-decoration: none;
 }
 
+#wrapper {
+	position: relative;
+}
 
 
 
-
+#fixedNav {
+	position: fixed;
+	height: 80px;
+	width: 1170px;
+	background: black;
+	display: none;
+}
 
 
 /*************************
@@ -26,7 +35,6 @@ HEADER
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-
 }
 
 #logoImg {
@@ -43,7 +51,7 @@ HEADER
 	margin: 0 0 15px 15px;
 	color: white;
 	background: black;
-	padding: 8px;
+	padding: 8px 0;
 	border-radius: 8px;
 }
 
@@ -75,10 +83,10 @@ nav ul li {
 
 nav ul li a {
     display: inline-block; 
-    width: 100%;
+    width: 95%;
     color: white;
     background: black;
-    padding: 8px;
+    padding: 8px 2.5%;
     border-radius: 8px;
     height: 15px;
 }
@@ -93,23 +101,6 @@ nav ul li a span {
 nav ul li a:hover {
     color: black;
     background: white;
-	display: inline-block; 
-	width: 100%;
-	margin: 3px 5px;
-}
-
-nav ul li a {
-	display: inline-block; 
-	width: 100%;
-	color: white;
-	background: black;
-	padding: 8px;
-	border-radius: 8px;
-}
-
-nav ul li a:hover {
-	color: black;
-	background: white;
 }
 
 /*************************

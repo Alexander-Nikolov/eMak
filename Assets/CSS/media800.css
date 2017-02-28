@@ -1,4 +1,27 @@
-@media screen and (min-width: 800px) { 
+@media screen and (min-width: 800px) {
+    /*************************
+    GENERAL
+    *************************/
+    body {
+        font-size: 0.9em;
+    }
+    /*************************
+    HEADER
+    *************************/ 
+    #logo {
+        margin-bottom: 30px;
+    }
+
+    #logoImg {
+	    display: block;
+        float: left;
+        margin: 0 0 10px 10px;
+    }
+
+    #logoImg img {
+	    width: 110%;
+    }
+
     nav ul li {
         width: 20%;
     }
