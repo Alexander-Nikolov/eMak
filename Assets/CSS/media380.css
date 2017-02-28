@@ -1,0 +1,13 @@
+@media screen and (min-width: 380px) { 
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 45%;  
+    }
+    nav ul li a {
+        height: 25px;
+    }
+}

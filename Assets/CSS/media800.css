@@ -1,0 +1,8 @@
+@media screen and (min-width: 800px) { 
+    nav ul li {
+        width: 20%;
+    }
+     nav ul li a {
+        height: 40px;
+    }
+}
