@@ -1,12 +1,16 @@
 @media screen and (min-width: 1170px) { 
-    #wrapper {
+    /*************************
+    GENERAL
+    *************************/
+
+     #wrapper {
         width: 1170px;
         margin: auto;
     }
 
-    /*************************
-    GENERAL
-    *************************/
+    #fixedNav {
+        display: block;
+    }
 
 
     /*************************
