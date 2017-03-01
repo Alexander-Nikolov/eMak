@@ -28,6 +28,34 @@ a {
 	opacity: 0;
 	transition: opacity 1s;
 	display: none;
+	top: 0;
+}
+
+
+
+#toHome {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 10px;
+	position: fixed;
+	bottom: -40px;
+	left: 0;
+	padding: 10px 15px;
+	background: #D02F05;
+	transition: bottom 1s;
+}
+
+#toHome img {
+	width: 20px;
+	float: left;
+}
+
+#toHome	> span > span {
+	display: block;
+	float: left;
+    position: relative;
+    transform: translateY(20%);
+	margin-left: 10px;
 }
 
 
@@ -36,6 +64,9 @@ HEADER
 *************************/
 header {
 	background: #D02F05;
+	margin: 20px 0;
+	border-radius: 15px;
+	padding-bottom: 10px;
 }
 
 #logo {
@@ -113,20 +144,31 @@ nav ul li a:hover {
 /*************************
 MAIN
 *************************/
+
+main {
+	background: white;
+	box-sizing: border-box;
+	padding: 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+
 /*************************
 ASIDE
 *************************/
 
-aside {
+
+main aside {
 	padding: 8px 0px;
-	display: inline-block;
-	width: 30%;
+	width: 20%;
 	box-sizing: border-box;
 	border: 1px solid grey;
 	border-radius: 10px;
+	display: none;
 }
 
-aside ul li {
+main aside ul li {
 	text-align: center;
 	display: inline-block;
 	width: 100%;
@@ -134,7 +176,7 @@ aside ul li {
 	box-sizing: border-box;	
 }
 
-aside li a {
+main aside li a {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
@@ -142,7 +184,14 @@ aside li a {
 	padding: 8px 0px;
 }
 
-aside li:hover, aside li a:hover {
-	background-color: red;
+main aside li:hover, aside li a:hover {
+	background-color: #D02F05;
 	color: white;
+}
+
+
+main section {
+	border: 1px solid black;
+	height: 1500px;
+	width: 100%;
 }
