@@ -23,13 +23,17 @@
     /*************************
     HEADER
     *************************/
-    nav ul li {
+    header nav {
+        top: 10px;
+        width: 1170px;
+    }
+    header nav ul li {
         font-size: 12px;
         box-sizing: border-box;
         width: 11%;
         margin: 8px 0;
     }
-     nav ul li a {
+     header nav ul li a {
         height: 35px;
     }
 

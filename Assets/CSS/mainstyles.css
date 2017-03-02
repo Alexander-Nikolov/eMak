@@ -24,11 +24,7 @@ a {
 	height: 80px;
 	width: 1170px;
 	background: #D02F05;
-	z-index: -1;
-	opacity: 0;
-	transition: opacity 1s;
-	display: none;
-	top: 0;
+	top: 0px;
 }
 
 
@@ -105,21 +101,21 @@ header {
 }
 
 
-nav {
+header nav {
 	text-align: center;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-nav ul li {
+header nav ul li {
     margin: 5px;
 }
 
-nav ul li a {
+header nav ul li a {
     display: inline-block; 
     width: 95%;
     color: white;
@@ -129,14 +125,14 @@ nav ul li a {
     height: 15px;
 }
 
-nav ul li a span {
+header nav ul li a span {
     display: block;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #2E221F;
     background: white;
 }
