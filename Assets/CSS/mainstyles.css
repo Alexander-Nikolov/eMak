@@ -63,11 +63,6 @@ HEADER
 *************************/
 
 
-nav a {
-	box-sizing: content-box;
-}
-
-
 header {
 	background: #D02F05;
 	margin: 20px 0;
@@ -83,44 +78,31 @@ header {
 #logoAndSearch {
 	display:inline-block; 
 	width: 100%;
+	text-align: center;
 }
 
 
 #logoImg {
 	display: inline-block;
-	float: left;
+	width: 100%;
 }
 
-#homePage {
-	display: inline-block;
-	width: 30%;
+#myBar {
+	display: flex;
+	justify-content: space-around;
 }
 
-#homePage a {
-	float: left;
-	margin: 0 0 15px 15px;
-	color: white;
-	background: #2E221F;
-	padding: 8px 2px;
-	border-radius: 8px;
-	text-decoration: none;
-}
-
-
-#homePage a:hover {
-	color: #2E221F;
-	background: white;
-	text-decoration: none;
-}
-
-#homePage a span {
-	font-size: 0.7em;
-	margin-right: 5px;
+.textContent {
+	display: none;
 }
 
 
 header nav {
 	text-align: center;
+}
+
+header nav a {
+	box-sizing: content-box;
 }
 
 header nav ul {
@@ -160,13 +142,12 @@ header nav ul li a:hover {
 #search {
 	display: inline-block;
 	position: relative;
-	top: 50%;
-	transform: translateY(150%);
 	margin-left: 40px;
 }
 
 #searchForm {
-	width: 500px;
+	display: inline-block;
+	width: 250px;	
 }
 
 #arrowLeft {
@@ -178,7 +159,8 @@ header nav ul li a:hover {
 	position: relative;
 	top: 50%;
 	left: 0;
-	transform: translateY(70%);
+	transform: rotate(90deg) translateY(-200%) translateX(-70%);
+	
 	float:left;
 }
 

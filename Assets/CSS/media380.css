@@ -2,6 +2,15 @@
     /*************************
     HEADER
     *************************/
+
+    #searchForm { 
+        width: 300px;
+    }
+
+    #arrowLeft { 
+        transform: rotate(90deg) translateY(-400%) translateX(-70%);
+    }
+
     header nav ul {
         flex-direction: row;
         flex-wrap: wrap;

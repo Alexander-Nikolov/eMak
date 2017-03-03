@@ -16,10 +16,31 @@
 	    display: block;
         float: left;
         margin: 0 0 10px 10px;
+        width: auto;
     }
 
     #logoImg img {
 	    width: 110%;
+    }
+
+    #search {
+        display: block;
+        float: left;
+        top: 50%;
+        transform: translateY(150%);
+        margin-left: 40px;
+    }
+
+    #arrowLeft {
+	    transform: translateY(70%) translateX(200%);
+    }
+
+    #searchForm { 
+        width: 500px;
+    }
+
+    .textContent {
+	    display: inline;
     }
 
     header nav ul li {
