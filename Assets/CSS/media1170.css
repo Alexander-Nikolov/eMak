@@ -49,7 +49,19 @@
         width: 78%;
         float: right;
     }
+
+
+    /*************************
+    Carousel
+    *************************/
+
+    #caroContainer {
+        display: inline-block;
+    }
 }
+
+
+
 
 
 
