@@ -4,7 +4,7 @@ Scroll
 
 $("#toHome").click(function () {
     $('html, body').animate({
-        scrollTop: $("header").offset().top - 20
+        scrollTop: $("header").offset().top - 75
     }, 1000);
 });
 
@@ -54,4 +54,20 @@ $(window).scroll(function () {
         })
     }
 
+})
+
+
+
+/*************************
+Arrows for side menu
+*************************/
+
+$('main aside nav ul li').hover(function(e) {
+    $(e.target.lastChild.firstChild).css({
+        visibility: 'visible'
+    })
+}, function(e) {
+    $(e.target.lastChild.firstChild).css({
+        visibility: 'hidden'
+    })
 })
