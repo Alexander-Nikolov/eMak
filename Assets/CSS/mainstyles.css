@@ -3,14 +3,23 @@
 /*************************
 GENERAL
 *************************/
+
+
+
+
 body {
     font-family: sans-serif;
     font-size: 0.8em;
 	background-color:rgba(46, 34, 31, 0.3);
 }
 
-a {
+a, a:hover {
 	text-decoration: none;
+}
+
+
+* {
+	box-sizing: content-box;
 }
 
 #wrapper {

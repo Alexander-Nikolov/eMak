@@ -16,7 +16,7 @@ Navigation hide + to home button
 $("#fixedNav").hide();
 var navShow = false;
 $(window).scroll(function () {
-    if ($(window).scrollTop() > 230 && !navShow) {
+    if ($(window).scrollTop() > 230 && !navShow && window.innerWidth >= '1170') {
         navShow = true;
         $("#fixedNav").fadeTo(500, 0.9);
         $("#navigation").hide().fadeIn(1000).css({
