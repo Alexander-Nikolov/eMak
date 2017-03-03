@@ -46,7 +46,7 @@
     header nav ul li {
         width: 20%;
     }
-    header nav ul li a {
+    header nav ul li>span {
         height: 40px;
     }
 }

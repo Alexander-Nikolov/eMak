@@ -71,3 +71,18 @@ $('main aside nav ul li').hover(function(e) {
         visibility: 'hidden'
     })
 })
+
+
+
+
+
+
+
+$('.navLink').click(function(e) {
+    var linkNames = getLowerSecNames(e.currentTarget.firstChild);
+    $('#sideMenu li>span span:first-child').each(function(index) {
+        $(this).text(linkNames[index]);
+    });
+    $('#navigation ul li').children().removeClass('navClickedOn');
+    $(e.currentTarget).addClass('navClickedOn');
+});
