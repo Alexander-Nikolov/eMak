@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>eMak</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/mainstyles.css">
     <link rel="stylesheet" href="../CSS/media380.css">
@@ -17,13 +20,43 @@
         </div>
         <header>
             <div id="logo">
-                <div id="logoImg">
-                    <a href="index.html">
-                        <img src="../Images/logo.png" alt="The logo of the site">
-                    </a>
-                </div>
-                <div id="homePage">
-                    <a href=""><span>&lt;&lt;</span>Към началната страница</a>
+                <div id="logoAndSearch">
+                    <div id="logoImg">
+                        <a href="index.html">
+                            <img src="../Images/logo.png" alt="The logo of the site">
+                        </a>
+                    </div>
+                    <div id="search">
+                        <div id="searchForm"> 
+                            <div id="arrowLeft"></div>
+                            <form id="searchBar">
+                                <input type="text" name="searchBar" placeholder="Какво търсиш днес?" />
+                                <div id="searchButton">
+                                    <a href=""><span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+                <div>
+                    <div id="homePage">
+                        <a href=""><span>&lt;&lt;</span>Към началната страница</a>
+                    </div>
+                    <div id="myCart">
+                        <span class="glyphicon glyphicon-shopping-cart icons"></span>
+                        <span class="textContent">Моята количка</span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                    <div id="myFavorites">
+                        <span class="glyphicon glyphicon-heart icons"></span>
+                        <span class="textContent">Любими</span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                    <div id="myAccount">
+                        <span class="glyphicon glyphicon-search icons"></span>
+                        <span class="textContent">Моят акаунт</span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
                 </div>
             </div>
             <nav id="navigation">
