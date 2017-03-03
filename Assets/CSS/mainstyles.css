@@ -223,6 +223,10 @@ span.glyphicon-chevron-down {
 	padding: 10px 20px;
 }
 
+#myAccount a:hover, #myFavorites a:hover, #myCart a:hover {
+	text-decoration: none;
+}
+
 /*************************
 MAIN
 *************************/
