@@ -15,6 +15,7 @@ Navigation hide + to home button
 *************************/
 $("#fixedNav").hide();
 var navShow = false;
+var toHomeShow = false;
 $(window).scroll(function () {
     if ($(window).scrollTop() > 230 && !navShow && window.innerWidth >= '1170') {
         navShow = true;
@@ -26,22 +27,35 @@ $(window).scroll(function () {
             position: 'fixed'
 
         });
-        $('#toHome').stop().animate({
-            bottom: 10
-        }, 50)
-    } else if ($(window).scrollTop() < 230) {
+
+    } else if ($(window).scrollTop() < 230 || window.innerWidth <= '1170') {
         navShow = false;
         $("body").css({
-            "margin-top": "20px"
+            "margin-top": "0px"
         })
         $("#fixedNav").hide();
         $("#navigation").css({
             position: 'static'
         })
+
+    }
+
+    if ($(window).scrollTop() > 250 && !toHomeShow) {
+        toHomeShow = true;
+        $('#toHome').stop().animate({
+            bottom: 10
+        }, 50)
+    } else if ($(window).scrollTop() < 250) {
+        toHomeShow = false;
         $('#toHome').stop().animate({
             bottom: -40
         }, 50)
     }
+
+
+
+
+
 
     if ($(window).scrollTop() > 550 && window.innerWidth >= '1170') {
         $("#sideMenu").css({
@@ -62,11 +76,11 @@ $(window).scroll(function () {
 Arrows for side menu
 *************************/
 
-$('main aside nav ul li').hover(function(e) {
+$('main aside nav ul li').hover(function (e) {
     $(e.target.lastChild.firstChild).css({
         visibility: 'visible'
     })
-}, function(e) {
+}, function (e) {
     $(e.target.lastChild.firstChild).css({
         visibility: 'hidden'
     })
@@ -78,11 +92,23 @@ $('main aside nav ul li').hover(function(e) {
 
 
 
-$('.navLink').click(function(e) {
+$('.navLink').click(function (e) {
     var linkNames = getLowerSecNames(e.currentTarget.firstChild);
-    $('#sideMenu li>span span:first-child').each(function(index) {
+    $('#sideMenu li>span span:first-child').each(function (index) {
         $(this).text(linkNames[index]);
     });
     $('#navigation ul li').children().removeClass('navClickedOn');
     $(e.currentTarget).addClass('navClickedOn');
 });
+
+
+
+
+
+
+
+
+
+
+
+

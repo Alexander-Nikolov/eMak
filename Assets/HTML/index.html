@@ -63,15 +63,24 @@
             </div>
             <nav id="navigation">
                 <ul>
-                    <li><span class="navLink navClickedOn"><span>Телефони, Таблети &amp; Смарт технологии</span></span></li>
-                    <li><span class="navLink"><span>Лаптопи, IT продукти &amp; Офис</span></span></li>
-                    <li><span class="navLink"><span>ТВ, Електроника &amp; Фото</span></span></li>
-                    <li><span class="navLink"><span>Големи електроуреди</span></span></li>
-                    <li><span class="navLink"><span>Малки електроуреди &amp; Лична грижа</span></span></li>
-                    <li><span class="navLink"><span>Козметика, Мода &amp; Спорт</span></span></li>
-                    <li><span class="navLink"><span>Книги, Детски артукули &amp; Играчки</span></span></li>
-                    <li><span class="navLink"><span>Дом &amp; Градина</span></span></li>
-                    <li><span class="navLink"><span>Авто, Инструменти &amp; Petshop</span></span></li>
+                    <li><span class="navLink navClickedOn"><span>Телефони, Таблети &amp; Смарт технологии</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Лаптопи, IT продукти &amp; Офис</span></span>
+                    </li>
+                    <li><span class="navLink"><span>ТВ, Електроника &amp; Фото</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Големи електроуреди</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Малки електроуреди &amp; Лична грижа</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Козметика, Мода &amp; Спорт</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Книги, Детски артукули &amp; Играчки</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Дом &amp; Градина</span></span>
+                    </li>
+                    <li><span class="navLink"><span>Авто, Инструменти &amp; Petshop</span></span>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -133,20 +142,40 @@
             <aside id="sideMenu">
                 <nav>
                     <ul>
-                        <li><span><span>Мобилни телефони</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Таблети</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Външни батерии</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Аксесоари</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Смарт часовници</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Фитнес гривни</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Преносими тонколони</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
-                        <li><span><span>Smart Home &amp; VR очила</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span></li>
+                        <li><span><span>Мобилни телефони</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Таблети</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Външни батерии</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Аксесоари</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Смарт часовници</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Фитнес гривни</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Преносими тонколони</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
+                        <li><span><span>Smart Home &amp; VR очила</span> <span><img src="../Images/right-arrow.png" alt="arrow to the right"></span></span>
+                        </li>
                     </ul>
                 </nav>
             </aside>
 
             <section>
-
+                <div id="productsContainer">
+                    <script>
+                        for(var index=1; index <= 8; index++) {
+                            document.write('<div id="productSection' + index + '" class="productSection"> ');
+                            document.write('<div class="productWrap fillSpace" id="productSection' + index + '-first"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="seeMore"><span>Виж още</span></div>');
+                            document.write('</div>');
+                        }
+                    </script>
+                </div>
             </section>
         </main>
         <div id="toHome">

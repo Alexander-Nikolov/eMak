@@ -8,6 +8,9 @@
     /*************************
     HEADER
     *************************/ 
+    header {
+        margin: 20px 0;
+    }
     #logo {
         margin-bottom: 30px;
     }
