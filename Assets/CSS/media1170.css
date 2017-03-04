@@ -33,7 +33,7 @@
         width: 11%;
         margin: 8px 0;
     }
-     header nav ul li a {
+     header nav ul li>span {
         height: 35px;
     }
 
