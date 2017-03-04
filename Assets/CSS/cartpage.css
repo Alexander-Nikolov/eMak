@@ -1,0 +1,150 @@
+/**********************
+HEADER 
+**********************/
+
+#wrapper {
+	font-family: Arial;
+}
+
+header {
+	width: 100%;
+	display: inline-block;
+	background-color: #d02f05;
+}
+
+#dropdownMenu {
+	margin-left: 80px;
+	display: inline-block;
+	background-color: #e6876e;
+	color:white;
+	padding: 10px;
+	float: left;
+}
+
+#dropdownMenu .glyphicon-align-justify {
+	font-size:1.9em;
+}
+
+#dropdownMenu .glyphicon-chevron-down {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+#logoImg {
+	float:left;
+}
+
+#logoImg img {
+	margin: 0px 20px;
+	height: 50px;
+	width: auto;
+}
+
+#search {
+	display: inline-block;
+	position: relative;
+	margin: 10.5px 0px;
+	width: 40%;	
+	float: left;
+}
+
+#searchForm {
+	display: inline-block;
+	width: 100%;
+}
+
+#arrowLeft {
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 10px solid white;
+	position: relative;
+	top: 50%;
+	left: 0;
+	transform: rotate(360deg) translateY(-200%) translateX(-70%);
+	
+	float:left;
+}
+
+#searchBar {
+	display: inline-block;
+	background-color: white;
+}
+
+#searchBar {
+	width:90%;
+	border-radius: 5px;
+}
+
+#searchBar input {
+	width: 90%;
+	height: 100%;
+	padding:7px;
+	border:none;
+	border-right: 1px solid grey;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}		
+
+#searchBar input:focus {
+	outline-width: 0;
+}
+
+#searchButton {
+	display: inline-block;
+	width: 8%;
+	text-align:center;
+}
+
+#searchButton a {
+	width:100%;
+}
+
+span.icons {
+    font-size: 1.3em;
+    color: white;
+}
+
+span.textContent {
+    font-size: 1.2em;
+	color:white;
+	margin:5px;
+}
+
+span.glyphicon-chevron-down {
+	color:white;
+}
+
+#myAccount, #myFavorites, #myCart {
+	margin-top: 12px;
+	margin-right: 10px;
+	float:left;
+}
+
+#myAccount a:hover, #myFavorites a:hover, #myCart a:hover {
+	text-decoration: none;
+}
+
+/**********************
+MAIN 
+**********************/
+#container {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 100px;
+}
+
+#container h1 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+#containerInfo {
+	padding: 30px;
+}
+
+/**********************
+FOOTER 
+**********************/
