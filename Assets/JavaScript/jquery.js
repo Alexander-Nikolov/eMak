@@ -28,7 +28,7 @@ $(window).scroll(function () {
 
         });
 
-    } else if ($(window).scrollTop() < 230) {
+    } else if ($(window).scrollTop() < 230 || window.innerWidth <= '1170') {
         navShow = false;
         $("body").css({
             "margin-top": "0px"
@@ -100,3 +100,15 @@ $('.navLink').click(function (e) {
     $('#navigation ul li').children().removeClass('navClickedOn');
     $(e.currentTarget).addClass('navClickedOn');
 });
+
+
+
+
+
+
+
+
+
+
+
+

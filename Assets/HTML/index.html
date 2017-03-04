@@ -164,46 +164,18 @@
 
             <section>
                 <div id="productsContainer">
-                    <div id="productSection1">
-                        <div class="productWrap">
-                            <div class="productImg">
-                                <img src="" alt="">
-                            </div>
-                            <div class="productInfo">
-                                <p>asfgaefwafvs afwaesadWADSFEDS</p>
-                            </div>
-                            <div class="productPrice">
-                                <span>
-                                    <span>
-                                        2143
-                                    <sup>
-                                        .99
-                                    </sup>
-                                    lv
-                                    </span>
-                                </span>
-                            </div>
-                            <div class="productMoreInfo">
-                                <span>
-                                    <span>
-                                        >>
-                                    </span>
-                                <span>
-                                        виж повече
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="productSection2"></div>
-                    <div id="productSection3"></div>
-                    <div id="productSection4"></div>
-                    <div id="productSection5"></div>
-                    <div id="productSection6"></div>
-                    <div id="productSection7"></div>
-                    <div id="productSection8"></div>
+                    <script>
+                        for(var index=1; index <= 8; index++) {
+                            document.write('<div id="productSection' + index + '" class="productSection"> ');
+                            document.write('<div class="productWrap fillSpace" id="productSection' + index + '-first"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="productWrap fillSpace"></div>');
+                            document.write('<div class="seeMore"><span>Виж още</span></div>');
+                            document.write('</div>');
+                        }
+                    </script>
                 </div>
-
             </section>
         </main>
         <div id="toHome">
