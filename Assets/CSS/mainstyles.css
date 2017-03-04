@@ -68,7 +68,7 @@ HEADER
 
 header {
 	background: #D02F05;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	border-radius: 15px;
 	padding-bottom: 10px;
 }
@@ -82,6 +82,7 @@ header {
 	display:inline-block; 
 	width: 100%;
 	text-align: center;
+	margin-bottom: 10px;
 }
 
 
@@ -323,4 +324,75 @@ main section {
 	border: 1px solid black;
 	height: 1500px;
 	width: 100%;
+}
+
+
+
+#productsContainer {
+	display: inline-block;
+	width: 100%;
+}
+#productSection1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.productWrap {
+	width: 160px;
+	margin: 10px 0;
+	padding: 8px 0;
+	background: #D02F05;
+	color: white;
+	border-radius: 15px;
+}
+
+.productImg {
+	border: 2px solid #D02F05;
+	border-radius: 15px;
+	padding: 5px;
+	background: white;
+	height: 170px;
+}
+
+.productInfo {
+	padding: 10px 5px;
+	background: #2E221F;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	height: 50px;
+}
+
+.productPrice {
+	padding: 10px 5px;
+	background: #2E221F;
+}
+
+.productPrice sup {
+	font-size: 0.7em;
+}
+
+.productMoreInfo {
+	border-top: 1px solid #D02F05;
+	padding: 10px 5px;
+	background: #2E221F;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.productMoreInfo:hover {
+	background: #D02F05;
+}
+
+.productMoreInfo:hover>span span:first-child {
+	background: #2E221F;
+}
+
+.productMoreInfo>span span:first-child {
+	background: #D02F05;
+	padding: 5px 5px 5px 10px;
+	border-radius: 10px;
+	border-bottom-right-radius: 15px;
+	margin-right: 15px;
 }

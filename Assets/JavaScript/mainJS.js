@@ -150,3 +150,64 @@ function getLowerSecNames(ele) {
 
     return linkNames;
 }
+
+
+function displayProduct(img, info, price, supPrice, appendOn) {
+    var ele1 = document.createElement('div');
+    ele1.className = 'productWrap';
+    appendOn.appendChild(ele1);
+
+
+    var ele2 = document.createElement('div');
+    ele2.className = 'productImg';
+    ele1.appendChild(ele2);
+
+    var ele22 = document.createElement('img');
+    ele22.src = img;
+    ele2.appendChild(ele22);
+
+
+    var ele3 = document.createElement('div');
+    ele3.className = 'productInfo';
+    ele1.appendChild(ele3);
+
+    var ele33 = document.createElement('p');
+    ele33.textContent = info;
+    ele3.appendChild(ele33);
+
+
+    var ele4 = document.createElement('div');
+    ele4.className = 'productPrice';
+    ele1.appendChild(ele4);
+
+    var ele44 = document.createElement('span');
+    ele4.appendChild(ele44);
+    var ele441 = document.createElement('span');
+    ele441.innerHTML = price;
+    ele44.appendChild(ele441);
+    var ele442 = document.createElement('sup');
+    ele442.textContent = '.' + supPrice;
+    ele44.appendChild(ele442);
+    ele441.textContent += 'лв';
+
+
+
+
+    var ele5 = document.createElement('div');
+    ele5.className = 'productMoreInfo';
+    ele1.appendChild(ele5);
+
+    var ele55 = document.createElement('span');
+    ele5.appendChild(ele55);
+    var ele551 = document.createElement('span');
+    ele551.textContent = '>>';
+    ele55.appendChild(ele551);
+    var ele552 = document.createElement('span');
+    ele552.textContent = 'виж повече';
+    ele55.appendChild(ele552);
+}
+
+
+
+displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'));
+
