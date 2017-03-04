@@ -3,9 +3,17 @@ body {
 	background-color: #f7f7f7;
 }
 
+/**********************
+HEADER
+**********************/
+
 #logo, main {
 	text-align: center;
 }
+
+/**********************
+MAIN
+**********************/
 
 #loginForm {
 	display: inline-block;
@@ -48,6 +56,56 @@ body {
 #help {
 	padding:1em 2em;
 }
+
+#fbAndGm p {
+	color:#ababab;
+	margin-bottom: 0.6em;
+}
+
+#buttons {
+	padding: 13px;
+}
+
+#fbButton {
+	float:left;
+	background-color: #295396;
+}
+
+#gmailButton {
+	float:right;
+	background-color: #d44534;
+}
+
+#fbButton, #gmailButton {
+	display: inline-block;
+	width: 47%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+#fbButton a, #gmailButton a {
+	text-decoration: none;
+	width:100%;
+}
+
+.siteName {
+	color:white;
+	font-size:1.1em;
+	line-height: 3.2em;
+	font-weight: bold;
+}
+
+.siteLogo img{
+	width:50px; 
+	height:50px;
+	float: left;
+}
+
+
+/**********************
+FOOTER
+**********************/
 
 footer {
 	text-align: center;
