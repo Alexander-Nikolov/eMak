@@ -314,7 +314,7 @@ main aside nav li>span {
 	color: white;
 }
 
-main aside nav li:hover, aside li a:hover {
+.asideNavTargeted, .asideNavHovered {
 	background-color: #D02F05;
 	color: white;
 	text-decoration: none;

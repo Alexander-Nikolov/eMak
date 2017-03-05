@@ -10,13 +10,24 @@ $("#toHome").click(function () {
 
 
 
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+
+    var elemTop = $(elem).offset().top - 450;
+    var elemBottom = elemTop + $(elem).height();
+
+    return elemTop <= docViewTop && elemBottom >= docViewTop;
+}
+
+
+
 /*************************
 Navigation hide + to home button
 *************************/
 $("#fixedNav").hide();
 var navShow = false;
 var toHomeShow = false;
-$(window).scroll(function () {
+function scrolling() {
     if ($(window).scrollTop() > 230 && !navShow && window.innerWidth >= '1170') {
         navShow = true;
         $("body").css({
@@ -68,7 +79,32 @@ $(window).scroll(function () {
         })
     }
 
-})
+
+
+
+
+    $('.productSection').each(function (index) {
+        var res = isScrolledIntoView($('#productSection' + (index + 1)));
+        if (res) {
+            $($('main aside nav ul li')[index]).addClass('asideNavTargeted');
+            $($('main aside nav ul li')[index].firstChild.lastChild.firstChild).css({
+                visibility: 'visible'
+            })
+        } else {
+            $($('main aside nav ul li')[index]).removeClass('asideNavTargeted');
+            if ($($('main aside nav ul li')[index]).hasClass('asideNavHovered')) {
+                return;
+            }
+            $($('main aside nav ul li')[index].firstChild.lastChild.firstChild).css({
+                visibility: 'hidden'
+            })
+        }
+    })
+
+
+}
+$(window).scroll(scrolling);
+$(window).resize(scrolling);
 
 
 
@@ -77,17 +113,40 @@ Arrows for side menu
 *************************/
 
 $('main aside nav ul li').hover(function (e) {
-    $(e.target.lastChild.firstChild).css({
-        visibility: 'visible'
-    })
+    targetedLowSec(e.currentTarget);
 }, function (e) {
-    $(e.target.lastChild.firstChild).css({
-        visibility: 'hidden'
-    })
+    lostLowSec(e.currentTarget);
 })
 
+function targetedLowSec(ele) {
+    $(ele).addClass('asideNavHovered');
+    $(ele.firstChild.lastChild.firstChild).css({
+        visibility: 'visible'
+    })
+}
 
 
+function lostLowSec(ele) {
+    $(ele).removeClass('asideNavHovered');
+    if ($(ele).hasClass('asideNavTargeted')) {
+        return;
+    }
+    $(ele.firstChild.lastChild.firstChild).css({
+        visibility: 'hidden'
+    })
+}
+
+
+$('main aside nav ul li').click(function (e) {
+    $('main aside nav ul li').each(function (index) {
+        if ($('main aside nav ul li')[index] === e.currentTarget) {
+                $('html, body').animate({
+                    scrollTop: $("#productSection" + (index + 1)).offset().top - 200
+                }, 1000);
+        }
+    })
+
+})
 
 
 
@@ -99,6 +158,7 @@ $('.navLink').click(function (e) {
     });
     $('#navigation ul li').children().removeClass('navClickedOn');
     $(e.currentTarget).addClass('navClickedOn');
+    setTimeout(scrolling, 500);
 });
 
 

@@ -14,6 +14,10 @@ LowerSection.prototype.addProducts = function (products) {
 
 LowerSection.prototype.getProducts = function () {
     var obj = this;
+    if (obj.products.length != 0) {
+        obj.setProducts();
+        return;
+    }
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
