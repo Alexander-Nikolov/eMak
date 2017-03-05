@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/productpage.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="fixedNav">
+        </div>
+        <header>
+            <div id="logo">
+                <div id="logoAndSearch">
+                    <div id="logoImg">
+                        <a href="index.html">
+                            <img src="../Images/logo.png" alt="The logo of the site">
+                        </a>
+                    </div>
+                    <div id="search">
+                        <div id="searchForm">
+                            <!-- <div id="arrowLeft"></div> -->
+                            <form id="searchBar">
+                                <input type="text" name="searchBar" placeholder="Какво търсиш днес?" />
+                                <div id="searchButton">
+                                    <a href=""><span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="myBar">
+                    <div id="myAccount">
+                        <a href="./login.html">
+                            <span class="glyphicon glyphicon-user icons"></span>
+                            <span class="textContent">Моят акаунт</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myFavorites">
+                        <a href="">
+                            <span class="glyphicon glyphicon-heart icons"></span>
+                            <span class="textContent">Любими</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myCart">
+                        <a href="">
+                            <span class="glyphicon glyphicon-shopping-cart icons"></span>
+                            <span class="textContent">Моята количка</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </header>
+        <nav>
+            <div class="navMenuItems">
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <a href="">Продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Абониране за бюлетин</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Разопаковани продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">eMAG инфо</a>
+            </div>
+        </nav>
+        <main>
+            <div id="path"></div>
+            <div id="headerProduct">
+                <h1>TV</h1>
+                <p>Код на продукта: 55848485641684</p>
+                <button id="cmpButton">Сравни</button>
+                <button id="fbButton">Сподели</button>
+            </div>
+            <div id="mainInfoProduct">
+                <div id="imagesProduct">
+                    <img id="mainImage" src="../Images/tv3.jpg">
+                    <div id="gallery">
+                        <img src="../Images/tv1.jpg">
+                        <img src="../Images/tv2.jpg">
+                        <img src="../Images/tv4.jpg">
+                        <img src="../Images/tv5.jpg">
+                    </div>
+                </div>
+                <div id="infoProduct">  
+                    <div id="infoContent">
+                        <div id="clients">
+                            <p class="greyParagraph">Оценка от клиенти:</p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <div>
+                                <a href="">Добави ревю</a> &vert; 
+                                <a href="">1 въпрос</a>
+                            </div>
+                        </div>
+                        <div id="moreInfo">
+                            <p class="greyParagraph">Предлаган от:</p>
+                            <p>eMAG</p>
+                            <div class="boxesInfo">
+                                <img src="../Images/box.png">
+                                <p>Безплатна доставка</p>
+                            </div>
+                            <div class="boxesInfo">
+                                <img src="../Images/tir.png">
+                                <p>Проверка на пратката</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="other">
+                        <h2>249.<sup>99</sup>лв.</h2>
+                        <div>
+                            <button id="btnAvailability">В наличност</button>
+                        </div>
+                        <div>
+                            <button id="btnCart"><span class="glyphicon glyphicon-shopping-cart"></span>Добави в количката</button>
+                        </div>
+                        <div>
+                            <button id="btnFavorites"><span class="glyphicon glyphicon-heart-empty"></span>Добави в любими</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>

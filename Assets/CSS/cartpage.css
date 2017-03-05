@@ -130,14 +130,14 @@ span.glyphicon-chevron-down {
 MAIN 
 **********************/
 #container {
-	width: 50%;
+	width: 70%;
 	margin: auto;
 	text-align: center;
-	padding: 100px;
+	padding-top:150px;
 }
 
 #container h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 	margin-bottom: 20px;
 }
 
@@ -145,6 +145,79 @@ MAIN
 	padding: 30px;
 }
 
+#button {
+	background-color: #285f8f;
+	border-radius: 10px;
+	padding: 0.5em;
+	color: white;
+	margin-bottom: 2em;
+}
+
 /**********************
 FOOTER 
 **********************/
+
+footer {
+	border-top: 1px solid grey;
+	margin-top: 150px;
+	padding: 1em;
+}
+
+footer h2 {
+	color: grey;
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+}
+
+footer p {
+	color: grey;
+	font-size: 0.9em;
+}
+
+footer img {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+footer>div div {
+	width: 25%;
+	float: left;
+}
+
+.boxesFooter {
+	width: 75%;
+	margin-bottom: 1em;
+}
+
+#more {
+	width: 60%;
+	float: left;
+}
+
+#more>div {
+	width: 100%;
+}
+
+#more a {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	text-decoration: underline;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+#more a:last-child {
+	width: 50%;
+}
+
+#cr {
+	float: right;
+	text-align:right;
+	color: grey;
+}
+
+#cr p {
+	margin-bottom: 0.5em;
+}
