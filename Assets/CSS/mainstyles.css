@@ -337,7 +337,7 @@ main section {
 	justify-content: space-around;
 }
 
-.productWrap {
+.productWrap, .fillSpace {
 	width: 160px;
 	margin: 10px 0;
 	padding: 8px 0;
@@ -359,7 +359,7 @@ main section {
 	background: #2E221F;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
-	height: 50px;
+	height: 100px;
 }
 
 .productPrice {

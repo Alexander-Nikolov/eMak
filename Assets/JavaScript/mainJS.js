@@ -21,7 +21,7 @@ LowerSection.prototype.getProducts = function () {
             obj.setProducts();
         }
     }
-    xhr.open('GET', '../JavaScript/jsonfiles/page1/' + this.category + '.json');
+    xhr.open('GET', '../JavaScript/jsonfiles/' + this.category + '.json');
     xhr.send();
 }
 
@@ -82,13 +82,11 @@ LowerSection.prototype.displayProducts = function (img, info, price, supPrice, p
 }
 
 LowerSection.prototype.setProducts = function() {
-    console.log(this);
     var indexOfSection = this.checkSection();
     var parent = document.getElementById('productSection' + (indexOfSection + 1));
     var displayBefore = document.getElementById('productSection' + (indexOfSection + 1) + '-first');
     for (var index = 0; index < this.products.length; index++) {
         var element = this.products[index];
-        console.log(this);
         this.displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore)
     }
 }
@@ -100,7 +98,7 @@ LowerSection.prototype.checkSection = function() {
         for (var index2 = 0; index2 < obj.lowerSections.length; index2++) {
             var element = obj.lowerSections[index2];
             if (element.name === text) {
-                return index;
+                return index2;
             }    
         }
     }
@@ -111,9 +109,9 @@ var sections = [
     {
         section: new Section('Телефони, Таблети & Смарт технологии'),
         lowerSections: [
-            new LowerSection('Мобилни телефони'),
-            new LowerSection('Таблети', "mobilePhones"),
-            new LowerSection('Външни батерии'),
+            new LowerSection('Мобилни телефони', 'phones'),
+            new LowerSection('Таблети', 'tablets'),
+            new LowerSection('Външни батерии', 'outer-batteries'),
             new LowerSection('Аксесоари'),
             new LowerSection('Смарт часовници'),
             new LowerSection('Фитнес гривни'),
@@ -234,10 +232,11 @@ var sections = [
 function getLowerSecNames(ele) {
     var text = ele.textContent;
     var linkNames = [];
+    $('.productWrap').remove();
     sections.forEach(function (obj) {
-        console.log(obj.section.name);
         if (obj.section.name === text) {
             obj.lowerSections.forEach(function (lowSec) {
+                lowSec.getProducts();
                 linkNames.push(lowSec.name);
             })
         }
@@ -246,14 +245,10 @@ function getLowerSecNames(ele) {
     return linkNames;
 }
 
-sections[0].lowerSections[1].getProducts();
+function onLoad() {
+    sections[0].lowerSections.forEach(function(lowSec) {
+        lowSec.getProducts();
+    })
+}
 
-
-
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-// displayProduct('../Images/tv1.jpg', 'tv sdaasd', '241', '99', document.getElementById('productSection1'), document.getElementById('productSection1-first'));
-
+onLoad();
