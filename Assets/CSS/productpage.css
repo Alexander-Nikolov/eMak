@@ -102,12 +102,12 @@ header {
 }
 
 span.icons {
-    font-size: 1.3em;
-    color: white;
+	font-size: 1.3em;
+	color: white;
 }
 
 span.textContent {
-    font-size: 1.2em;
+	font-size: 1.2em;
 	color:white;
 	margin:5px;
 }
@@ -158,6 +158,10 @@ nav {
 	background-color: #dfdfdf;
 }
 
+/************************
+MAIN 
+************************/
+
 main {
 	padding: 4em;
 }
@@ -195,4 +199,105 @@ main {
 	background-color: #f5f5f5;
 	padding: 0.5em;
 	border-radius: 10px;
+}
+
+#mainInfoProduct {
+	padding-top: 1em;
+	width: 100%;
+}
+
+#mainImage {
+	height: auto;
+	width: 500px;
+} 
+
+#gallery img{
+	height: auto;
+	width: 100px;
+}
+
+#infoProduct {
+	margin-top: 1em;
+	float: left;
+	width: 59%;
+}
+
+#imagesProduct {
+	float: left;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+#infoContent {
+	width: 50%;
+	float: left;
+}
+
+#other {
+	width: 50%;
+	float: left;
+}
+
+#clients {
+	margin-bottom: 1em;
+}
+
+.greyParagraph{
+	color: #acacac;
+	margin-bottom: 0.5em;
+}
+
+#moreInfo {
+	width: 100%;
+}
+
+.boxesInfo {
+	margin-top: 1em;
+	float: left;
+	width: 100%; 	
+}
+
+.boxesInfo p{
+	display: inline-block;
+	height: 3em;
+	position: relative;
+	top: 8px;
+	left: 5px;
+}
+
+.boxesInfo img {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+#other h2 {
+	font-size: 2em;
+	color: red;
+	margin-bottom: 1em;
+}
+
+#btnAvailability {
+	background-color: #009900;
+	color: white;
+	margin-bottom: 1em;
+}
+
+
+#btnCart, #btnFavorites {
+	width: 100%;
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 5px;
+}
+
+#btnCart {
+	background-color: #005eb8;
+	color:white;
+}
+
+#btnFavorites {
+	border: none;
+	border: 1px solid  #005eb8;
+	color:  #005eb8;
 }
