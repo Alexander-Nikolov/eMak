@@ -1,0 +1,32 @@
+[
+    {
+        "img": "../Images/Products/coolpad1.jpg",
+        "info": "Охладител за лаптоп A+ CIC5B, 15.6, USB, 5 вентилатора, Черен ",
+        "price": "34",
+        "supPrice": "99"
+    },
+    {
+        "img": "../Images/Products/coolpad2.jpg",
+        "info": "Охладител за лаптоп A+ CIC2B, 15.6, USB, 2 вентилатора, Черен ",
+        "price": "21",
+        "supPrice": "00"
+    },
+    {
+        "img": "../Images/Products/coolpad3.jpg",
+        "info": "Охладител за лаптоп A+ CIC4B, 15.6, USB, 4 вентилатора, Черен ",
+        "price": "21",
+        "supPrice": "09"
+    },
+    {
+        "img": "../Images/Products/coolpad4.jpg",
+        "info": "Охладител за лаптоп Maxi Hama, USB ",
+        "price": "18",
+        "supPrice": "99"
+    },
+    {
+        "img": "../Images/Products/coolpad5.jpg",
+        "info": "Охладител за лаптоп Serioux SRX-NCP150AA, 10-17, USB, Black ",
+        "price": "13",
+        "supPrice": "99"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "img": "../Images/Products/accespc1.jpg",
+        "info": "Клавиатура gaming Razer BlackWidow Tournament Chroma, Layout US ",
+        "price": "269",
+        "supPrice": "79"
+    },
+    {
+        "img": "../Images/Products/accespc2.jpg",
+        "info": "Клавиатура ultraslim A+ KO2, Безжична, Черна ",
+        "price": "33",
+        "supPrice": "00"
+    },
+    {
+        "img": "../Images/Products/accespc3.jpg",
+        "info": "Безжична мишка Microsoft Sculpt Comfort, Bluetooth, Черна ",
+        "price": "59",
+        "supPrice": "09"
+    },
+    {
+        "img": "../Images/Products/accespc4.jpg",
+        "info": "Тонколони 5.1 A+ MS35, 35W RMS ",
+        "price": "89",
+        "supPrice": "99"
+    },
+    {
+        "img": "../Images/Products/accespc5.jpg",
+        "info": "Web камера Microsoft LifeCam Business HD-3000, HD, Черна ",
+        "price": "34",
+        "supPrice": "99"
+    }
+]
