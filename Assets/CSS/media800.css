@@ -5,9 +5,14 @@
     body {
         font-size: 0.9em;
     }
+
+    #toHome {
+        font-size: 1em;
+    }
     /*************************
     HEADER
     *************************/ 
+    
     header {
         margin: 20px 0;
     }

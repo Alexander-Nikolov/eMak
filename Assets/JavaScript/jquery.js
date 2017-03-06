@@ -51,12 +51,12 @@ function scrolling() {
 
     }
 
-    if ($(window).scrollTop() > 250 && !toHomeShow) {
+    if ($(window).scrollTop() > 450 && !toHomeShow) {
         toHomeShow = true;
         $('#toHome').stop().animate({
-            bottom: 10
+            bottom: 30
         }, 50)
-    } else if ($(window).scrollTop() < 250) {
+    } else if ($(window).scrollTop() < 450) {
         toHomeShow = false;
         $('#toHome').stop().animate({
             bottom: -40
@@ -103,8 +103,15 @@ function scrolling() {
 
 
 }
-$(window).scroll(scrolling);
-$(window).resize(scrolling);
+$(window).scroll(function () {
+    scrolling();
+});
+$(window).resize(function () {
+    scrolling();
+    $('#toHome').css({
+        left: $('#wrapper').offset().left + 10 + 'px'
+    })
+});
 
 
 
@@ -140,9 +147,9 @@ function lostLowSec(ele) {
 $('main aside nav ul li').click(function (e) {
     $('main aside nav ul li').each(function (index) {
         if ($('main aside nav ul li')[index] === e.currentTarget) {
-                $('html, body').animate({
-                    scrollTop: $("#productSection" + (index + 1)).offset().top - 200
-                }, 1000);
+            $('html, body').animate({
+                scrollTop: $("#productSection" + (index + 1)).offset().top - 200
+            }, 1000);
         }
     })
 
@@ -167,7 +174,16 @@ $('.navLink').click(function (e) {
 
 
 
+function onBodyLoad() {
+    $('#toHome').css({
+        left: $('#wrapper').offset().left + 10 + 'px'
+    })
+}
 
+
+document.body.onload = function() {
+    onBodyLoad()
+}
 
 
 
