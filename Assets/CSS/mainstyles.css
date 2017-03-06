@@ -425,3 +425,52 @@ main section {
 .seeMore:hover {
 	background: #2E221F;
 }
+
+
+/*************************
+FOOTER
+*************************/
+
+
+footer {
+	background: #D02F05;
+	border: 10px solid #2E221F;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+#footerContainer {
+	height: 180px;
+	position: relative;
+}
+
+
+#footerContainer>div:first-child {
+	position: absolute;
+	bottom: 0;
+
+}
+
+#footerContainer>div:first-child p {
+	font-size: 0.6em;
+	padding: 5px;
+}
+
+#footerContainer>div:last-child div {
+	padding: 10px;
+	float:left;
+}
+
+#footerContainer>div:last-child div:last-child {
+	float:right;
+}
+
+#footerContainer div:last-child img {
+	width: 30px;
+}
+
+#tel>span{
+	display: block;
+	position: relative;
+	transform: translateY(50%);
+}
