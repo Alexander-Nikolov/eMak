@@ -1,0 +1,80 @@
+@media screen and (min-width: 600px) and (max-width: 900px){
+	#dropdownMenu {
+		margin-left: 0px;
+		margin-right: 10em;
+	}
+
+	#logoImg img{
+		width: 100px;
+		height: auto;
+	}
+
+	#search {
+		display: block;
+		margin: 1em 2em;
+		width: 90%;
+	}
+
+	span.icons {
+		font-size:1em;
+	}
+
+	span.textContent {
+		font-size: 1.1em;
+		font-style: bold;
+	}
+
+	#myAccount, #myFavorites, #myCart {
+		text-align: center;
+		width: 33%;
+		margin-right: 0;
+		margin-bottom: 1em;
+	}
+
+	#container {
+		width: 90%;
+		padding-top: 2em;
+	}
+
+	#containerInfo {
+		padding: 1em;
+	}
+
+
+	footer {
+		margin-top: 2em;
+	}
+
+	footer img {
+		width: 50px;
+		height: 50px;
+	}
+
+	footer>div>div{
+		width: 50%;
+		padding-bottom: 1em;
+	}
+
+	.boxesFooter {
+		width: 70%;
+	}
+
+	#more {
+		width: 100%;
+	}
+
+	#more>div {
+		text-align: center;
+	}
+	#more a {
+		width: 26%;
+	}
+
+	#more a:last-child {
+		width: 45%;
+	}
+
+	#cr {
+		text-align: right;
+	}
+}

@@ -1,0 +1,74 @@
+@media screen and (max-width: 380px) {
+	#dropdownMenu {
+		margin-left:0px;
+		margin-right: 1.3em;
+	}
+
+	#dropdownMenu .glyphicon-align-justify {
+		font-size:1em;
+	}
+
+	#search {
+		display: inline-block;
+		position: relative;
+		margin: 1em;
+		width: 90%;	
+		float: left;
+	}
+
+	span.textContent {
+		display: none;
+	}
+
+	#myAccount, #myFavorites, #myCart {
+		text-align: center;
+		width: 33%;
+		margin-right: 0;
+		margin-bottom: 1em;
+	}
+
+	#container {
+		width: 90%;
+		padding-top: 2em;
+	}
+
+	#containerInfo {
+		padding: 1em;
+	}
+
+
+	footer {
+		margin-top: 2em;
+	}
+
+	footer img {
+		width: 40px;
+		height: 40px;
+	}
+
+	footer>div>div{
+		width: 100%;
+	}
+
+	.boxesFooter {
+		width: 60%;
+	}
+
+	#more {
+		width: 100%;
+	}
+	#more>div {
+		text-align: center;
+	}
+	#more a {
+		width: 100%;
+	}
+
+	#more a:last-child {
+		width: 100%;
+	}
+
+	#cr {
+		text-align: center;
+	}
+}

@@ -136,6 +136,7 @@ nav {
 	padding-left: 3em;
 	padding-right: 3em;
 	clear: both;
+	border-bottom: 1px solid darkgrey;
 }
 
 .navMenuItems {

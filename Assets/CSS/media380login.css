@@ -1,0 +1,25 @@
+@media screen and (max-width: 480px) { 
+    #loginForm {
+        border-radius: 5px;
+        padding: 5px;
+        width: 90%;
+    }
+
+    #loginForm h2 {
+        font-size: 2em; 
+    }
+
+    #loginForm input[type="email"], #buttonSubmit {
+        height: 2.5em;
+        font-size: 1em;
+    }
+    
+    .siteName {
+        font-size: 1em;
+    }
+
+    .siteLogo img{
+        width:40px; 
+        height:40px;
+    }
+}
