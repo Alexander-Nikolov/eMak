@@ -1,0 +1,11 @@
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    #loginForm {
+        border-radius: 6px;
+        padding: 6px;
+        width: 70%;
+    }
+    
+    .siteName {
+        font-size: 1.2em;
+   } 
+}

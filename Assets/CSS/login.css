@@ -81,7 +81,7 @@ MAIN
 	width: 47%;
 	box-sizing: border-box;
 	border-radius: 10px;
-	margin-top: 10px;
+	margin-top: 1em;
 }
 
 #fbButton a, #gmailButton a {
