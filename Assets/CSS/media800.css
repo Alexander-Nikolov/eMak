@@ -47,6 +47,15 @@
         width: 500px;
     }
 
+
+    .glyphicon-chevron-down {
+	    transform: none;
+    }
+
+    .hoverWindow {
+        display: block;
+    }
+
     .textContent {
 	    display: inline;
     }
