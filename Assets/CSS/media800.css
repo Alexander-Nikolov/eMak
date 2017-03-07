@@ -57,4 +57,16 @@
     header nav ul li>span {
         height: 40px;
     }
+
+
+
+
+/*************************
+FOOTER
+*************************/ 
+
+    footer {
+        margin-bottom: 10px;
+    }
+
 }

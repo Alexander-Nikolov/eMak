@@ -45,6 +45,7 @@ a, a:hover {
 	background: #D02F05;
 	transition: bottom 1s;
 	font-size: 1.1em;
+	z-index: 500;
 }
 
 #toHome img {
@@ -226,6 +227,7 @@ span.glyphicon-chevron-down {
 }
 
 #myAccount, #myFavorites, #myCart {
+	position: relative;
 	display: inline-block;
 	float:right;
 	padding: 10px 20px;
@@ -267,6 +269,7 @@ main {
 	width: 100%;
 	border-radius: 15px;
 	margin-bottom: 20px;
+	border: 2px solid #D02F05;
 }
 
 
@@ -433,44 +436,57 @@ FOOTER
 
 
 footer {
-	background: #D02F05;
-	border: 10px solid #2E221F;
+	background: #FFF;
+	border: 2px solid #D02F05;
 	border-radius: 15px;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
+	color: #2E221F;
+	text-align: center;
+}
+
+footer img {
+	width: 20px;
 }
 
 #footerContainer {
 	height: 180px;
 	position: relative;
-}
-
-
-#footerContainer>div:first-child {
-	position: absolute;
-	bottom: 0;
-
-}
-
-#footerContainer>div:first-child p {
-	font-size: 0.6em;
-	padding: 5px;
-}
-
-#footerContainer>div:last-child div {
 	padding: 10px;
-	float:left;
 }
 
-#footerContainer>div:last-child div:last-child {
-	float:right;
+
+#contact span:last-child {
+	margin-left: 10px;
 }
 
-#footerContainer div:last-child img {
-	width: 30px;
+.blackIcon {
+	color: black;
 }
 
-#tel>span{
-	display: block;
-	position: relative;
-	transform: translateY(50%);
+
+#usefulIcons {
+	margin: 10px 0;
+}
+
+#usefulIcons>div  {
+    display: inline-block;
+}
+
+#usefulIcons span.blackIcon  {
+    font-size: 23px;
+	padding: 10px;
+}
+
+#usefulIcons div:last-child img {
+	width: 25px;
+	margin-left: 30px;
+}
+
+#copyR {
+	margin-top: 20px;
+}
+
+#copyR span {
+	font-size: 0.6em;
+	opacity: 0.8;
 }
