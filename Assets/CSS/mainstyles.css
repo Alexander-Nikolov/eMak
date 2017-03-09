@@ -109,11 +109,11 @@ header {
 	z-index: 550;
 	text-align: center;
 	padding: 10px;
-	margin: 2px;
 	background: #2E221F;
 	border: 2px solid #D02F05;
 	border-radius: 15px;
 	display: none;
+	left: -10px;
 }
 
 
@@ -158,19 +158,6 @@ header {
 .hoverWindowButton>span:hover span:first-child  {
 	background: #2E221F;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .textContent {
