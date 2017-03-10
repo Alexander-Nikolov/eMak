@@ -482,6 +482,18 @@ main section {
 	visibility: hidden;
 }
 
+.prodIndicator {
+	width: 160px;
+	height: 455px;
+	position: relative;
+}
+
+.prodIndicator img {
+	width: 150px;
+	display: block;
+	position: absolute;
+	top: 30%;
+}
 
 .seeMore {
 	display: inline-block;

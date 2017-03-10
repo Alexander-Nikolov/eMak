@@ -137,16 +137,25 @@ var productSections = (function () {
     return {
 
         setProducts: function (lowerSection, index) {
-            var parent = document.getElementById('productSection' + (index + 1));
-            var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
+            var parent = document.getElementById('productSection' + (index + 1)); 
+            var displayBefore = document.getElementById('productSection' + (index + 1) + '-first')
 
-            for (var product = 0; product < lowerSection.products.length; product++) {
+            var howMuch = lowerSection.products.length;
+            for (var product = 0; product < howMuch; product++) {
                 var element = lowerSection.products[product];
-                displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore)
+                if (product + 1 === howMuch) {
+                    displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
+                } else {
+                    displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
+                }         
             }
         },
 
         getProducts: function (lowerSection, index) {
+            var parent = document.getElementById('productSection' + (index + 1)); 
+            var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
+
+            indicatorsDisplay(parent, displayBefore);
 
             if (lowerSection.products.length != 0) {
                 productSections.setProducts(lowerSection, index);
@@ -177,7 +186,6 @@ var productSections = (function () {
             return sections.find(function (obj, index) {
                 if (text === obj.section.name) {
                     obj.lowerSections.forEach(function (element, index2) {
-
                         productSections.getProducts(element, index2);
                     })
                     return obj;

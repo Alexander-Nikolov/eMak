@@ -1,6 +1,8 @@
-function displayProducts(img, info, price, supPrice, parent, insertBefore) {
+function displayProducts(img, info, price, supPrice, parent, insertBefore, last) {
+    
     var ele1 = document.createElement('div');
     ele1.className = 'productWrap';
+    ele1.style.display = 'none';
     parent.insertBefore(ele1, insertBefore);
 
 
@@ -10,6 +12,15 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore) {
 
     var ele22 = document.createElement('img');
     ele22.src = img;
+    if (last) {
+        ele22.addEventListener('load', function () {
+            $(parent).children('.productWrap').css({
+                display: 'block'
+            })
+            $('.prodIndicator').remove();
+        })
+    }
+
     ele2.appendChild(ele22);
 
 
@@ -55,6 +66,17 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore) {
 }
 
 
+function indicatorsDisplay(parent, insertBefore) {
+    for (var index = 0; index < 5; index++) {
+        var ele = document.createElement('div');
+        ele.className = 'prodIndicator';
+        parent.insertBefore(ele, insertBefore);
+
+        var eleImg = document.createElement('img');
+        eleImg.src = '../Images/indicator.gif';
+        ele.appendChild(eleImg);
+    }
+}
 
 
 
