@@ -136,9 +136,68 @@ var productSections = (function () {
 
     return {
 
+        displaySearchResult: function (searched) {
+            var searched = {
+                searched: searched
+            }
+            var parent = document.getElementById('productSection');
+            var displayBefore = document.getElementById('productSection-first');
+            indicatorsDisplay(parent, displayBefore, 6);
+            for (var index = 0; index < 1; index++) {
+                var lowerSections = sections[index].lowerSections;
+                lowerSections.forEach(function (section) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            section.products = (JSON.parse(xhr.responseText));
+                        }
+                    }
+                    xhr.open('GET', '../JavaScript/jsonfiles/' + section.category + '.json');
+                    xhr.send();
+                })
+
+            }
+            setTimeout(function () {
+
+                var searched = this.searched.split(/[ ,]+/);
+
+                var productsToShow = [];
+                for (var searchedIndex = 0; searchedIndex < searched.length; searchedIndex++) {
+                    var searchedWord = searched[searchedIndex].toLowerCase();
+                    for (var index = 0; index < 1; index++) {
+                        var lowerSections = sections[index].lowerSections;
+
+                        lowerSections.forEach(function (section) {
+                            section.products.forEach(function (product) {
+
+                                var indexOfTag = product.tags.indexOf(searchedWord);
+                                if (indexOfTag != -1) {
+                                    productsToShow.push(product);
+                                }
+                            })
+                        })
+                    }
+                }
+                var parent = document.getElementById('productSection');
+                var displayBefore = document.getElementById('productSection-first');
+                for (var index = 0; index < productsToShow.length; index++) {
+                    var element = productsToShow[index];
+                    if (index + 1 == productsToShow.length) {
+                        displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
+                    } else {
+                        displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
+                    }
+
+                }
+
+            }.bind(searched), 1000);
+
+        },
+
+
         setProducts: function (lowerSection, index) {
-            var parent = document.getElementById('productSection' + (index + 1)); 
-            var displayBefore = document.getElementById('productSection' + (index + 1) + '-first')
+            var parent = document.getElementById('productSection' + (index + 1));
+            var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
             var howMuch = lowerSection.products.length;
             for (var product = 0; product < howMuch; product++) {
@@ -147,15 +206,15 @@ var productSections = (function () {
                     displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
                 } else {
                     displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
-                }         
+                }
             }
         },
 
         getProducts: function (lowerSection, index) {
-            var parent = document.getElementById('productSection' + (index + 1)); 
+            var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
-            indicatorsDisplay(parent, displayBefore);
+            indicatorsDisplay(parent, displayBefore, 5);
 
             if (lowerSection.products.length != 0) {
                 productSections.setProducts(lowerSection, index);
@@ -200,11 +259,3 @@ var productSections = (function () {
 
     };
 })();
-
-
-
-
-
-
-
-productSections.onLoad();

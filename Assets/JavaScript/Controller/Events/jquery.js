@@ -216,13 +216,6 @@ $('#myCart').on('mouseleave', function (e) {
     $(e.currentTarget).children().last().remove();
 });
 
-
-
-
-
-
-
-
 function onBodyLoad() {
     $('#toHome').css({
         left: $('#wrapper').offset().left + 10 + 'px'
@@ -230,11 +223,7 @@ function onBodyLoad() {
 }
 
 
-document.body.onload = function () {
-    onBodyLoad()
-    isMenuDown = false;
-    scrolling(); 
-}
+
 
 
 

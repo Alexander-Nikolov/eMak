@@ -1,9 +1,9 @@
 function displayProducts(img, info, price, supPrice, parent, insertBefore, last) {
-    
     var ele1 = document.createElement('div');
     ele1.className = 'productWrap';
     ele1.style.display = 'none';
     parent.insertBefore(ele1, insertBefore);
+    
 
 
     var ele2 = document.createElement('div');
@@ -66,8 +66,8 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
 }
 
 
-function indicatorsDisplay(parent, insertBefore) {
-    for (var index = 0; index < 5; index++) {
+function indicatorsDisplay(parent, insertBefore, howMany) {
+    for (var index = 0; index < howMany; index++) {
         var ele = document.createElement('div');
         ele.className = 'prodIndicator';
         parent.insertBefore(ele, insertBefore);
@@ -111,3 +111,5 @@ function createHoverWindow(target, infoText, buttonInfo) {
     ele7.textContent = buttonInfo;
     ele5.appendChild(ele7);
 }
+
+

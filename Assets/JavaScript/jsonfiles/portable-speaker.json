@@ -3,30 +3,35 @@
         "img": "../Images/Products/porspeaker1.png",
         "info": "Преносима тонколонка JBL GO, Черна ",
         "price": "58",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["тонколона"]
     },
     {
         "img": "../Images/Products/porspeaker2.jpg",
         "info": "Преносима тонколона bluetooth A+ BS1 ",
         "price": "17",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["тонколона"]
     },
     {
         "img": "../Images/Products/porspeaker3.jpg",
         "info": "Преносима тонколона JBL GO, Сива ",
         "price": "63",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["тонколона"]
     },
     {
         "img": "../Images/Products/porspeaker4.jpg",
         "info": "Преносима тонколона bluetooth A+ X1, Черна ",
         "price": "52",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["тонколона"]
     },
     {
         "img": "../Images/Products/porspeaker5.jpg",
         "info": "Преносима тонколона bluetooth A+ BS5 ",
         "price": "35",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["тонколона"]
     }
 ]

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>eMak</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/mainstyles.css">
+    <link rel="stylesheet" href="../CSS/media380.css">
+    <link rel="stylesheet" href="../CSS/media800.css">
+    <link rel="stylesheet" href="../CSS/media1170.css">
+    <link rel="stylesheet" href="../CSS/search/searchstyle.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <div id="logoAndSearch">
+                    <div id="logoImg">
+                        <a href="index.html">
+                            <img src="../Images/logo.png" alt="The logo of the site">
+                        </a>
+                    </div>
+                    <div id="search">
+                        <div id="searchForm">
+                            <div id="arrowLeft"></div>
+                            <form id="searchBar">
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
+                                <div id="searchButton">
+                                    <a href=""><span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="searchResult"></h1>
+        </header>
+        <main>
+            <section>
+                <div id="productsContainer">
+                    <script>
+                            document.write('<div id="productSection" class="productSection"> ');
+                            document.write('<div class="fillSpace" id="productSection-first"></div>');
+                            document.write('<div class="fillSpace"></div>');
+                            document.write('<div class="fillSpace"></div>');
+                            document.write('<div class="fillSpace"></div>');
+                            document.write('<div class="fillSpace"></div>');
+                            document.write('</div>');
+                    </script>
+                </div>
+            </section>
+        </main>
+        <div id="toHome">
+            <span>
+                <img src="../Images/homearrow.png" alt="back to top">
+                <span>Начало!</span>
+            </span>
+        </div>
+        <footer>
+            <div id="footerContainer">
+                <div id="contact">
+                    <span>Контакти: Телефон: 02/1241241</span>
+                    <span><a href="facebook.com"><img src="../Images/Facebook.png" alt=""></a></span>
+                </div>
+                <div id="usefulIcons">
+                    <div><a href="./login.html"><span class="glyphicon glyphicon-user blackIcon"></a></span>
+                    </div>
+                    <div><a href=""><span class="glyphicon glyphicon-heart blackIcon"></a></span>
+                    </div>
+                    <div><a href="./cartpage.html"><span class="glyphicon glyphicon-shopping-cart blackIcon"></a></span>
+                    </div>
+                    <div>
+                        <a href=""><img src="../Images/tir.png" alt=""></a>
+                    </div>
+                </div>
+                <div id="copyR">
+                    <span>Copyright © 2001-2017 Данте Интернешънъл СА, Идентификационен номер по ДДС: BG5308935 </span>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../JavaScript/Controller/DoM/domchange.js"></script>
+    <script src="../JavaScript/Model/mainJS.js"></script>
+    <script src="../JavaScript/Controller/Events/events.js"></script>
+    <script src="../JavaScript/searchScript.js"></script>
+    
+</body>
+
+</html>
