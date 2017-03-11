@@ -11,3 +11,13 @@ main section {
     color: white;
 
 }
+
+
+
+#noResult {
+    text-align: center;
+    font-size: 2em;
+    color: #2E221F;
+    height: 455px;
+    display: none;
+}

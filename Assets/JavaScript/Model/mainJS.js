@@ -8,11 +8,11 @@ function LowerSection(name, category) {
     this.products = [];
 }
 
-LowerSection.prototype.addProducts = function (products) {
+LowerSection.prototype.addProducts = function(products) {
     this.products = products;
 }
 
-var productSections = (function () {
+var productSections = (function() {
     var sections = [
         {
             section: new Section('Телефони, Таблети & Смарт технологии'),
@@ -136,7 +136,8 @@ var productSections = (function () {
 
     return {
 
-        displaySearchResult: function (searched) {
+        displaySearchResult: function(searched) {
+            document.getElementById('noResult').style.display = 'none';
             var searched = {
                 searched: searched
             }
@@ -145,9 +146,9 @@ var productSections = (function () {
             indicatorsDisplay(parent, displayBefore, 6);
             for (var index = 0; index < 1; index++) {
                 var lowerSections = sections[index].lowerSections;
-                lowerSections.forEach(function (section) {
+                lowerSections.forEach(function(section) {
                     var xhr = new XMLHttpRequest();
-                    xhr.onreadystatechange = function () {
+                    xhr.onreadystatechange = function() {
                         if (xhr.readyState === 4) {
                             section.products = (JSON.parse(xhr.responseText));
                         }
@@ -157,37 +158,49 @@ var productSections = (function () {
                 })
 
             }
-            setTimeout(function () {
+            setTimeout(function() {
 
-                var searched = this.searched.split(/[ ,]+/);
-
+                var searched = this.searched.split(/[и ,]+/);
                 var productsToShow = [];
+
+                for (var index = 0; index < 1; index++) {
+                    var lowerSections = sections[index].lowerSections;
+                    lowerSections.forEach(function(section) {
+                        section.products.forEach(function(product) {
+                            productsToShow.push(product);
+                        })
+                    })
+                }
+
                 for (var searchedIndex = 0; searchedIndex < searched.length; searchedIndex++) {
                     var searchedWord = searched[searchedIndex].toLowerCase();
-                    for (var index = 0; index < 1; index++) {
-                        var lowerSections = sections[index].lowerSections;
-
-                        lowerSections.forEach(function (section) {
-                            section.products.forEach(function (product) {
-
-                                var indexOfTag = product.tags.indexOf(searchedWord);
-                                if (indexOfTag != -1) {
-                                    productsToShow.push(product);
-                                }
-                            })
-                        })
+                    if (searchedWord.length != 0) {
+                        for (var index = 0; index < productsToShow.length; index++) {
+                            var product = productsToShow[index];
+                            var indexOfTag = product.tags.indexOf(searchedWord);
+                            if (indexOfTag == -1) {
+                                productsToShow.splice(index, 1);
+                                index--;
+                            }
+                        }
                     }
                 }
+
                 var parent = document.getElementById('productSection');
                 var displayBefore = document.getElementById('productSection-first');
-                for (var index = 0; index < productsToShow.length; index++) {
-                    var element = productsToShow[index];
-                    if (index + 1 == productsToShow.length) {
-                        displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
-                    } else {
-                        displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
-                    }
+                if (productsToShow.length != 0) {
+                    for (var index = 0; index < productsToShow.length; index++) {
+                        var element = productsToShow[index];
+                        if (index + 1 == productsToShow.length) {
+                            displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
+                        } else {
+                            displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
+                        }
 
+                    }
+                } else {
+                    $('.prodIndicator').remove();
+                    document.getElementById('noResult').style.display = 'block';
                 }
 
             }.bind(searched), 1000);
@@ -195,7 +208,7 @@ var productSections = (function () {
         },
 
 
-        setProducts: function (lowerSection, index) {
+        setProducts: function(lowerSection, index) {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
@@ -210,7 +223,7 @@ var productSections = (function () {
             }
         },
 
-        getProducts: function (lowerSection, index) {
+        getProducts: function(lowerSection, index) {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
@@ -221,7 +234,7 @@ var productSections = (function () {
                 return;
             }
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
                     lowerSection.products = (JSON.parse(xhr.responseText));
                     productSections.setProducts(lowerSection, index);
@@ -231,28 +244,28 @@ var productSections = (function () {
             xhr.send();
         },
 
-        getLowerSections: function (index) {
+        getLowerSections: function(index) {
             return sections[index].lowerSections;
         },
 
-        getSection: function (index) {
+        getSection: function(index) {
             return sections[index];
         },
 
-        findProduct: function (ele) {
+        findProduct: function(ele) {
             var text = ele.textContent;
             $('.productWrap').remove();
-            return sections.find(function (obj, index) {
+            return sections.find(function(obj, index) {
                 if (text === obj.section.name) {
-                    obj.lowerSections.forEach(function (element, index2) {
+                    obj.lowerSections.forEach(function(element, index2) {
                         productSections.getProducts(element, index2);
                     })
                     return obj;
                 }
             })
         },
-        onLoad: function () {
-            sections[0].lowerSections.forEach(function (lowSec, index) {
+        onLoad: function() {
+            sections[0].lowerSections.forEach(function(lowSec, index) {
                 productSections.getProducts(lowSec, index);
             })
         }
