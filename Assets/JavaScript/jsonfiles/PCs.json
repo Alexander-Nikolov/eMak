@@ -3,30 +3,35 @@
         "img": "../Images/Products/pc1.jpg",
         "info": "Настолен компютър Serioux Classic A4 с процесор AMD A10-7870K, 3.9GHz, 8GB RAM, 1TB HDD, WiFi ",
         "price": "959",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["компютър", "настолен компютър"]
     },
     {
         "img": "../Images/Products/pc2.jpg",
         "info": "Настолен компютър Serioux Classic C5 c процесор Intel® Celeron™ Dual Core N3050 1.60Ghz, 2GB RAM, 500GB HDD, Intel® HD Graphics ",
         "price": "399",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["компютър", "настолен компютър"]
     },
     {
         "img": "../Images/Products/pc3.jpg",
         "info": "Настолен компютър Lenovo IdeaCentre 300S-11IBR с процесор Intel® Celeron® Quad Core™ J3160 1.60GHz, Braswell™, 4GB, 1TB, DVD-ROM, Intel® HD Graphics, Free DOS, Мишка + Клавиатура, Черен ",
         "price": "574",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["компютър", "настолен компютър"]
     },
     {
         "img": "../Images/Products/pc4.jpg",
         "info": "Настолен компютър PC HP EliteDesk 705 G2 MT c процесор AMD A10 PRO-8750B 3.60 GHz, 8GB, 128GB SSD, DVD-RW, AMD Radeon™ R7 Graphics, Microsoft Windwos 7 Pro/Microsoft Windows 10 Pro, Клавиатура + Мишка, Black ",
         "price": "1.499",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["компютър", "настолен компютър"]
     },
     {
         "img": "../Images/Products/pc5.jpg",
         "info": "Настолен компютър Lenovo IdeaCentre Y700-34ISH с процесор Intel® Core™ i5-6600 3.30 GHz, Skylake™, 8GB, 1TB, DVD-RW, nVIDIA GeForce GTX 1070 8GB, Free DOS, Мишка+ Клаваитура ",
         "price": "2.559",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["компютър", "настолен компютър"]
     }
 ]

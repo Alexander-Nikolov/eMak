@@ -1,0 +1,37 @@
+[
+    {
+        "img": "../Images/Products/washingmach1.jpg",
+        "info": "Пералня Whirlpool AWO/C60100, 1000 об./мин, 6 кг, Клас A++, Бяла",
+        "price": "429",
+        "supPrice": "79",
+        "tags": ["пералня", "бяла"]
+    },
+    {
+        "img": "../Images/Products/washingmach2.jpg",
+        "info": "Пералня Star-Light WMM-508A+, 5 кг, 800 об/мин, Клас A+, Бяла ",
+        "price": "329",
+        "supPrice": "00",
+        "tags": ["пералня", "бяла"]
+    },
+    {
+        "img": "../Images/Products/washingmach3.jpg",
+        "info": "Пералня 6th Sense Colours Whirlpool AWO/C6314, 1200 об./мин, 6 кг, Клас A+++, Бяла ",
+        "price": "599",
+        "supPrice": "09",
+        "tags": ["пералня", "бяла"]
+    },
+    {
+        "img": "../Images/Products/washingmach4.jpg",
+        "info": "Пералня Whirlpool AWS 71000, 6th Sense Colours, Slim, 7 кг, 1000 об/мин, Клас A+++ ",
+        "price": "699",
+        "supPrice": "99",
+        "tags": ["пералня", "бяла"]
+    },
+    {
+        "img": "../Images/Products/washingmach5.jpg",
+        "info": "Пералня Heinner HWM-M7012A+, 7 кг, 1200 об/мин, Клас A+, Display LED, Бяла ",
+        "price": "464",
+        "supPrice": "99",
+        "tags": ["пералня", "бяла"]
+    }
+]

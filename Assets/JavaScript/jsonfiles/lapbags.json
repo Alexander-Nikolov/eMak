@@ -3,30 +3,35 @@
         "img": "../Images/Products/lapbag1.jpg",
         "info": "Чанта за лаптоп A+ LBLS266B, 15.6, Черна ",
         "price": "43",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["чанта", "чанта за лаптоп", "черна"]
     },
     {
         "img": "../Images/Products/lapbag2.jpg",
         "info": "Раница за лаптоп A+ BBLS99B, 15.6, Black/Blue ",
         "price": "32",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["раница", "раница за лаптоп", "черна"]
     },
     {
         "img": "../Images/Products/lapbag3.jpg",
         "info": "Чанта за лаптоп A+ LBLS20AB, 15.6, Черна ",
         "price": "34",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["чанта", "чанта за лаптоп", "черна"]
     },
     {
         "img": "../Images/Products/lapbag4.jpg",
         "info": "Чанта за лаптоп A+ LBM83, 15.6, Black ",
         "price": "21",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["чанта", "чанта за лаптоп", "черна"]
     },
     {
         "img": "../Images/Products/lapbag5.jpg",
         "info": "Чанта за лаптоп Asus Nereus, 16, Черна ",
         "price": "23",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["чанта", "чанта за лаптоп", "черна"]
     }
 ]

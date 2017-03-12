@@ -4,34 +4,34 @@
         "info": "Смартфон Samsung Galaxy J5 (2016), Dual Sim, 16GB, 4G, Black ",
         "price": "314",
         "supPrice": "99",
-        "tags": ["смартфон"]
+        "tags": ["смартфон", "черен", "16gb"]
     },
     {
         "img": "../Images/Products/phone2.jpg",
         "info": "Смартфон Wink City S, Dual SIM, 8GB, 3G, Black ",
         "price": "144",
         "supPrice": "99",
-        "tags": ["смартфон"]
+        "tags": ["смартфон", "черен", "8gb"]
     },
     {
         "img": "../Images/Products/phone3.jpg",
         "info": "Смартфон Huawei P8 Lite, Dual Sim, 16 GB, 4G, Черен ",
         "price": "314",
         "supPrice": "09",
-        "tags": ["смартфон"]
+        "tags": ["смартфон", "черен", "16gb"]
     },
     {
         "img": "../Images/Products/phone4.jpg",
         "info": "Смартфон Wink World SE, Dual SIM, 8GB, 3G, Черен",
         "price": "414",
         "supPrice": "99",
-        "tags": ["смартфон"]
+        "tags": ["смартфон", "черен", "8gb"]
     },
     {
         "img": "../Images/Products/phone5.jpg",
         "info": "Смартфон Apple iPhone 7, 32GB, Black ",
         "price": "214",
         "supPrice": "99",
-        "tags": ["смартфон"]
+        "tags": ["смартфон", "черен", "32gb", "iphone"]
     }
 ]

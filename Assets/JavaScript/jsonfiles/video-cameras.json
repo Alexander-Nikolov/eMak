@@ -1,0 +1,37 @@
+[
+    {
+        "img": "../Images/Products/vidcamera1.jpg",
+        "info": "Видеокамера Sony HDR-PJ410 с вграден проектор, Full HD, Черна ",
+        "price": "699",
+        "supPrice": "79",
+        "tags": ["видеокамера", "черна"]
+    },
+    {
+        "img": "../Images/Products/vidcamera2.jpg",
+        "info": "Видеокамера Sony HDR-CX625, Full-HD, Черна ",
+        "price": "941",
+        "supPrice": "00",
+        "tags": ["видеокамера", "черна"]
+    },
+    {
+        "img": "../Images/Products/vidcamera3.jpg",
+        "info": "Видеокамера Canon Legria HF R706, Full HD, Черна ",
+        "price": "519",
+        "supPrice": "09",
+        "tags": ["видеокамера", "черна"]
+    },
+    {
+        "img": "../Images/Products/vidcamera4.jpg",
+        "info": "Видеокамера Panasonic HC-X920EP-K, Full HD, Wi-Fi, Black ",
+        "price": "1.199",
+        "supPrice": "99",
+        "tags": ["видеокамера", "черна"]
+    },
+    {
+        "img": "../Images/Products/vidcamera5.jpg",
+        "info": "Видеокамера Sony FDR-AX33, Ultra HD 4K, Черна ",
+        "price": "1.599",
+        "supPrice": "99",
+        "tags": ["видеокамера", "черна"]
+    }
+]

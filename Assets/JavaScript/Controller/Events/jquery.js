@@ -126,6 +126,7 @@ function scrolling() {
 
 }
 $(window).scroll(function () {
+    isMenuDown = false;
     scrolling();
 });
 $(window).resize(function () {

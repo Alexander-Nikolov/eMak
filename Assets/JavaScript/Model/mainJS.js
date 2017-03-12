@@ -57,7 +57,7 @@ var productSections = (function() {
             section: new Section('Големи електроуреди'),
             lowerSections: [
                 new LowerSection('Хладилници', 'refrigerators'),
-                new LowerSection('Фризери', 'Freezers'),
+                new LowerSection('Фризери', 'freezers'),
                 new LowerSection('Перални', 'washing-mach'),
                 new LowerSection('Сушилни', 'dryers'),
                 new LowerSection('Съдомиялни', 'dishwashers'),
@@ -144,7 +144,7 @@ var productSections = (function() {
             var parent = document.getElementById('productSection');
             var displayBefore = document.getElementById('productSection-first');
             indicatorsDisplay(parent, displayBefore, 6);
-            for (var index = 0; index < 1; index++) {
+            for (var index = 0; index < sections.length; index++) {
                 var lowerSections = sections[index].lowerSections;
                 lowerSections.forEach(function(section) {
                     var xhr = new XMLHttpRequest();
@@ -160,10 +160,10 @@ var productSections = (function() {
             }
             setTimeout(function() {
 
-                var searched = this.searched.split(/[и ,]+/);
+                var searched = this.searched.split(/[ ,]+/);
                 var productsToShow = [];
 
-                for (var index = 0; index < 1; index++) {
+                for (var index = 0; index < sections.length; index++) {
                     var lowerSections = sections[index].lowerSections;
                     lowerSections.forEach(function(section) {
                         section.products.forEach(function(product) {
