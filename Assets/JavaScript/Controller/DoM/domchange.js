@@ -53,6 +53,13 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
 
     var ele5 = document.createElement('div');
     ele5.className = 'productMoreInfo';
+    ele5.addEventListener('click', function() {
+        sessionStorage.prodImage = img;
+        sessionStorage.prodPrice = price;
+        sessionStorage.prodSupPrice = supPrice;
+
+        window.location = "./productpage.html"
+    }, false)
     ele1.appendChild(ele5);
 
     var ele55 = document.createElement('span');
