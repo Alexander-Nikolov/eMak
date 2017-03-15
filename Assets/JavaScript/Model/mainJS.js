@@ -1,3 +1,12 @@
+function urlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status != 404;
+}
+
+
+
 function Section(name) {
     this.name = name;
 }
@@ -6,13 +15,14 @@ function LowerSection(name, category) {
     this.name = name;
     this.category = category;
     this.products = [];
+    this.showNumber = 3;
 }
 
-LowerSection.prototype.addProducts = function(products) {
+LowerSection.prototype.addProducts = function (products) {
     this.products = products;
 }
 
-var productSections = (function() {
+var productSections = (function () {
     var sections = [
         {
             section: new Section('Телефони, Таблети & Смарт технологии'),
@@ -136,7 +146,7 @@ var productSections = (function() {
 
     return {
 
-        displaySearchResult: function(searched) {
+        displaySearchResult: function (searched) {
             document.getElementById('noResult').style.display = 'none';
             var searched = {
                 searched: searched
@@ -146,27 +156,31 @@ var productSections = (function() {
             indicatorsDisplay(parent, displayBefore, 6);
             for (var index = 0; index < sections.length; index++) {
                 var lowerSections = sections[index].lowerSections;
-                lowerSections.forEach(function(section) {
+                lowerSections.forEach(function (section) {
                     var xhr = new XMLHttpRequest();
-                    xhr.onreadystatechange = function() {
+                    xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4) {
                             section.products = (JSON.parse(xhr.responseText));
                         }
                     }
-                    xhr.open('GET', '../JavaScript/jsonfiles/' + section.category + '.json');
+                    if (urlExists('../JavaScript/jsonfiles/' + section.category + '.json')) {
+                        xhr.open('GET', '../JavaScript/jsonfiles/' + section.category + '.json');
+                    } else {
+                        xhr.open('GET', '../JavaScript/jsonfiles/phones.json');
+                    }
                     xhr.send();
                 })
 
             }
-            setTimeout(function() {
+            setTimeout(function () {
 
                 var searched = this.searched.split(/[ ,]+/);
                 var productsToShow = [];
 
                 for (var index = 0; index < sections.length; index++) {
                     var lowerSections = sections[index].lowerSections;
-                    lowerSections.forEach(function(section) {
-                        section.products.forEach(function(product) {
+                    lowerSections.forEach(function (section) {
+                        section.products.forEach(function (product) {
                             productsToShow.push(product);
                         })
                     })
@@ -208,11 +222,15 @@ var productSections = (function() {
         },
 
 
-        setProducts: function(lowerSection, index) {
+        setProducts: function (lowerSection, index) {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
-
-            var howMuch = lowerSection.products.length;
+            var seeMore = document.getElementById('seeMore' + (index + 1));
+            var seeMoreFunc = function (e) {
+                showMore(lowerSection, parent, displayBefore, e.currentTarget, index);
+            }
+            seeMore.onclick = seeMoreFunc;
+            var howMuch = lowerSection.showNumber;
             for (var product = 0; product < howMuch; product++) {
                 var element = lowerSection.products[product];
                 if (product + 1 === howMuch) {
@@ -223,7 +241,7 @@ var productSections = (function() {
             }
         },
 
-        getProducts: function(lowerSection, index) {
+        getProducts: function (lowerSection, index) {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
@@ -234,38 +252,44 @@ var productSections = (function() {
                 return;
             }
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     lowerSection.products = (JSON.parse(xhr.responseText));
                     productSections.setProducts(lowerSection, index);
                 }
             }
-            xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
+            if (urlExists('../JavaScript/jsonfiles/' + lowerSection.category + '.json')) {
+                xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
+            } else {
+                xhr.open('GET', '../JavaScript/jsonfiles/phones.json');
+            }
             xhr.send();
         },
 
-        getLowerSections: function(index) {
+        getLowerSections: function (index) {
             return sections[index].lowerSections;
         },
 
-        getSection: function(index) {
+        getSection: function (index) {
             return sections[index];
         },
 
-        findProduct: function(ele) {
+        findProduct: function (ele) {
             var text = ele.textContent;
             $('.productWrap').remove();
-            return sections.find(function(obj, index) {
+            $('.seeMore').removeClass('seeLess');
+            $('.seeMore').text('Виж още');
+            return sections.find(function (obj, index) {
                 if (text === obj.section.name) {
-                    obj.lowerSections.forEach(function(element, index2) {
+                    obj.lowerSections.forEach(function (element, index2) {
                         productSections.getProducts(element, index2);
                     })
                     return obj;
                 }
             })
         },
-        onLoad: function() {
-            sections[0].lowerSections.forEach(function(lowSec, index) {
+        onLoad: function () {
+            sections[0].lowerSections.forEach(function (lowSec, index) {
                 productSections.getProducts(lowSec, index);
             })
         }

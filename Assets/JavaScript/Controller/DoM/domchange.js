@@ -3,7 +3,7 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
     ele1.className = 'productWrap';
     ele1.style.display = 'none';
     parent.insertBefore(ele1, insertBefore);
-    
+
 
 
     var ele2 = document.createElement('div');
@@ -53,7 +53,7 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
 
     var ele5 = document.createElement('div');
     ele5.className = 'productMoreInfo';
-    ele5.addEventListener('click', function() {
+    ele5.addEventListener('click', function () {
         sessionStorage.prodImage = img;
         sessionStorage.prodPrice = price;
         sessionStorage.prodSupPrice = supPrice;
@@ -120,3 +120,29 @@ function createHoverWindow(target, infoText, buttonInfo) {
 }
 
 
+
+
+
+
+function showMore(ele, parent, displayBefore, button, indexOfSection) {
+    if (!$(button).hasClass('seeLess')) {
+        $(button).addClass('seeLess');
+        button.textContent = 'Виж по-малко'
+        indicatorsDisplay(parent, displayBefore, ele.products.length - ele.showNumber);
+        for (var index = ele.showNumber; index < ele.products.length; index++) {
+            var element = ele.products[index];
+            if (index + 1 === ele.products.length) {
+                displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore, true);
+            } else {
+                displayProducts(element.img, element.info, element.price, element.supPrice, parent, displayBefore);
+            }
+        }
+    } else {
+        $(button).removeClass('seeLess');
+        button.textContent = 'Виж повече';
+        for (var index = ele.showNumber; index < ele.products.length; index++) {
+            var element = document.querySelectorAll('#productSection' + (indexOfSection + 1) + '>.productWrap')[ele.showNumber];
+            element.parentNode.removeChild(element);
+        }
+    }
+}

@@ -507,7 +507,7 @@ main section {
 	cursor: pointer;
 }
 
-.seeMore:hover {
+.seeMore:hover, .seeLess {
 	background: #2E221F;
 }
 
