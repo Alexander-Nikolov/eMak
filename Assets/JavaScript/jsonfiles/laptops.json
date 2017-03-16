@@ -3,30 +3,35 @@
         "img": "../Images/Products/laptop1.jpg",
         "info": "Лаптоп Acer Aspire ES1-523-276S с процесор AMD E1-7010 Dual Core (up to 1.5GHz), 15.6 HD LED (HDMI), AMD Radeon R2, 4GB RAM, 500GB HDD, Linux, BG клавиатура ",
         "price": "1.300",
-        "supPrice": "99"
+        "supPrice": "99",
+        "brand": "Acer"
     },
     {
         "img": "../Images/Products/laptop2.jpg",
         "info": "Лаптоп ASUS A550VX-XX286D с процесор Intel® Core™ i5-6300HQ 2.30GHz, Skylake™, 15.6, 4GB, 1TB, DVD-RW, nVIDIA® GeForce® GTX 950M 2GB, Free DOS, Blue Gray ",
         "price": "1.144",
-        "supPrice": "00"
+        "supPrice": "00",
+        "brand": "Asus"
     },
     {
         "img": "../Images/Products/laptop3.jpg",
         "info": "Лаптоп Lenovo IdeaPad 110-15IBR с процесор Intel® Celeron® N3060 1.60GHz, 15.6, 4GB, 500GB, DVD-RW, Intel® HD Graphics, Free DOS, Black",
         "price": "440",
-        "supPrice": "09"
+        "supPrice": "09",
+        "brand": "Lenovo"
     },
     {
         "img": "../Images/Products/laptop4.jpg",
         "info": "Лаптоп HP 255 G5 с процесор AMD Quad core A6-7310 APU with Radeon™ R4 Graphics (2.2 GHz up to 2.4GHz) 15.6 FHD (1920х1080) Anti-Glare, 4GB RAM, 500GB HDD, DVD/RW, 802.11ac,FREE DOS, BG клавиатура ",
         "price": "2.279",
-        "supPrice": "99"
+        "supPrice": "99",
+        "brand":"HP"
     },
     {
         "img": "../Images/Products/laptop5.jpg",
         "info": "Лаптоп ASUS ZenBook UX360CA-C4011T с процесор Intel® Core™ m3-6Y30 0.90GHz, Skylake™, 13.3, Full HD, Touchscreen, 4GB, 128GB SSD, Intel® HD Graphics 515, Microsoft Windows 10, Gray ",
         "price": "1.199",
-        "supPrice": "99"
+        "supPrice": "99",
+        "brand": "Asus"
     }
 ]

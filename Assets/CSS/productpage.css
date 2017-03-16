@@ -159,6 +159,13 @@ nav {
 	background-color: #dfdfdf;
 }
 
+#mobileMenuButton {
+	display: none;
+}
+
+#mobilemenu {
+	display: none;
+}
 /************************
 MAIN 
 ************************/

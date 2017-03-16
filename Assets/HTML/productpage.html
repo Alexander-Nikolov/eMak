@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/productpage.css">
+    <link rel="stylesheet" href="../CSS/media380product.css">
 </head>
 
 <body>
@@ -59,6 +60,21 @@
                 </div>
             </div> 
         </header>
+        <span id="mobileMenuButton" class="glyphicon glyphicon-align-justify">Меню</span>
+        <div id="mobilemenu">
+            <div class="navMenuItems">
+                <a href="">Продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Абониране за бюлетин</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Разопаковани продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">eMAG инфо</a>
+            </div>
+        </div>
         <nav>
             <div class="navMenuItems">
                 <span class="glyphicon glyphicon-align-justify"></span>
@@ -138,5 +154,16 @@
         </footer>
     </div>
 </body>
+<script type="text/javascript">
+    document.getElementById('mobileMenuButton').addEventListener('click', function() {
+        if(document.getElementById('mobilemenu').style.display == "none"){
+            document.getElementById('mobilemenu').style.display = 'inline-block';
+            document.getElementByTagName('nav').style.display = 'none';
+        } else {
+            document.getElementById('mobilemenu').style.display = 'none';
+            document.getElementByTagName('nav').style.display = 'inline-block';
+        }
+    }, false);
+</script>
 
 </html>
