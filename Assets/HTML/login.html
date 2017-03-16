@@ -19,15 +19,15 @@
 			</div>
 		</header>
 		<main>
-			<div id="loginForm">
+			<div id="emailForm" class="loginForm">
 				<h2>Здравей!</h2>
-				<form>
+				<form method="POST">
 					<div>
 						<label for="email">Моля въведи имейл адрес</label>
 						<input type="email" id="useremail" name="email" required/>
 					</div>
 					<div>
-						<input type="submit" id="buttonSubmit" value="Продължи"/>
+						<input type="submit" id="buttonSubmitEmail" value="Продължи"/>
 					</div>
 				</form>
 				<div id="help">
@@ -51,6 +51,18 @@
 						</button>
 					</div>
 				</div>
+			</div>
+			<div id="passwordForm" class="loginForm">
+				<h2>Здравей!</h2>
+				<form method="POST">
+					<div>
+						<label for="password">Моля въведи парола</label>
+						<input type="password" id="password" name="password" required/>
+					</div>
+					<div>
+						<input type="submit" id="buttonSubmitPassword" value="Продължи"/>
+					</div>
+				</form>
 			</div>
 		</main>
 		<footer>

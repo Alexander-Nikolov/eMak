@@ -15,7 +15,7 @@ HEADER
 MAIN
 **********************/
 
-#loginForm {
+.loginForm {
 	display: inline-block;
 	background-color: white;
 	border-radius: 8px;
@@ -23,19 +23,19 @@ MAIN
 	width: 25%;
 }
 
-#loginForm h2 {
+.loginForm h2 {
 	color: #999999;
 	font-size: 2.2em;
 	margin-bottom: 1em;
 }
 
-#loginForm label {
+.loginForm label {
 	display: block;
 	margin-bottom: 1em;
 }
 
-#loginForm input[type="email"], #buttonSubmit {
-	width:90%;
+.loginForm input[type="email"], .loginForm input[type="password"], #buttonSubmitEmail, #buttonSubmitPassword {
+	width: 90%;
 	height: 2.5em;
 	font-size: 1.1em;
 	margin-bottom: 1em;
@@ -44,11 +44,11 @@ MAIN
 	box-sizing: border-box;
 }
 
-#loginForm input[type="email"]:focus {
+.loginForm input[type="email"]:focus, .loginForm input[type="password"]:focus {
 	outline-width: 0;
 }
 
-#buttonSubmit {
+#buttonSubmitPassword, #buttonSubmitEmail {
 	color: white;
 	background-color: #0068b5;
 }
@@ -102,6 +102,9 @@ MAIN
 	float: left;
 }
 
+#passwordForm {
+	display: none;
+}
 
 /**********************
 FOOTER

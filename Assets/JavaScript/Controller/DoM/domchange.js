@@ -101,11 +101,9 @@ function createHoverWindow(target, infoText, buttonInfo) {
     ele3.textContent = infoText;
     ele2.appendChild(ele3);
 
-
     var ele4 = document.createElement('div');
     ele4.className = 'hoverWindowButton';
     ele2.appendChild(ele4);
-
 
     var ele5 = document.createElement('span');
     ele4.appendChild(ele5);
@@ -118,11 +116,6 @@ function createHoverWindow(target, infoText, buttonInfo) {
     ele7.textContent = buttonInfo;
     ele5.appendChild(ele7);
 }
-
-
-
-
-
 
 function showMore(ele, parent, displayBefore, button, indexOfSection) {
     if (!$(button).hasClass('seeLess')) {

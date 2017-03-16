@@ -1,11 +1,6 @@
-/*Нека почнем за телефон първо*/
-
 /*************************
 GENERAL
 *************************/
-
-
-
 
 body {
 	font-family: sans-serif;
@@ -16,9 +11,6 @@ body {
 a, a:hover {
 	text-decoration: none;
 }
-
-
-
 
 #wrapper {
 	position: relative;
@@ -159,6 +151,34 @@ header {
 	background: #2E221F;
 }
 
+#profileMenu {
+	display: none;
+	/*text-align: left;*/
+}
+
+#profileMenu div {
+	border-radius: 15px;
+	background-color:#d02f05;
+	height: 75%;
+	padding: 0.09em;
+}
+
+#profileMenu a{
+	display: block;
+	font-size: 1.1em;
+	color:white;
+	padding: 0.09em;
+}
+
+#profileMenu a:hover {
+	text-decoration: underline !important;
+}
+
+#logOutButton {
+	color: white;
+	background-color: #2e221f;
+	border: none;
+}
 
 .textContent {
 	display: none;
