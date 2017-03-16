@@ -3,30 +3,35 @@
         "img": "../Images/Products/tablet1.jpg",
         "info": "Таблет ASUS ZenPad 8.0 Z380M-6A025A, 8, Quad-Core 1.3GHz, 2GB RAM, 16 GB, IPS, Dark Gray ",
         "price": "244",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["таблет", "asus", "тъмно сив"]
     },
     {
         "img": "../Images/Products/tablet2.jpg",
         "info": "Таблет Samsung Tab S2 VE T719, 8.0, Octa-Core 1.8 GHz, 3GB RAM, 32GB, 4G, White ",
         "price": "144",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["таблет", "samsung", "бял"]
     },
     {
         "img": "../Images/Products/tablet3.jpg",
         "info": "Таблет ASUS ZenPad 8.0 Z380KNL, 8.0, Quad-Core 1.2GHz, 2GB RAM, 16 GB, 4G, IPS, Dark Gray ",
         "price": "314",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["таблет", "asus", "тъмно сив"]
     },
     {
         "img": "../Images/Products/tablet4.jpg",
         "info": "Таблет Samsung Tab S2 VE T713, 8.0, Octa-Core 1.8 GHz, 3GB RAM, 32GB, White ",
         "price": "414",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["таблет", "samsung", "бял"]
     },
     {
         "img": "../Images/Products/tablet5.jpg",
         "info": "Таблет Huawei MediaPad T1, 8, Quad Core, 1.2 GHz, 1GB RAM, 8GB, 3G, IPS, Silver ",
         "price": "214",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["таблет", "huawei", "сребрист"]
     }
 ]

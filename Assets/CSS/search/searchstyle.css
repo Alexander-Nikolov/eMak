@@ -1,0 +1,23 @@
+main section {
+    width: 90%;
+    float: none;
+    margin: auto;
+}
+
+
+#searchResult {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+
+}
+
+
+
+#noResult {
+    text-align: center;
+    font-size: 2em;
+    color: #2E221F;
+    height: 455px;
+    display: none;
+}

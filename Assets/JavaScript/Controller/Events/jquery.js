@@ -27,6 +27,7 @@ Navigation hide + to home button
 $("#fixedNav").hide();
 var navShow = false;
 var toHomeShow = false;
+var isMenuDown = false;
 function scrolling() {
     if ($(window).scrollTop() > 230 && !navShow && window.innerWidth >= '1170') {
         navShow = true;
@@ -65,21 +66,41 @@ function scrolling() {
 
 
 
+    var sideMenuBottom = $('#sideMenu').offset().top + $('#sideMenu').height();
+    var mainBottom = $('main').offset().top + $('main').height();
+    var winTop = $(window).scrollTop();
 
 
 
-    if ($(window).scrollTop() > 550 && window.innerWidth >= '1170') {
+
+
+    if (sideMenuBottom >= mainBottom - 30 && !isMenuDown) {
+        isMenuDown = true;
+        $('#sideMenu').css({
+            top: mainBottom - $('#sideMenu').height() - 100,
+            position: 'absolute'
+        })
+    }
+
+    if (isMenuDown && winTop < $('#sideMenu').offset().top - 100) {
+        isMenuDown = false;
         $("#sideMenu").css({
             position: 'fixed',
             top: '100px'
         })
-    } else {
+    }
+
+    if ($(window).scrollTop() > 550 && window.innerWidth >= '1170' && !isMenuDown) {
+        $("#sideMenu").css({
+            position: 'fixed',
+            top: '100px'
+        })
+    } else if ($(window).scrollTop() < 550 && !isMenuDown) {
         $("#sideMenu").css({
             position: 'static'
         })
+
     }
-
-
 
 
 
@@ -102,8 +123,10 @@ function scrolling() {
     })
 
 
+
 }
 $(window).scroll(function () {
+    isMenuDown = false;
     scrolling();
 });
 $(window).resize(function () {
@@ -159,9 +182,9 @@ $('main aside nav ul li').click(function (e) {
 
 
 $('.navLink').click(function (e) {
-    var linkNames = getLowerSecNames(e.currentTarget.firstChild);
+    var obj = productSections.findProduct(e.currentTarget.firstChild);
     $('#sideMenu li>span span:first-child').each(function (index) {
-        $(this).text(linkNames[index]);
+        $(this).text(obj.lowerSections[index].name);
     });
     $('#navigation ul li').children().removeClass('navClickedOn');
     $(e.currentTarget).addClass('navClickedOn');
@@ -170,68 +193,29 @@ $('.navLink').click(function (e) {
 
 
 
-$('#myAccount').on('mouseenter', function(e) {
-    createHoverWindow(e.currentTarget, e.clientX, e.clientY, 'Нямаш акаунт ?', 'Влезте в акаунт');
+$('#myAccount').on('mouseenter', function (e) {
+    createHoverWindow(e.currentTarget, 'Нямаш акаунт ?', 'Влезте в акаунт');
 });
 
-$('#myAccount').on('mouseleave', function(e) {
+$('#myAccount').on('mouseleave', function (e) {
     $(e.currentTarget).children().last().remove();
 });
 
-$('#myFavorites').on('mouseenter', function(e) {
-    createHoverWindow(e.currentTarget, e.clientX, e.clientY, 'Трябва да си в акаунт за да видиш любимите си продукти ?', 'Влезте в акаунт');
+$('#myFavorites').on('mouseenter', function (e) {
+    createHoverWindow(e.currentTarget, 'Трябва да си в акаунт за да видиш любимите си продукти', 'Влезте в акаунт');
 });
 
-$('#myFavorites').on('mouseleave', function(e) {
+$('#myFavorites').on('mouseleave', function (e) {
     $(e.currentTarget).children().last().remove();
 });
 
-$('#myCart').on('mouseenter', function(e) {
-    createHoverWindow(e.currentTarget, e.clientX, e.clientY, 'Вашите продукти в количката:', 'Влезте в акаунт');
+$('#myCart').on('mouseenter', function (e) {
+    createHoverWindow(e.currentTarget, 'Вашите продукти в количката:', 'Влезте в акаунт');
 });
 
-$('#myCart').on('mouseleave', function(e) {
+$('#myCart').on('mouseleave', function (e) {
     $(e.currentTarget).children().last().remove();
 });
-
-
-function createHoverWindow(target, x, y, infoText, buttonInfo) {
-    var ele1 = document.createElement('div');
-    ele1.className = 'hoverWindow';
-    ele1.style.left = x - $(target).offset().left + 'px';
-    ele1.style.top = y - $(target).offset().top + 'px';
-    target.appendChild(ele1);
-
-    var ele2 = document.createElement('div');
-    ele2.className = 'hoverWindowContainer';
-    ele1.appendChild(ele2);
-
-    var ele3 = document.createElement('p');
-    ele3.className = 'hoverWindowInfo';
-    ele3.textContent = infoText;
-    ele2.appendChild(ele3);
-
-
-    var ele4 = document.createElement('div');
-    ele4.className = 'hoverWindowButton';
-    ele2.appendChild(ele4);
-
-
-    var ele5 = document.createElement('span');
-    ele4.appendChild(ele5);
-
-    var ele6 = document.createElement('span');
-    ele6.textContent = '>>';
-    ele5.appendChild(ele6);
-
-    var ele7 = document.createElement('span');
-    ele7.textContent = buttonInfo;
-    ele5.appendChild(ele7);
-}
-
-
-
-
 
 function onBodyLoad() {
     $('#toHome').css({
@@ -240,9 +224,7 @@ function onBodyLoad() {
 }
 
 
-document.body.onload = function () {
-    onBodyLoad()
-}
+
 
 
 

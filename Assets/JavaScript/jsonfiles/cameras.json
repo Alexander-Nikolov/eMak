@@ -1,0 +1,37 @@
+[
+    {
+        "img": "../Images/Products/camera1.jpg",
+        "info": "Дигитален фотоапарат Sony DSC-WX500, 18.2MP, Wi-Fi, NFC, White ",
+        "price": "649",
+        "supPrice": "79",
+        "tags": ["фотоапарат", "бял"]
+    },
+    {
+        "img": "../Images/Products/camera2.jpg",
+        "info": "Дигитален фотоапарат Sony Cyber-Shot DSC-RX100 II, 20.2MP, FullHD, Black ",
+        "price": "1.148",
+        "supPrice": "00",
+        "tags": ["фотоапарат", "черен"]
+    },
+    {
+        "img": "../Images/Products/camera3.jpg",
+        "info": "Комплект дигитален фотоапарат Polaroid Snap с 8GB MicroSD карта памет и Фотохартия Polaroid Zink Paper",
+        "price": "299",
+        "supPrice": "09",
+        "tags": ["фотоапарат", "бял"]
+    },
+    {
+        "img": "../Images/Products/camera4.jpg",
+        "info": "Дигитален фотоапарат Olympus TG-870, 16MP, Водоустойчив, Удароустойчив, Черен ",
+        "price": "559",
+        "supPrice": "99",
+        "tags": ["фотоапарат", "черен"]
+    },
+    {
+        "img": "../Images/Products/camera5.jpg",
+        "info": "Дигитален фотоапарат Canon SX620HS, 20.2MP, Сребрист ",
+        "price": "559",
+        "supPrice": "99",
+        "tags": ["фотоапарат", "сребрист"]
+    }
+]

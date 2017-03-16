@@ -3,30 +3,35 @@
         "img": "../Images/Products/offchair1.jpg",
         "info": "Стол Smart, Черен ",
         "price": "64",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["стол", "черен"]
     },
     {
         "img": "../Images/Products/offchair2.jpg",
         "info": "Стол Kring Edison, PU ",
         "price": "144",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["стол", "kring"]
     },
     {
         "img": "../Images/Products/offchair3.jpg",
         "info": "Стол Kring Eco, Оранжев ",
         "price": "109",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["стол", "оранжев"]
     },
     {
         "img": "../Images/Products/offchair4.jpg",
         "info": "Стол Kring Bokai, Ергономичен, Екологична кожа, Черен",
         "price": "199",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["стол", "черен"]
     },
     {
         "img": "../Images/Products/offchair5.jpg",
         "info": "Стол Kring Kontur, Мрежа, Черен ",
         "price": "79",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["стол", "черен"]
     }
 ]

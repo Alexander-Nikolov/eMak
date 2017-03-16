@@ -3,30 +3,35 @@
         "img": "../Images/Products/tv1.jpg",
         "info": "Телевизор LED Smart Samsung, 40(101 cм), 40KU6072, 4K Ultra HD ",
         "price": "859",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["телевизор", "samsung"]
     },
     {
         "img": "../Images/Products/tv2.jpg",
         "info": "Телевизор Smart LED Samsung 40KU6172, Извит, 40 (101 см), 4K Ultra HD ",
         "price": "1.099",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["телевизор", "samsung"]
     },
     {
         "img": "../Images/Products/tv3.jpg",
         "info": "Телевизор LED Samsung 32J4000, 32 (80 см), HD ",
         "price": "419",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["телевизор", "samsung"]
     },
     {
         "img": "../Images/Products/tv4.jpg",
         "info": "Телевизор LED LG 43LH541V, 43 (108 см), Game TV, Full HD ",
         "price": "699",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["телевизор", "led"]
     },
     {
         "img": "../Images/Products/tv5.jpg",
-        "info": "Комплект Crono 2: Тефтер с дати + Календар Cascade XL",
+        "info": "Телевизор LED Star-Light, 32 (80 см), 32DM3500, HD Ready ",
         "price": "319",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["телевизор", "samsung"]
     }
 ]

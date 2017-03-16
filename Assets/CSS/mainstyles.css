@@ -109,11 +109,11 @@ header {
 	z-index: 550;
 	text-align: center;
 	padding: 10px;
-	margin: 2px;
 	background: #2E221F;
 	border: 2px solid #D02F05;
 	border-radius: 15px;
 	display: none;
+	left: -10px;
 }
 
 
@@ -158,19 +158,6 @@ header {
 .hoverWindowButton>span:hover span:first-child  {
 	background: #2E221F;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .textContent {
@@ -495,6 +482,18 @@ main section {
 	visibility: hidden;
 }
 
+.prodIndicator {
+	width: 160px;
+	height: 455px;
+	position: relative;
+}
+
+.prodIndicator img {
+	width: 150px;
+	display: block;
+	position: absolute;
+	top: 30%;
+}
 
 .seeMore {
 	display: inline-block;
@@ -508,7 +507,7 @@ main section {
 	cursor: pointer;
 }
 
-.seeMore:hover {
+.seeMore:hover, .seeLess {
 	background: #2E221F;
 }
 

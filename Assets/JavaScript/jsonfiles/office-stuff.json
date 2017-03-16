@@ -3,30 +3,35 @@
         "img": "../Images/Products/office1.jpg",
         "info": "Комплект Писалка Scrikss Vintage 33 + Химикал ABS, Пластмаса, Черен, Кутия ",
         "price": "33",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["химикал", "черен химикал", "комплект"]
     },
     {
         "img": "../Images/Products/office2.jpg",
         "info": "Химикал Parker IM Standard Blue CT ",
         "price": "39",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["химикал", "син химикал"]
     },
     {
         "img": "../Images/Products/office3.jpg",
         "info": "Химикал с капачка D.Rect 9900, Син, 100 бр/комплект ",
         "price": "25",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["химикал", "син химикал", "комплект"]
     },
     {
         "img": "../Images/Products/office4.jpg",
         "info": "Комплект Crono 1: Тефтер A4 със спирала и тънкописец + Календар за бюро ",
         "price": "19",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["химикал", "комплект"]
     },
     {
         "img": "../Images/Products/office5.jpg",
         "info": "Комплект Crono 2: Тефтер с дати + Календар Cascade XL",
         "price": "21",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["химикал", "комплект"]
     }
 ]

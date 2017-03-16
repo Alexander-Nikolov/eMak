@@ -3,30 +3,35 @@
         "img": "../Images/Products/amp1.jpg",
         "info": "Усилвател Pioneer A-20-K, 2.0, 100W RMS, Черен ",
         "price": "469",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["усилвател", "черен", "100w"]
     },
     {
         "img": "../Images/Products/amp2.jpg",
         "info": "Усилвател Akai AS005RA-750B, 375W RMS, Сребрист ",
         "price": "299",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["усилвател", "сребрист", "375w"]
     },
     {
         "img": "../Images/Products/amp3.jpg",
         "info": "Усилвател Harman Kardon HK3700, 2.0, 85W RMS, Черен ",
         "price": "770",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["усилвател", "черен", "85w"]
     },
     {
         "img": "../Images/Products/amp4.jpg",
         "info": "Усилвател Akai AS030RA-780, 5.1, 375W RMS, Златист ",
         "price": "399",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["усилвател", "златист", "375w"]
     },
     {
         "img": "../Images/Products/amp5.jpg",
         "info": "Усилвател Akai AS009RA-558 ",
         "price": "199",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["усилвател", "akai"]
     }
 ]

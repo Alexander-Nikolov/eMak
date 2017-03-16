@@ -29,7 +29,7 @@
                         <div id="searchForm">
                             <div id="arrowLeft"></div>
                             <form id="searchBar">
-                                <input type="text" name="searchBar" placeholder="Какво търсиш днес?" />
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
                                 <div id="searchButton">
                                     <a href=""><span class="glyphicon glyphicon-search"></span></a>
                                 </div>
@@ -171,7 +171,7 @@
                             document.write('<div class="fillSpace"></div>');
                             document.write('<div class="fillSpace"></div>');
                             document.write('<div class="fillSpace"></div>');
-                            document.write('<div class="seeMore"><span>Виж още</span></div>');
+                            document.write('<div id="seeMore' + index + '" class="seeMore"><span>Виж още</span></div>');
                             document.write('</div>');
                         }
                     </script>
@@ -212,8 +212,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../JavaScript/jquery.js"></script>
-    <script src="../JavaScript/mainJS.js"></script>
+    <script src="../JavaScript/Controller/Events/jquery.js"></script>
+    <script src="../JavaScript/Controller/DoM/domchange.js"></script>
+    <script src="../JavaScript/Model/mainJS.js"></script>
+    <script src="../JavaScript/Controller/Events/events.js"></script>
+    <script>
+        document.body.onload = function () {
+            onBodyLoad()
+            scrolling();
+            productSections.onLoad(); 
+        }
+    </script>  
 </body>
 
 </html>

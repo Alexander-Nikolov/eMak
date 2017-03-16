@@ -3,30 +3,35 @@
         "img": "../Images/Products/acces1.jpg",
         "info": "Калъф Wink Flip Cover за Wink Blaze ",
         "price": "19",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["калъф", "flip", "wink"]
     },
     {
         "img": "../Images/Products/acces2.jpg",
         "info": "Калъф Samsung Clear View Cover за Galaxy S7 Edge G935, Gold ",
         "price": "67",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["калъф", "златист", "samsung"]
     },
     {
         "img": "../Images/Products/acces3.jpg",
         "info": "Калъф Samsung LED View Cover за Galaxy S7 Edge G935, Gold ",
         "price": "64",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["калъф", "samsung", "златист"]
     },
     {
         "img": "../Images/Products/acces4.jpg",
         "info": "Калъф Samsung Clear View Cover за Galaxy S7 Edge G935, Black ",
         "price": "44",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["калъф", "черен", "samsung"]
     },
     {
         "img": "../Images/Products/acces5.jpg",
         "info": "Протектор A+ Case за iPhone 6/6s ",
         "price": "4",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["протектор", "а+", "iphone"]
     }
 ]

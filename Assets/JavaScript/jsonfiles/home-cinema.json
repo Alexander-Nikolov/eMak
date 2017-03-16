@@ -3,30 +3,35 @@
         "img": "../Images/Products/hc1.jpg",
         "info": "Система за домашно кино Samsung 7.1, 3D с Blu-Ray Samsung HT-J7750, 1330W, Черна ",
         "price": "1.499",
-        "supPrice": "79"
+        "supPrice": "79",
+        "tags": ["домашно", "кино", "черна"]
     },
     {
         "img": "../Images/Products/hc2.jpg",
         "info": "Аудио система 5.1 Akai, USB/SD, MP3, DVD, 105W RMS ",
         "price": "149",
-        "supPrice": "00"
+        "supPrice": "00",
+        "tags": ["аудио", "система", "dvd"]
     },
     {
         "img": "../Images/Products/hc3.jpg",
         "info": "Система за домашно кино Samsung HT-J5500, Blu Ray, 5.1, 3D, 1000W ",
         "price": "495",
-        "supPrice": "09"
+        "supPrice": "09",
+        "tags": ["домашно", "кино", "100w"]
     },
     {
         "img": "../Images/Products/hc4.jpg",
         "info": "Система за домашно кино 5.1 3D с Blu-Ray Samsung HT-J7500W, 1000W, Черна ",
         "price": "1.089",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["домашно", "кино", "черна"]
     },
     {
         "img": "../Images/Products/hc5.jpg",
         "info": "Система за домашно кино 5.1 c Blu-ray 3D Sony BDVE4100 ",
         "price": "667",
-        "supPrice": "99"
+        "supPrice": "99",
+        "tags": ["домашно", "кино", "sony"]
     }
 ]

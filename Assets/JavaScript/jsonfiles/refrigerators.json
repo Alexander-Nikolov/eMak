@@ -1,0 +1,37 @@
+[
+    {
+        "img": "../Images/Products/refrigerators1.jpg",
+        "info": "Хладилник с фризер Heinner HC-249A+, 249 л, Клас A+, H 180 см, Бял ",
+        "price": "499",
+        "supPrice": "79",
+        "tags": ["хладилник", "бял"]
+    },
+    {
+        "img": "../Images/Products/refrigerators2.jpg",
+        "info": "Хладилник MIDEA HD-113 FN с горна камера, 87 л, клас А+, бял , Височина 84 см ",
+        "price": "234",
+        "supPrice": "00",
+        "tags": ["хладилник", "бял"]
+    },
+    {
+        "img": "../Images/Products/refrigerators3.jpg",
+        "info": "Хладилник с фризер Samsung RB31FERNDWW, 310 л, Клас А +, No frost, H 185 см, Бял ",
+        "price": "799",
+        "supPrice": "09",
+        "tags": ["хладилник", "бял"]
+    },
+    {
+        "img": "../Images/Products/refrigerators4.png",
+        "info": "Хладилник Hotpoint-Ariston Quadrio E4DAAXC, Капацитет 470 литри, Клас A+, Full No Frost, H 195.5 cм, Инокс ",
+        "price": "1.499",
+        "supPrice": "99",
+        "tags": ["хладилник", "сребрист"]
+    },
+    {
+        "img": "../Images/Products/refrigerators5.jpg",
+        "info": "Хладилник с фризер Bosch KGV36UL30, Low Frost, 309 л, Клас A++, H 186 см, Инокс ",
+        "price": "899",
+        "supPrice": "99",
+        "tags": ["хладилник", "бял"]
+    }
+]
