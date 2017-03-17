@@ -44,6 +44,23 @@
                             <span class="textContent">Моят акаунт</span>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
+                        <div id="profileMenu" class="hoverWindow">
+                            <div class="hoverWindowContainer">
+                                <a href="./Profile/myorders.html">Моите поръчки</a>
+                                <a href="./Profile/myfavourites.html">Любими</a>
+                                <a href="./Profile/mydiscounts.html">Моите ваучери и отстъпки</a>
+                                <a href="./Profile/myguarantees.html">Моите гаранции</a>
+                                <a href="./Profile/return.html">Връщане и поправка</a>
+                                <a href="./Profile/myprofile.html">Лични данни</a>
+                                <a href="./Profile/myabonaments.html">Моите абонаменти</a>
+                            </div>
+                            <button id="logOutButton" class="hoverWindowButton">
+                                <span>
+                                    <span class="glyphicon glyphicon-log-out"></span> 
+                                    <span>Изход</span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                     <div id="myFavorites">
                         <a href="">
@@ -220,7 +237,12 @@
         document.body.onload = function () {
             onBodyLoad()
             scrolling();
-            productSections.onLoad(); 
+            productSections.onLoad();
+            
+            document.getElementById('logOutButton').addEventListener('click', function(event) {
+                localStorage.removeItem("user_id");
+                window.location = "../HTML/index.html";
+            }, false); 
         }
     </script>  
 </body>

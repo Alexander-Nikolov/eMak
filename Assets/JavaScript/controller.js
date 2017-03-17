@@ -1,52 +1,37 @@
 (function () {
-    var login = document.getElementById("buttonSubmit");
-    login.addEventListener('click', function(event) {
+    var addUser = document.getElementById("buttonSubmitEmail");
+    
+    addUser.addEventListener('click', function(event) {
         var useremail = document.querySelector("#useremail");
         var email = useremail.value.trim();
-        
-        useremail.addEventListener('focus', function () {
-            if (document.getElementById('error'))
-                document.getElementById('error').parentNode.removeChild(document.getElementById('merror'));
-        })
-
-        if (userManager.loginUser(useremail)) {
-            window.location = './bravo.html';
-            console.log("Hi");
-        }
-        else {
-            console.log("Bye");
-
-            var error = document.createElement('span');
-            error.id = "error";
-            error.textContent = "Invalid email";
-            useremail.parentNode.appendChild(error);
-            console.log("Hi");
-
-        }
         event.preventDefault();
-    }, false);
+        console.log("mdm");
 
+        if (userManager.isUserEmailExists(email)) {
+            var user = userManager.getUserByEmail(email);
+            document.getElementById("passwordForm").style.display = "inline-block";
+            document.getElementById("emailForm").style.display = "none";
 
-//     var createAcc = getById('createAcc');
-//     createAcc.addEventListener('click', function (event) {
-//         event = event || window.event;
-//         getById('registerForm').style.display = 'block';
-//         event.preventDefault();
-//     }, false);
+            document.getElementById('buttonSubmitPassword').addEventListener('click', function(event) {
+                event.preventDefault();
+                var userpassword = document.getElementById("password");
+                var password = userpassword.value.trim();
+                if (user.password === password) {
+                    localStorage.setItem("user_id", user.id);
+                    window.location = "../HTML/index.html";
 
-//     getById('registerForm').addEventListener('submit', function (event) {
-//         var inputs = document.querySelectorAll("#registerForm > form > input");
-//         var username = inputs[0].value.trim();
-//         var password = inputs[1].value.trim();
-//         var age = Number(inputs[2].value.trim());
+                } else {
+                    // wrong password
+                    // counter (> 3) error                    
+                }
+                
+            }, false);
 
-//         if (userManager.isPasswordValid(password) &&
-//             !userManager.isUserNameExists(username)) {
-//             userManager.addUser(new User(username, password, age));
-//         getById('registerForm').style.display = 'none';
-//     }
+        } else {
+            console.log("djoisn");
+            // register
+        }
 
-//     event.preventDefault();
-// }, false);
+    });
 
 })();
