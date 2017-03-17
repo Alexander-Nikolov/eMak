@@ -382,3 +382,43 @@ main {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 }
+
+#containerContent h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin: 1em 4em;
+}
+
+#containerContent {
+	display: inline-block;
+}
+
+.availabilities {
+	margin: 1em;
+	border-top: 1px solid lightgrey;
+	padding: 0.5em;
+	width: 96%;
+	height: 180px;
+}
+
+.availabilities figure{
+	text-align: center;
+	width: 50%;
+}
+
+.availabilities:nth-of-type(even) figure {
+    float: left;
+}
+
+.availabilities:nth-of-type(odd) figure {
+    float: right;
+}
+
+.availabilities p {
+	text-align: center;
+	display: inline-block;
+	width: 40%;
+	margin-top: 2em;
+	font-size: 1.3em;
+}
