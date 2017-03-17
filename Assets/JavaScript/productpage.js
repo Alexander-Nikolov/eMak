@@ -14,7 +14,6 @@ price.appendChild(lv);
 var otherImages = document.querySelectorAll('#gallery>img');
 for (var index = 0; index < otherImages.length; index++) {
     (function (index) {
-        console.log(index)
         otherImages[index].addEventListener('mouseover', function () {
             var savePath = otherImages[index].src;
             otherImages[index].src = mainImage.src;
@@ -31,4 +30,21 @@ for (var index = 0; index < otherImages.length; index++) {
             mainImage.src = savePath;
         }, false);
     })(index);
+}
+
+
+
+var addToCart = document.querySelectorAll('#other>div');
+
+addToCart[1].addEventListener('click', function() {
+    user_id.cart.addProductToCart({
+        img: sessionStorage.prodImage,
+        info: sessionStorage.prodInfo,
+        price: sessionStorage.prodPrice,
+        supPrice: sessionStorage.prodSupPrice
+    })
+}, false)
+
+var user_id = {
+    cart: new Cart([])
 }
