@@ -80,3 +80,15 @@
 		text-align: right;
 	}
 }
+
+@media screen and (min-width: 1170px) {
+	header {
+		position: fixed;
+		top: 0;
+	}
+	footer {
+        position: fixed;
+	    bottom: 0;
+    }
+}
+

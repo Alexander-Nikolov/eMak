@@ -10,7 +10,7 @@ header {
 	width: 100%;
 	display: inline-block;
 	background-color: #d02f05;
-	position: fixed;
+	z-index: 1000;
 }
 
 #logoImg {
