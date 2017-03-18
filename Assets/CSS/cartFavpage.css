@@ -118,6 +118,18 @@ main {
 	margin-bottom: 250px;
 }
 
+#prodCont h2 {
+	font-size: 1.2em;
+	width: 50%;
+	margin: auto;
+	padding: 10px;
+	color: white;
+	background: #2E221F;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
 
 #container {
 	width: 70%;
@@ -229,6 +241,7 @@ footer>div div {
 	color: #2E221F;
 	border-radius: 10px;
 	border-bottom: 2px solid #d02f05;
+	border-top: 2px solid #d02f05;
 }
 
 #productsHolder>div {
@@ -287,7 +300,7 @@ footer>div div {
 }
 
 
-.prodBtnCont>span:last-child {
+.prodBtnCont>span:nth-child(2) {
 	cursor: pointer;
 	padding: 10px 20px;
 	background: #d02f05;
@@ -318,4 +331,12 @@ footer>div div {
 	background: #d02f05;
 	padding: 8px;
 	border-radius: 10px;
+}
+
+#buyAll span span span:first-child {
+	padding: 0;
+}
+
+#buyAll sup {
+	font-size: 90%;
 }

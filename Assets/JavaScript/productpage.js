@@ -43,7 +43,7 @@ addToCart.addEventListener('click', function () {
         document.getElementById('btnCart').style.backgroundColor = 'green';     
         document.querySelector('#btnCart>span:last-child').textContent = 'Добавено в количката';
         addedToCart = true;
-        user.cart.addProductToCart({
+        user.cart.addProduct({
             img: sessionStorage.prodImage,
             info: sessionStorage.prodInfo,
             price: sessionStorage.prodPrice,
@@ -64,9 +64,11 @@ addToCart.addEventListener('click', function () {
 
 //test user
 var cart = new Cart([]);
+var favCont = new FavouriteContainer([]);
 
 var user = {
-    cart: cart
+    cart: cart,
+    favCont: favCont
 }
 sessionStorage.setItem('user', JSON.stringify(user));
-var user = getUserSetCart();
+var user = getUserSetProdHolders();
