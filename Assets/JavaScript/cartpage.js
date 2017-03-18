@@ -12,10 +12,22 @@ Cart.prototype.removeProductFromCart = function (index) {
 
 Cart.prototype.getTotalPrice = function () {
     var total = 0;
+    var supTotal = 0;
     for (var index = 0; index < this.products.length; index++) {
-        total += products[index].price;
+        total += parseInt(this.products[index].price);
+        supTotal += parseInt(this.products[index].supPrice);
     }
-    return total;
+    
+    if (supTotal.toString().length >= 3) {
+       total += parseInt(supTotal.toString().slice(0, supTotal.toString().length - 2));
+       supTotal = parseInt(supTotal.toString().slice(supTotal.toString().length - 2));
+    }
+    
+    if (supTotal.toString().length < 2) {
+        supTotal = ('0' + supTotal);
+    }
+
+    return [total, supTotal];
 }
 
 

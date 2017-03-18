@@ -115,6 +115,7 @@ MAIN
 **********************/
 main {
 	margin-top: 100px;
+	margin-bottom: 250px;
 }
 
 
@@ -152,6 +153,7 @@ footer {
 	padding: 1em;
 	display: inline-block;
 	width: 100%;
+	background: white;
 }
 
 footer h2 {
@@ -226,6 +228,7 @@ footer>div div {
 	background:#2E221F;
 	color: #2E221F;
 	border-radius: 10px;
+	border-bottom: 2px solid #d02f05;
 }
 
 #productsHolder>div {
@@ -236,13 +239,16 @@ footer>div div {
 	position: relative;
 	border: 1px solid #d02f05;
 	background: white;
-	margin-bottom: 10px;
+	margin: 5px 0;
 }
 
 #productsHolder>div>div {
 	float: left;
 }
 
+.prodImgCont {
+	cursor: pointer;
+}
 
 .prodImgCont>img {
 	width: 150px;
@@ -293,4 +299,23 @@ footer>div div {
 .prodBtnCont>span:last-child:hover {
 	background: #2E221F;
 	color: #d02f05;
+}
+
+
+#buyAll {
+	width: 50%;
+	padding: 15px 5px;
+	text-align: center;
+	margin: auto;
+	background: #2E221F;
+	color: white;
+	cursor: pointer;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#buyAll span span {
+	background: #d02f05;
+	padding: 8px;
+	border-radius: 10px;
 }

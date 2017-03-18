@@ -36,17 +36,30 @@ for (var index = 0; index < otherImages.length; index++) {
 
 
 
-var addToCart = document.querySelectorAll('#other>div');
+var addToCart = document.getElementById('addToCart');
+var addedToCart = false;
+addToCart.addEventListener('click', function () {
+    if (!addedToCart) {
+        document.getElementById('btnCart').style.backgroundColor = 'green';     
+        document.querySelector('#btnCart>span:last-child').textContent = 'Добавено в количката';
+        addedToCart = true;
+        user.cart.addProductToCart({
+            img: sessionStorage.prodImage,
+            info: sessionStorage.prodInfo,
+            price: sessionStorage.prodPrice,
+            supPrice: sessionStorage.prodSupPrice
+        })
+        //test user
+        sessionStorage.setItem('user', JSON.stringify(user));
+        setTimeout(function () {
+            addedToCart = false;
+            document.getElementById('btnCart').style.backgroundColor = '#005eb8';
+            document.querySelector('#btnCart>span:last-child').textContent = 'Добави в количката';
+        }, 1000);
+    } else {
 
-addToCart[1].addEventListener('click', function () {
-    user.cart.addProductToCart({
-        img: sessionStorage.prodImage,
-        info: sessionStorage.prodInfo,
-        price: sessionStorage.prodPrice,
-        supPrice: sessionStorage.prodSupPrice
-    })
-    //test user
-    sessionStorage.setItem('user', JSON.stringify(user));
+    }
+
 }, false);
 
 //test user
