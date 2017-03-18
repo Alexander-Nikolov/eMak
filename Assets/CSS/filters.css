@@ -1,0 +1,208 @@
+/**********************
+HEADER 
+**********************/
+
+#wrapper {
+	font-family: Arial;
+}
+
+header {
+	width: 100%;
+	display: inline-block;
+	background-color: #d02f05;
+	z-index: 1000;
+}
+
+#logoImg {
+	float:left;
+}
+
+#logoImg img {
+	margin: 0px 20px;
+	height: 50px;
+	width: auto;
+}
+
+#search {
+	display: inline-block;
+	position: relative;
+	margin: 10.5px 0px;
+	width: 40%;	
+	float: left;
+}
+
+#searchForm {
+	display: inline-block;
+	width: 100%;
+}
+
+#arrowLeft {
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 10px solid white;
+	position: relative;
+	top: 50%;
+	left: 0;
+	transform: rotate(360deg) translateY(-200%) translateX(-70%);
+	
+	float:left;
+}
+
+#searchBar {
+	display: inline-block;
+	background-color: white;
+}
+
+#searchBar {
+	width:90%;
+	border-radius: 5px;
+}
+
+#searchBar input {
+	width: 90%;
+	height: 100%;
+	padding:7px;
+	border:none;
+	border-right: 1px solid grey;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}		
+
+#searchBar input:focus {
+	outline-width: 0;
+}
+
+#searchButton {
+	display: inline-block;
+	width: 8%;
+	text-align:center;
+}
+
+#searchButton a {
+	width:100%;
+}
+
+span.icons {
+	font-size: 1.3em;
+	color: white;
+}
+
+span.textContent {
+	font-size: 1.2em;
+	color:white;
+	margin:5px;
+}
+
+span.glyphicon-chevron-down {
+	color:white;
+}
+
+#myAccount, #myFavorites, #myCart {
+	position: relative;
+	margin-top: 12px;
+	margin-right: 10px;
+	float:left;
+}
+
+#myAccount a:hover, #myFavorites a:hover, #myCart a:hover {
+	text-decoration: none;
+}
+
+/******************************
+NAV 
+*******************************/
+
+nav {
+	display: inline-block;
+	width:100%;
+	padding-left: 3em;
+	padding-right: 3em;
+	clear: both;
+	border-bottom: 1px solid darkgrey;
+}
+
+.navMenuItems {
+	display: inline-block;
+	float: left;
+	padding: 1em;
+	cursor: pointer;
+}
+
+.navMenuItems a {
+	text-decoration: none;
+	color: black;
+}
+
+.navMenuItems:last-child {
+	float: right;
+}
+
+.navMenuItems:hover {
+	background-color: #dfdfdf;
+}
+
+#mobileMenuButton {
+	display: none;
+}
+
+#mobilemenu {
+	display: none;
+}
+
+/****************************
+MAIN 
+*****************************/
+
+aside {
+	display: inline-block;
+	width: 15%;
+}
+
+aside > div h2{
+	color: #d02f05;
+}
+
+aside > div {
+	margin: 1em 0em 0em 4em; 
+}
+
+aside > div input[type="checkbox"]{
+	margin-right: 0.4em;
+}
+
+#products {
+	border-left: 1px solid lightgrey;
+	margin: 1em 0em;
+	width: 80%;
+	float: right;
+	padding: 0em 1em;
+}
+
+.product {
+	margin-bottom: 1em;
+	border-bottom: 1px solid grey;
+}
+
+.product h1{
+	font-size: 1.2em;
+	font-weight: bold;
+	float: right;
+	display: inline-block;
+	width: 70%;
+}
+
+.product p {
+	display: inline-block;
+	float: right;
+	width: 70%;
+	margin-top: 2em;
+	color: red;
+}
+
+.product img {
+	text-align: center;
+	width: 16%;
+	margin-left: 4em;
+}
