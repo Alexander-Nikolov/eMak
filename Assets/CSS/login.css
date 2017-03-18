@@ -34,7 +34,7 @@ MAIN
 	margin-bottom: 1em;
 }
 
-.loginForm input[type="email"], .loginForm input[type="password"], #buttonSubmitEmail, #buttonSubmitPassword {
+.loginForm input[type="email"], .loginForm input[type="password"],.loginForm input[type="text"], #buttonSubmitEmail, #buttonSubmitPassword, #buttonSubmitRegistration {
 	width: 90%;
 	height: 2.5em;
 	font-size: 1.1em;
@@ -44,11 +44,11 @@ MAIN
 	box-sizing: border-box;
 }
 
-.loginForm input[type="email"]:focus, .loginForm input[type="password"]:focus {
+.loginForm input[type="email"]:focus, .loginForm input[type="password"]:focus, .loginForm input[type="text"]:focus {
 	outline-width: 0;
 }
 
-#buttonSubmitPassword, #buttonSubmitEmail {
+#buttonSubmitPassword, #buttonSubmitEmail, #buttonSubmitRegistration {
 	color: white;
 	background-color: #0068b5;
 }
@@ -104,6 +104,15 @@ MAIN
 
 #passwordForm {
 	display: none;
+}
+
+#registrationForm {
+	display: none;
+}
+
+#IAgree {
+	text-align:left;
+	margin-bottom: 1em;
 }
 
 /**********************

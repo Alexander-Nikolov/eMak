@@ -315,7 +315,6 @@ main {
 	width: 75%;
 	margin: auto;
 	background-color: #e4f1f9;
-	min-height: 400px;
 	border-radius: 10px;
 	padding: 1em;
 }
@@ -324,13 +323,14 @@ main {
 	width: 98%;
 	margin: auto;
 	background-color: white;
-	min-height: 380px;
 	font-family: Arial;
 	border: 1px solid lightgrey;
 }
 
 #createList {
 	padding: 1em;
+	display: inline-block;
+	width: 100%;
 	border-bottom: 1px solid lightgrey;
 }
 
@@ -421,4 +421,165 @@ main {
 	width: 40%;
 	margin-top: 2em;
 	font-size: 1.3em;
+}
+
+#addDiscount {
+	border-top: 1px solid lightgrey;
+	display: inline-block;
+	width: 100%;
+	float: both;
+}
+
+#addDiscount div {
+	padding: 1em;
+	float: left;
+}
+
+#addDiscount div:first-child {
+	width: 60%;
+} 
+
+#addDiscount div:last-child {
+	width: 40%;
+} 
+
+#addDiscount h2 {
+	padding: 0.5em;
+	font-weight: bold;
+}
+
+#addDiscount button {
+	border-color: #005596;
+	color: #005596;
+	border-radius: 5px;
+	padding: 0.5em;
+}
+
+#containerContent {
+	padding: 1em;
+}
+
+#containerContent h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-top: 1em;
+}
+ 
+#titleGA {
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+
+#containerContent ul {
+	padding: 1em;
+}
+
+#containerContent ul li {
+	list-style-type: circle;
+}
+
+#containerContent input[type="checkbox"]{
+	display: inline-block;
+	float: both;
+}
+
+#containerContent h4 {
+	font-weight: bold;
+	font-size: 1.2em;
+	border-bottom: 1px solid lightgrey;
+	margin: 1em 0em;
+	padding-bottom: 0.3em;
+}
+
+#saveButton {
+	background-color: #3175b0;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	padding: 0.5em;
+	margin-top: 1.5em;
+}
+
+.titleReturn {
+	font-family: Arial;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0.7em 1em;
+}
+
+.returnPageBoxes {
+	display: inline-block;
+	width: 46%;
+	margin: 1em;
+	padding: 1.5em;
+	background-color: white;
+	text-align: center;
+	font-family: Arial;
+}
+
+.returnPageBoxes h2 {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+.returnPageBoxes p {
+	padding: 0px 1em;
+	font-size: 1.1em;
+}
+
+.returnPageBoxes button {
+	border: none;
+	border-radius: 5px;
+	border: 1px solid #3175b0;
+	color: #3175b0;
+	background-color: white;
+	padding: 0.5em;
+	margin-top: 1em;
+}
+
+#stepsReturn {
+	background-color: white;
+	font-family: Arial;
+	text-align: center;
+	margin: 1em;
+}
+
+span.glyphicon-menu-right {
+	font-size: 6em;
+	color: lightgrey;
+}
+
+#steps {
+	margin-top: 1em;
+	border-bottom: 1px solid lightgrey;
+}
+
+#steps figure {
+	display: inline-block;
+	width: 25%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#youKnow {
+	text-align: left;
+	padding: 1em;
+}
+
+#youKnow h1 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+#youKnow div {
+	padding: 1em;
+}
+
+span.glyphicon-retweet, span.glyphicon-wrench {
+	color: grey;
+	font-size:1.1em;
+	margin-right: 0.5em;
 }
