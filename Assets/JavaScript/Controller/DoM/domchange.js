@@ -55,6 +55,7 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
     ele5.className = 'productMoreInfo';
     ele5.addEventListener('click', function () {
         sessionStorage.prodImage = img;
+        sessionStorage.prodInfo = info;
         sessionStorage.prodPrice = price;
         sessionStorage.prodSupPrice = supPrice;
 

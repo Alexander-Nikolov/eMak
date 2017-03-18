@@ -10,24 +10,7 @@ header {
 	width: 100%;
 	display: inline-block;
 	background-color: #d02f05;
-}
-
-#dropdownMenu {
-	margin-left: 80px;
-	display: inline-block;
-	background-color: #e6876e;
-	color:white;
-	padding: 10px;
-	float: left;
-}
-
-#dropdownMenu .glyphicon-align-justify {
-	font-size:1.9em;
-}
-
-#dropdownMenu .glyphicon-chevron-down {
-	display: inline-block;
-	margin-left: 5px;
+	z-index: 1000;
 }
 
 #logoImg {
@@ -117,6 +100,7 @@ span.glyphicon-chevron-down {
 }
 
 #myAccount, #myFavorites, #myCart {
+	position: relative;
 	margin-top: 12px;
 	margin-right: 10px;
 	float:left;
@@ -129,6 +113,11 @@ span.glyphicon-chevron-down {
 /**********************
 MAIN 
 **********************/
+main {
+	margin-top: 100px;
+}
+
+
 #container {
 	width: 70%;
 	margin: auto;
@@ -161,6 +150,8 @@ footer {
 	border-top: 1px solid grey;
 	margin-top: 150px;
 	padding: 1em;
+	display: inline-block;
+	width: 100%;
 }
 
 footer h2 {
@@ -220,4 +211,86 @@ footer>div div {
 
 #cr p {
 	margin-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+#productsHolder {
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+	background:#2E221F;
+	color: #2E221F;
+	border-radius: 10px;
+}
+
+#productsHolder>div {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 30px;
+	position: relative;
+	border: 1px solid #d02f05;
+	background: white;
+	margin-bottom: 10px;
+}
+
+#productsHolder>div>div {
+	float: left;
+}
+
+
+.prodImgCont>img {
+	width: 150px;
+}
+
+
+.prodInfoCont {
+	padding: 10px 30px;
+	width: 75%;
+}
+
+.prodInfoCont>div:first-child {
+	display: inline-block;
+	margin-bottom: 50px;
+	padding: 8px;
+	background: #d02f05;
+	color: white;
+	border-radius: 10px;
+}
+
+.prodInfoCont>div:first-child sup {
+	font-size: 90%;
+}
+
+.prodBtnCont {
+	min-height: 140px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.prodBtnCont>span img {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
+
+
+.prodBtnCont>span:last-child {
+	cursor: pointer;
+	padding: 10px 20px;
+	background: #d02f05;
+	color: white;
+	border-radius: 10px;
+}
+
+
+.prodBtnCont>span:last-child:hover {
+	background: #2E221F;
+	color: #d02f05;
 }

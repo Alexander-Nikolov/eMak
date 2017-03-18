@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/productpage.css">
+    <link rel="stylesheet" href="../CSS/hoverWindow.css">
     <link rel="stylesheet" href="../CSS/media380product.css">
+    <link rel="stylesheet" href="../CSS/media800product.css">
+    <link rel="stylesheet" href="../CSS/media1170product.css">
 </head>
 
 <body>
@@ -25,9 +28,8 @@
                     </div>
                     <div id="search">
                         <div id="searchForm">
-                            <!-- <div id="arrowLeft"></div> -->
                             <form id="searchBar">
-                                <input type="text" name="searchBar" placeholder="Какво търсиш днес?" />
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
                                 <div id="searchButton">
                                     <a href=""><span class="glyphicon glyphicon-search"></span></a>
                                 </div>
@@ -51,45 +53,15 @@
                         </a>
                     </div>
                     <div id="myCart">
-                        <a href="">
+                        <a href="./cartpage.html">
                             <span class="glyphicon glyphicon-shopping-cart icons"></span>
                             <span class="textContent">Моята количка</span>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                     </div>
                 </div>
-            </div> 
+            </div>
         </header>
-        <span id="mobileMenuButton" class="glyphicon glyphicon-align-justify">Меню</span>
-        <div id="mobilemenu">
-            <div class="navMenuItems">
-                <a href="">Продукти</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">Абониране за бюлетин</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">Разопаковани продукти</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">eMAG инфо</a>
-            </div>
-        </div>
-        <nav>
-            <div class="navMenuItems">
-                <span class="glyphicon glyphicon-align-justify"></span>
-                <a href="">Продукти</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">Абониране за бюлетин</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">Разопаковани продукти</a>
-            </div>
-            <div class="navMenuItems">
-                <a href="">eMAG инфо</a>
-            </div>
-        </nav>
         <main>
             <div id="path"></div>
             <div id="headerProduct">
@@ -108,7 +80,7 @@
                         <img src="../Images/tv5.jpg">
                     </div>
                 </div>
-                <div id="infoProduct">  
+                <div id="infoProduct">
                     <div id="infoContent">
                         <div id="clients">
                             <p class="greyParagraph">Оценка от клиенти:</p>
@@ -118,7 +90,7 @@
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star"></span>
                             <div>
-                                <a href="">Добави ревю</a> &vert; 
+                                <a href="">Добави ревю</a> &vert;
                                 <a href="">1 въпрос</a>
                             </div>
                         </div>
@@ -153,18 +125,13 @@
         <footer>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../JavaScript/Model/mainJS.js"></script>
+    <script src="../JavaScript/Controller/Events/myBarScript.js"></script>
+    <script src="../JavaScript/Controller/DoM/domchange.js"></script>
+    <script src="../JavaScript/Controller/Events/events.js"></script>
+    <script src="../JavaScript/cartpage.js"></script>
     <script src="../JavaScript/productpage.js"></script>
 </body>
-<script type="text/javascript">
-    document.getElementById('mobileMenuButton').addEventListener('click', function() {
-        if(document.getElementById('mobilemenu').style.display == "none"){
-            document.getElementById('mobilemenu').style.display = 'inline-block';
-            document.getElementByTagName('nav').style.display = 'none';
-        } else {
-            document.getElementById('mobilemenu').style.display = 'none';
-            document.getElementByTagName('nav').style.display = 'inline-block';
-        }
-    }, false);
-</script>
 
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/cartpage.css">
+    <link rel="stylesheet" href="../CSS/hoverWindow.css">
     <link rel="stylesheet" href="../CSS/media380cart.css">
     <link rel="stylesheet" href="../CSS/media600cart.css">
     <link rel="stylesheet" href="../CSS/media800cart.css">
@@ -19,10 +20,6 @@
         <div id="fixedNav">
         </div>
         <header>
-            <div id="dropdownMenu">
-                <span class="glyphicon glyphicon-align-justify"></span>
-                <span class="glyphicon glyphicon-chevron-down"></span>
-            </div>
 
             <div id="logo">
                 <div id="logoAndSearch">
@@ -33,9 +30,8 @@
                     </div>
                     <div id="search">
                         <div id="searchForm">
-                            <!-- <div id="arrowLeft"></div> -->
                             <form id="searchBar">
-                                <input type="text" name="searchBar" placeholder="Какво търсиш днес?" />
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
                                 <div id="searchButton">
                                     <a href=""><span class="glyphicon glyphicon-search"></span></a>
                                 </div>
@@ -59,33 +55,41 @@
                         </a>
                     </div>
                     <div id="myCart">
-                        <a href="">
+                        <a href="./cartpage.html">
                             <span class="glyphicon glyphicon-shopping-cart icons"></span>
                             <span class="textContent">Моята количка</span>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                     </div>
                 </div>
-            </div> 
-           <!--  <nav id="navigation">
-                <ul>
-                    <li><span class="navLink navClickedOn"><span>Телефони, Таблети &amp; Смарт технологии</span></span></li>
-                    <li><span class="navLink"><span>Лаптопи, IT продукти &amp; Офис</span></span></li>
-                    <li><span class="navLink"><span>ТВ, Електроника &amp; Фото</span></span></li>
-                    <li><span class="navLink"><span>Големи електроуреди</span></span></li>
-                    <li><span class="navLink"><span>Малки електроуреди &amp; Лична грижа</span></span></li>
-                    <li><span class="navLink"><span>Козметика, Мода &amp; Спорт</span></span></li>
-                    <li><span class="navLink"><span>Книги, Детски артукули &amp; Играчки</span></span></li>
-                    <li><span class="navLink"><span>Дом &amp; Градина</span></span></li>
-                    <li><span class="navLink"><span>Авто, Инструменти &amp; Petshop</span></span></li>
-                </ul>
-            </nav> -->
+            </div>
         </header>
         <main>
-            <div id="container">  
+            <div id="productsHolder">
+                <div class="productCont">
+                    <div class="prodImgCont">
+                        <img src="../Images/tv1.jpg" alt="">
+                    </div>
+                    <div class="prodInfoCont">
+                        <div>
+                            <span><span>21321</span><sup>99</sup><span>лв</span></span>
+                        </div>
+                        <div>
+                            <span>L neque dssitaasdddddsssssssssssssssssssssddddddddddddddddddddddtibus voluptates incidunt officia odio? Inventore repudiandae id accusamus ipsam enim, aliquid itaque minima, suscipit.</span>
+                        </div> 
+                    </div>
+                    <div class="prodBtnCont">
+                        <span><img src="../Images/clear-button.png" alt=""></span>
+                        <span><span>Купи</span></span>
+                    </div>
+                </div>
+            </div>
+            <div id="container">
                 <h1>Количката ти е празна</h1>
                 <div id="containerInfo">
-                    <p>Ако имаш акаунт в eMAG моля да влезеш в него, след което ще те препратим към продуктите от количката ти.</p>
+                    <p>Ако имаш акаунт в eMAG моля да влезеш в него, след което ще те препратим към продуктите от количката
+                        ти.
+                    </p>
                 </div>
                 <a href="./login.html"><button id="button">Влез в акаунт</button></a>
                 <p>или може <a href="./index.html">да се върнеш</a> за да продължиш с покупките.</p>
@@ -144,6 +148,13 @@
                 <p>Идентификационен номер по ДДС: BG3075208935</p>
             </div>
         </footer>
-    </body>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../JavaScript/Model/mainJS.js"></script>
+<script src="../JavaScript/cartpage.js"></script>
+<script src="../JavaScript/Controller/Events/myBarScript.js"></script>
+<script src="../JavaScript/Controller/DoM/domchange.js"></script>
+<script src="../JavaScript/Controller/DoM/cartpageDoM.js"></script>
+<script src="../JavaScript/Controller/Events/events.js"></script>
 
-    </html>
+</html>
