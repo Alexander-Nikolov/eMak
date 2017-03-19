@@ -270,7 +270,7 @@ footer>div div {
 
 .prodInfoCont {
 	padding: 10px 30px;
-	width: 75%;
+	width: 60%;
 }
 
 .prodInfoCont>div:first-child {
@@ -290,6 +290,8 @@ footer>div div {
 	min-height: 140px;
 	display: inline-flex;
 	align-items: center;
+	width: 20%;
+	text-align: center;
 }
 
 .prodBtnCont>span img {
@@ -301,6 +303,8 @@ footer>div div {
 
 
 .prodBtnCont>span:nth-child(2) {
+	display: block;
+	width: 100%;
 	cursor: pointer;
 	padding: 10px 20px;
 	background: #d02f05;
@@ -310,7 +314,7 @@ footer>div div {
 
 
 .prodBtnCont>span:last-child:hover {
-	background: #2E221F;
+	background: #2E221F!important;
 	color: #d02f05;
 }
 

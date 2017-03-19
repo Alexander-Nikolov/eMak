@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
@@ -9,6 +10,7 @@
 	<link rel="stylesheet" href="../CSS/media800login.css">
 	<link rel="stylesheet" href="../CSS/media1170login.css">
 </head>
+
 <body>
 	<div id="wrapper">
 		<header>
@@ -27,11 +29,11 @@
 						<input type="email" id="useremail" name="email" required/>
 					</div>
 					<div>
-						<input type="submit" id="buttonSubmitEmail" value="Продължи"/>
+						<input type="submit" id="buttonSubmitEmail" value="Продължи" />
 					</div>
 				</form>
 				<div id="help">
-					<p>Нямаш акаунт? Не се притеснявай! Попълни имейл адреса, с който желаеш да се регистрираш.</p>	
+					<p>Нямаш акаунт? Не се притеснявай! Попълни имейл адреса, с който желаеш да се регистрираш.</p>
 				</div>
 				<div id="fbAndGm">
 					<p>или</p>
@@ -60,7 +62,7 @@
 						<input type="password" id="password" name="password" required/>
 					</div>
 					<div>
-						<input type="submit" id="buttonSubmitPassword" value="Продължи"/>
+						<input type="submit" id="buttonSubmitPassword" value="Продължи" />
 					</div>
 				</form>
 			</div>
@@ -80,10 +82,10 @@
 						<input id="repeatPassword" type="password" name="repeatPassword" required/>
 					</div>
 					<div>
-						<input id="IAgree" type="checkbox" name="IAgree" value="on"/>Съгласен съм с условията
+						<input id="IAgree" type="checkbox" name="IAgree" value="on" />Съгласен съм с условията
 					</div>
 					<div>
-						<input id="buttonSubmitRegistration" type="submit" value="Продължи"/>
+						<input id="buttonSubmitRegistration" type="submit" value="Продължи" />
 					</div>
 				</form>
 			</div>
@@ -101,5 +103,22 @@
 </body>
 <script type="text/javascript" src="../JavaScript/user.js"></script>
 <script type="text/javascript" src="../JavaScript/controller.js"></script>
+
+
+
+<script type="text/javascript" src="../JavaScript/productHolder.js"></script>
+<script>
+	//test user
+	var cart = new Cart([]);
+	var favCont = new FavouriteContainer([]);
+
+	var user = {
+		cart: cart,
+		favCont: favCont
+	}
+	sessionStorage.setItem('user', JSON.stringify(user));
+	var user = getUserSetProdHolders();
+
+</script>
 
 </html>

@@ -8,6 +8,14 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
 
     var ele2 = document.createElement('div');
     ele2.className = 'productImg';
+    ele2.addEventListener('click', function () {
+        sessionStorage.prodImage = img;
+        sessionStorage.prodInfo = info;
+        sessionStorage.prodPrice = price;
+        sessionStorage.prodSupPrice = supPrice;
+
+        window.location = "./productpage.html"
+    }, false)
     ele1.appendChild(ele2);
 
     var ele22 = document.createElement('img');

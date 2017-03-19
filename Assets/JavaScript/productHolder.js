@@ -78,13 +78,12 @@ ProductHolder.prototype.displayItems = function () {
             var ele4 = document.createElement('div');
             ele4.className = 'prodBtnCont';
             ele1.appendChild(ele4);
-
+   
             var ele41 = document.createElement('span');
             (function (index, holder) {
                 ele41.addEventListener('click', function () {
-                    var user = getUserSetCart();
-
                     holder.removeProduct(index);
+
                     sessionStorage.setItem('user', JSON.stringify(user));
                     holder.displayItems();
                 }, false);
@@ -101,6 +100,41 @@ ProductHolder.prototype.displayItems = function () {
 
                 var ele421 = document.createElement('span');
                 ele421.textContent = 'Купи'
+                ele42.appendChild(ele421);
+            } else if (this instanceof FavouriteContainer) {
+                var ele42 = document.createElement('span');
+                ele4.appendChild(ele42);
+
+                var ele421 = document.createElement('span');
+                ele421.textContent = 'Добави в количката';
+
+                (function (element1, element2, item) {
+
+
+                    var addedToCart = false;
+                    element2.addEventListener('click', function () {
+                        var user = getUserSetProdHolders();
+                        if (!addedToCart) {
+                            element1.textContent = 'Добавено!';
+                            addedToCart = true;
+                            user.cart.addProduct({
+                                img: item.img,
+                                info: item.info,
+                                price: item.price,
+                                supPrice: item.supPrice
+                            })
+                            //test user
+                            sessionStorage.setItem('user', JSON.stringify(user));
+                            setTimeout(function () {
+                                addedToCart = false;
+                                element1.textContent = ' Добави в количката ';
+                            }, 1000);
+                        }
+
+                    }, false);
+
+                })(ele421, ele42, item);
+
                 ele42.appendChild(ele421);
             }
 

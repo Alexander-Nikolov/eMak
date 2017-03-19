@@ -39,8 +39,9 @@ for (var index = 0; index < otherImages.length; index++) {
 var addToCart = document.getElementById('addToCart');
 var addedToCart = false;
 addToCart.addEventListener('click', function () {
+    var user = getUserSetProdHolders();
     if (!addedToCart) {
-        document.getElementById('btnCart').style.backgroundColor = 'green';     
+        document.getElementById('btnCart').style.backgroundColor = 'green';
         document.querySelector('#btnCart>span:last-child').textContent = 'Добавено в количката';
         addedToCart = true;
         user.cart.addProduct({
@@ -56,19 +57,60 @@ addToCart.addEventListener('click', function () {
             document.getElementById('btnCart').style.backgroundColor = '#005eb8';
             document.querySelector('#btnCart>span:last-child').textContent = 'Добави в количката';
         }, 1000);
-    } else {
-
     }
 
 }, false);
 
-//test user
-var cart = new Cart([]);
-var favCont = new FavouriteContainer([]);
 
-var user = {
-    cart: cart,
-    favCont: favCont
+function isAlreadyInFav() {
+    var user = getUserSetProdHolders();
+
+    return user.favCont.products.some(function (ele) {
+        if (ele.info == sessionStorage.prodInfo) {
+            return true;
+        }
+    })
 }
-sessionStorage.setItem('user', JSON.stringify(user));
-var user = getUserSetProdHolders();
+
+
+var addToFavs = document.getElementById('addToFavs');
+var addedToFavs = isAlreadyInFav() || false;
+if (addedToFavs) {
+    document.getElementById('btnFavorites').style.backgroundColor = '#AA3939';
+    document.getElementById('btnFavorites').style.color = 'white';
+    document.querySelector('#btnFavorites>span:last-child').textContent = 'Добавено в любими';
+}
+addToFavs.addEventListener('click', function () {
+    var user = getUserSetProdHolders();
+    if (!addedToFavs) {
+
+        addedToFavs = true;
+        user.favCont.addProduct({
+            img: sessionStorage.prodImage,
+            info: sessionStorage.prodInfo,
+            price: sessionStorage.prodPrice,
+            supPrice: sessionStorage.prodSupPrice
+        })
+        //test user
+        sessionStorage.setItem('user', JSON.stringify(user));
+        document.getElementById('btnFavorites').style.backgroundColor = '#AA3939';
+        document.getElementById('btnFavorites').style.color = 'white';
+        document.querySelector('#btnFavorites>span:last-child').textContent = 'Добавено в любими';
+    } else {
+        document.getElementById('btnFavorites').style.backgroundColor = 'buttonface';
+        document.getElementById('btnFavorites').style.color = '#005eb8';
+        document.querySelector('#btnFavorites>span:last-child').textContent = 'Добави в любими';
+        addedToFavs = false;
+
+        var found = false;
+        user.favCont.products.find(function (value, index) {
+            if (!found) {
+                if (value.info == sessionStorage.prodInfo) {
+                    user.favCont.removeProduct(index);
+                    found = true;
+                    sessionStorage.setItem('user', JSON.stringify(user));
+                }
+            }
+        })
+    }
+}, false);
