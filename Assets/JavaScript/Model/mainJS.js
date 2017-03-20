@@ -6,23 +6,22 @@ function urlExists(url) {
 }
 
 
-
-function Section(name) {
-    this.name = name;
-}
-
-function LowerSection(name, category) {
-    this.name = name;
-    this.category = category;
-    this.products = [];
-    this.showNumber = 3;
-}
-
-LowerSection.prototype.addProducts = function (products) {
-    this.products = products;
-}
-
 var productSections = (function () {
+    function Section(name) {
+        this.name = name;
+    }
+
+    function LowerSection(name, category) {
+        this.name = name;
+        this.category = category;
+        this.products = [];
+        this.showNumber = 5;
+    }
+
+    LowerSection.prototype.addProducts = function (products) {
+        this.products = products;
+    }
+
     var sections = [
         {
             section: new Section('Телефони, Таблети & Смарт технологии'),
@@ -226,6 +225,11 @@ var productSections = (function () {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
             var seeMore = document.getElementById('seeMore' + (index + 1));
+            var filter = document.getElementById('filters' + (index + 1));
+            filter.addEventListener('click', function() {
+                sessionStorage.section = JSON.stringify(lowerSection);
+                window.location = './filter.html';
+            }, false);
             var seeMoreFunc = function (e) {
                 showMore(lowerSection, parent, displayBefore, e.currentTarget, index);
             }
@@ -245,7 +249,7 @@ var productSections = (function () {
             var parent = document.getElementById('productSection' + (index + 1));
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
 
-            indicatorsDisplay(parent, displayBefore, 5);
+            indicatorsDisplay(parent, displayBefore, lowerSection.showNumber);
 
             if (lowerSection.products.length != 0) {
                 productSections.setProducts(lowerSection, index);

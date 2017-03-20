@@ -434,7 +434,7 @@ main section {
 
 .productWrap, .fillSpace {
 	width: 160px;
-	margin: 10px 0;
+	margin: 10px 5px;
 	padding: 8px 0;
 	background: #D02F05;
 	color: white;
@@ -521,21 +521,46 @@ main section {
 }
 
 .seeMore {
-	display: inline-block;
-	width: 95%;
+	box-sizing: border-box;
+	display: block;
+	width: 48%;
 	text-align: center;
 	color: white;
 	background: #D02F05;
 	padding: 10px;
 	margin: 0 auto 40px;
-	border-radius: 10px;
+	border-radius: 15px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
 	cursor: pointer;
+	float: left;
+	
 }
 
-.seeMore:hover, .seeLess {
+.filters {
+	box-sizing: border-box;
+	display: block;
+	width: 48%;
+	text-align: center;
+	color: white;
+	background: #D02F05;
+	padding: 10px;
+	margin: 0 auto 40px;
+	border-radius: 15px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	cursor: pointer;
+	float: right;
+}
+
+.seeMore:hover, .filters:hover, .seeLess {
 	background: #2E221F;
 }
 
+
+.buttonHolder {
+	width: 100%;
+}
 
 /*************************
 FOOTER
