@@ -96,7 +96,7 @@ function indicatorsDisplay(parent, insertBefore, howMany) {
 
 
 
-function createHoverWindow(target, infoText, buttonInfo) {
+function createHoverWindow(target, infoText, buttonInfo, type) {
     var ele1 = document.createElement('div');
     ele1.className = 'hoverWindow';
     target.appendChild(ele1);
@@ -105,20 +105,88 @@ function createHoverWindow(target, infoText, buttonInfo) {
     ele2.className = 'hoverWindowContainer';
     ele1.appendChild(ele2);
 
-    var ele3 = document.createElement('p');
-    ele3.className = 'hoverWindowInfo';
-    ele3.textContent = infoText;
+
+
+
+
+
+    if (infoText == 'links') {
+        var ele3 = document.createElement('div');
+        ele3.className = 'hoverWindowInfo';
+
+        var links = [
+            {
+                path: './Profile/myorders.html',
+                name: 'Моите поръчки'
+            },
+            {
+                path: './Profile/myfavourites.html',
+                name: 'Любими'
+            },
+            {
+                path: './Profile/mydiscounts.html',
+                name: 'Моите ваучери и отстъпки'
+            },
+            {
+                path: './Profile/myguarantees.html',
+                name: 'Моите гаранции'
+            },
+            {
+                path: './Profile/return.html',
+                name: 'Връщане и поправка'
+            },
+            {
+                path: './Profile/myprofile.html',
+                name: 'Лични данни'
+            },
+            {
+                path: './Profile/myabonaments.html',
+                name: 'Моите абонаменти'
+            }
+        ]
+
+        links.forEach(function (link) {
+            var newLink = document.createElement('a');
+            newLink.href = link.path;
+            newLink.textContent = link.name;
+
+            ele3.appendChild(newLink);
+        })
+    } else {
+        var ele3 = document.createElement('p');
+        ele3.className = 'hoverWindowInfo';
+        ele3.textContent = infoText;
+    }
     ele2.appendChild(ele3);
 
     var ele4 = document.createElement('div');
     ele4.className = 'hoverWindowButton';
+    if (infoText == "links") {
+        ele4.id = 'logOutButton';
+    } else {
+        ele4.addEventListener('click', function () {
+            if (type == 'cart') {
+                window.location = './cartpage.html';
+            } else if (type == 'fav') {
+                window.location = './favourites.html';
+            } else {
+                window.location = './login.html';
+            }
+        }, false)
+    }
+
+
     ele2.appendChild(ele4);
 
     var ele5 = document.createElement('span');
     ele4.appendChild(ele5);
 
     var ele6 = document.createElement('span');
-    ele6.textContent = '>>';
+    if (infoText == "links") {
+        ele6.className = 'glyphicon glyphicon-log-out';
+    } else {
+        ele6.textContent = '>>';
+    }
     ele5.appendChild(ele6);
 
     var ele7 = document.createElement('span');

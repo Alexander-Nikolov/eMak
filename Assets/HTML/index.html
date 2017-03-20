@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/mainstyles.css">
+    <link rel="stylesheet" href="../CSS/hoverWindow.css">
     <link rel="stylesheet" href="../CSS/media380.css">
     <link rel="stylesheet" href="../CSS/media800.css">
     <link rel="stylesheet" href="../CSS/media1170.css">
@@ -182,7 +183,7 @@
             <section>
                 <div id="productsContainer">
                     <script>
-                        for(var index=1; index <= 8; index++) {
+                        for (var index = 1; index <= 8; index++) {
                             document.write('<div id="productSection' + index + '" class="productSection"> ');
                             document.write('<div class="fillSpace" id="productSection' + index + '-first"></div>');
                             document.write('<div class="fillSpace"></div>');
@@ -238,17 +239,17 @@
     <script src="../JavaScript/Model/mainJS.js"></script>
     <script src="../JavaScript/Controller/Events/events.js"></script>
     <script>
-        document.body.onload = function () {
-            onBodyLoad()
-            scrolling();
-            productSections.onLoad();
-            
-            document.getElementById('logOutButton').addEventListener('click', function(event) {
-                localStorage.removeItem("user_id");
-                window.location = "../HTML/index.html";
-            }, false); 
-        }
-    </script>  
+                        document.body.onload = function () {
+                            onBodyLoad()
+                            scrolling();
+                            productSections.onLoad();
+
+                            document.getElementById('logOutButton').addEventListener('click', function (event) {
+                                localStorage.removeItem("user_id");
+                                window.location = "../HTML/index.html";
+                            }, false);
+                        }
+    </script>
 </body>
 
 </html>

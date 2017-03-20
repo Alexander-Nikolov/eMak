@@ -91,66 +91,6 @@ header {
 }
 
 
-
-
-.hoverWindow {
-	color: white;
-	position: absolute;
-	width: 200px;
-	height: 230px;
-	z-index: 550;
-	text-align: center;
-	padding: 10px;
-	background: #2E221F;
-	border: 2px solid #D02F05;
-	border-radius: 15px;
-	display: none;
-	left: -10px;
-}
-
-
-.hoverWindowInfo {
-	height: 160px;
-	border: 2px solid #2E221F;
-	border-radius: 15px;
-	background: #D02F05;
-	padding: 5px;
-}
-
-.hoverWindowButton {
-	margin-top: 10px;
-}
-
-.hoverWindowButton>span {
-	display: inline-block;
-	font-weight: bold;
-	padding: 5px 2px;
-	cursor: pointer;
-	border-radius: 15px;
-}
-
-.hoverWindowButton>span span:first-child {
-	display: inline-block;
-	padding: 10px;
-	background: #D02F05;
-	border-radius: 10px;
-	border-bottom-right-radius: 20px;
-	
-}
-
-.hoverWindowButton>span span:last-child {
-	display: inline-block;
-	padding: 0 5px;	
-}
-
-.hoverWindowButton>span:hover  {
-	background: #D02F05;
-}
-
-.hoverWindowButton>span:hover span:first-child  {
-	background: #2E221F;
-}
-
 #profileMenu {
 	display: none;
 	/*text-align: left;*/
