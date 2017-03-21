@@ -238,6 +238,7 @@
     <script src="../JavaScript/Controller/DoM/domchange.js"></script>
     <script src="../JavaScript/Model/mainJS.js"></script>
     <script src="../JavaScript/Controller/Events/events.js"></script>
+    <script type="text/javascript" src="../JavaScript/productHolder.js"></script>
     <script>
                         document.body.onload = function () {
                             onBodyLoad()
@@ -249,6 +250,16 @@
                                 window.location = "../HTML/index.html";
                             }, false);
                         }
+
+                        var cart = new Cart([]);
+                        var favCont = new FavouriteContainer([]);
+
+                        var guest = {
+                            cart: cart,
+                            favCont: favCont
+                        }
+                        sessionStorage.setItem('guest', JSON.stringify(guest));
+                        var guest = getUserSetProdHolders();
     </script>
 </body>
 

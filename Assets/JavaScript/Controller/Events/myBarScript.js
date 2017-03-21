@@ -23,7 +23,7 @@ $('#myFavorites').on('mouseleave', function (e) {
 });
 
 $('#myCart').on('mouseenter', function (e) {
-    var user = JSON.parse(sessionStorage.user);
+    var user = getUserSetProdHolders();
     createHoverWindow(e.currentTarget, 'Вашите продукти в количката: ' + user.cart.products.length, 'Количка', 'cart');
 });
 

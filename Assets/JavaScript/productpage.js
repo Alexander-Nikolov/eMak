@@ -51,7 +51,7 @@ addToCart.addEventListener('click', function () {
             supPrice: sessionStorage.prodSupPrice
         })
         //test user
-        sessionStorage.setItem('user', JSON.stringify(user));
+        setUser(user);
         setTimeout(function () {
             addedToCart = false;
             document.getElementById('btnCart').style.backgroundColor = '#005eb8';
@@ -81,36 +81,43 @@ if (addedToFavs) {
     document.querySelector('#btnFavorites>span:last-child').textContent = 'Добавено в любими';
 }
 addToFavs.addEventListener('click', function () {
-    var user = getUserSetProdHolders();
-    if (!addedToFavs) {
 
-        addedToFavs = true;
-        user.favCont.addProduct({
-            img: sessionStorage.prodImage,
-            info: sessionStorage.prodInfo,
-            price: sessionStorage.prodPrice,
-            supPrice: sessionStorage.prodSupPrice
-        })
-        //test user
-        sessionStorage.setItem('user', JSON.stringify(user));
-        document.getElementById('btnFavorites').style.backgroundColor = '#AA3939';
-        document.getElementById('btnFavorites').style.color = 'white';
-        document.querySelector('#btnFavorites>span:last-child').textContent = 'Добавено в любими';
-    } else {
-        document.getElementById('btnFavorites').style.backgroundColor = 'buttonface';
-        document.getElementById('btnFavorites').style.color = '#005eb8';
-        document.querySelector('#btnFavorites>span:last-child').textContent = 'Добави в любими';
-        addedToFavs = false;
+    if (sessionStorage.user != null) {
+        var user = getUserSetProdHolders();
+        if (!addedToFavs) {
+            addedToFavs = true;
+            user.favCont.addProduct({
+                img: sessionStorage.prodImage,
+                info: sessionStorage.prodInfo,
+                price: sessionStorage.prodPrice,
+                supPrice: sessionStorage.prodSupPrice
+            })
+            //test user
+            setUser(user);
+            document.getElementById('btnFavorites').style.backgroundColor = '#AA3939';
+            document.getElementById('btnFavorites').style.color = 'white';
+            document.querySelector('#btnFavorites>span:last-child').textContent = 'Добавено в любими';
+        } else {
+            document.getElementById('btnFavorites').style.backgroundColor = 'buttonface';
+            document.getElementById('btnFavorites').style.color = '#005eb8';
+            document.querySelector('#btnFavorites>span:last-child').textContent = 'Добави в любими';
+            addedToFavs = false;
 
-        var found = false;
-        user.favCont.products.find(function (value, index) {
-            if (!found) {
-                if (value.info == sessionStorage.prodInfo) {
-                    user.favCont.removeProduct(index);
-                    found = true;
-                    sessionStorage.setItem('user', JSON.stringify(user));
+            var found = false;
+            user.favCont.products.find(function (value, index) {
+                if (!found) {
+                    if (value.info == sessionStorage.prodInfo) {
+                        user.favCont.removeProduct(index);
+                        found = true;
+                        sessionStorage.setItem('user', JSON.stringify(user));
+                    }
                 }
-            }
-        })
+            })
+        }
+    } else {
+        document.getElementById('accneed').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('accneed').style.display = 'none';
+        }, 2000);
     }
 }, false);

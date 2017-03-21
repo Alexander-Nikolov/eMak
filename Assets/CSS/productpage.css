@@ -293,6 +293,19 @@ main {
 	border: none;
 	border: 1px solid  #005eb8;
 	color:  #005eb8;
+	
+}
+#addToFavs {
+	position: relative;
+}
+#accneed {
+	background-color: rgb(200, 39, 39, 0.5);
+	position: absolute;
+	top: 53px;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	display: none;
 }
 
 #container {

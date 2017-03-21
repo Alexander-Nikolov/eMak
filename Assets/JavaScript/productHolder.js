@@ -14,10 +14,17 @@ ProductHolder.prototype.displayItems = function () {
     var itemsHolder = document.getElementById('productsHolder');
     itemsHolder.innerHTML = '';
     var products = this.products;
-    if (products.length <= 0) {
-        document.getElementById('prodCont').style.display = 'none';
-        document.getElementById('container').style.display = 'block';
-    } else {
+    var holder = this;
+    function whichDoM() {
+        if (holder instanceof Cart) {
+            return updateDoMcart();
+        } else if (holder instanceof FavouriteContainer) {
+            return updateDoMfav();
+        }
+
+    }
+
+    if (whichDoM()) {
         for (var index = 0; index < products.length; index++) {
             var item = products[index];
 
@@ -78,14 +85,19 @@ ProductHolder.prototype.displayItems = function () {
             var ele4 = document.createElement('div');
             ele4.className = 'prodBtnCont';
             ele1.appendChild(ele4);
-   
+
             var ele41 = document.createElement('span');
             (function (index, holder) {
                 ele41.addEventListener('click', function () {
                     holder.removeProduct(index);
 
-                    sessionStorage.setItem('user', JSON.stringify(user));
-                    holder.displayItems();
+                    setUser(user);
+
+                    if (holder instanceof Cart) {
+                        getUserSetProdHolders().cart.displayItems();
+                    } else if (holder instanceof FavouriteContainer) {
+                        getUserSetProdHolders().favCont.displayItems();
+                    }
                 }, false);
             })(index, this);
             ele4.appendChild(ele41);
@@ -197,8 +209,22 @@ FavouriteContainer.prototype.constructor = FavouriteContainer;
 
 
 function getUserSetProdHolders() {
-    var obj = JSON.parse(sessionStorage.user);
+
+    try {
+        var obj = JSON.parse(sessionStorage.user);
+    } catch (e) {
+        var obj = JSON.parse(sessionStorage.guest);
+    }
+    // obj = JSON.parse(obj);
     obj.cart = new Cart(obj.cart.products);
     obj.favCont = new FavouriteContainer(obj.favCont.products);
     return obj;
+}
+
+function setUser(user) {
+    if (sessionStorage.user == null) {
+        sessionStorage.setItem('guest', JSON.stringify(user));
+    } else {
+        sessionStorage.setItem('user', JSON.stringify(user));
+    }
 }

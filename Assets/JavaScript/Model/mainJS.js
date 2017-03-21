@@ -226,7 +226,7 @@ var productSections = (function () {
             var displayBefore = document.getElementById('productSection' + (index + 1) + '-first');
             var seeMore = document.getElementById('seeMore' + (index + 1));
             var filter = document.getElementById('filters' + (index + 1));
-            filter.addEventListener('click', function() {
+            filter.addEventListener('click', function () {
                 sessionStorage.section = JSON.stringify(lowerSection);
                 window.location = './filter.html';
             }, false);
@@ -258,15 +258,28 @@ var productSections = (function () {
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
-                    lowerSection.products = (JSON.parse(xhr.responseText));
-                    productSections.setProducts(lowerSection, index);
+
+                    if (xhr.status > 299 || xhr.status < 200) {
+                        var xhr2 = new XMLHttpRequest();
+                        xhr2.open('GET', '../JavaScript/jsonfiles/phones.json');
+                        xhr2.send();
+                        xhr2.addEventListener('load', function () {
+                            lowerSection.products = (JSON.parse(xhr2.responseText));
+                            productSections.setProducts(lowerSection, index);
+                        })
+                    } else {
+                        lowerSection.products = (JSON.parse(xhr.responseText));
+                        productSections.setProducts(lowerSection, index);
+                    }
                 }
             }
-            if (urlExists('../JavaScript/jsonfiles/' + lowerSection.category + '.json')) {
-                xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
-            } else {
-                xhr.open('GET', '../JavaScript/jsonfiles/phones.json');
-            }
+
+            // if (urlExists('../JavaScript/jsonfiles/' + lowerSection.category + '.json')) {
+            //     xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
+            // } else {
+            //     xhr.open('GET', '../JavaScript/jsonfiles/phones.json');
+            // }
+            xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
             xhr.send();
         },
 
