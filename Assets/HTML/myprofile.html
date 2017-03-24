@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My abonaments</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/productpage.css">
+    <link rel="stylesheet" href="../CSS/media380product.css">
+    <link rel="stylesheet" href="../CSS/hoverWindow.css">
+    <style type="text/css">
+        #containerContent h1 {
+            margin-bottom: 1.3em;
+            font-size: 2em;
+            border-bottom: 1px solid lightgrey;
+        } 
+        form div {
+            margin-bottom: 1em;
+        }
+
+        form div label {
+            font-size: 1.1em;
+            font-style: italic;
+            margin-left: 2em;
+            color:#d02f05;
+        }
+
+        form div input {
+            display: none;
+            border:none;
+            border-bottom: 1px solid lightgrey;
+            margin-left: 1em;
+        }
+
+        form div input:focus {
+            outline-width: 0;
+        }
+
+        form div p {
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #save {
+            display: none;
+        }
+
+        #save, #change {
+            margin-top:;
+            width: 30%;
+            padding: 0.5em;
+            background-color: #005eb8;
+            color: white;
+            border:none;
+            border-radius: 5px;
+        }
+
+        #buttons {
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="fixedNav">
+        </div>
+        <header>
+            <div id="logo">
+                <div id="logoAndSearch">
+                    <div id="logoImg">
+                        <a href="index.html">
+                            <img src="../Images/logo.png" alt="The logo of the site">
+                        </a>
+                    </div>
+                    <div id="search">
+                        <div id="searchForm">
+                            <form id="searchBar">
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
+                                <div id="searchButton">
+                                    <a href=""><span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="myBar">
+                    <div id="myAccount">
+                        <a href="./login.html">
+                            <span class="glyphicon glyphicon-user icons"></span>
+                            <span class="textContent">Моят акаунт</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myFavorites">
+                        <a href="./favourites.html">
+                            <span class="glyphicon glyphicon-heart icons"></span>
+                            <span class="textContent">Любими</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myCart">
+                        <a href="./cartpage.html">
+                            <span class="glyphicon glyphicon-shopping-cart icons"></span>
+                            <span class="textContent">Моята количка</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <span id="mobileMenuButton" class="glyphicon glyphicon-align-justify">Меню</span>
+        <div id="mobilemenu">
+            <div class="navMenuItems">
+                <a href="">Продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Абониране за бюлетин</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">Разопаковани продукти</a>
+            </div>
+            <div class="navMenuItems">
+                <a href="">eMAG инфо</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div id="container"> 
+            <div id="containerContent">
+                <h1>Моят профил</h1>
+                <form method="POST">
+                    <div>
+                        <label>Имейл: </label>
+                        <p id="emailParagraph"></p>
+                    </div>
+                    <div class="canChange">
+                        <label for="firstName">Име: </label>
+                        <input id="firstName" type="text"/> 
+                        <p id="firstNameParagraph"></p>                    
+                    </div>
+                    <div class="canChange">
+                        <label for="lastName">Фамилия: </label> 
+                        <input id="lastName" type="text"/> 
+                        <p id="lastNameParagraph"></p> 
+                    </div>
+                    <div class="canChange">
+                        <label for="city">Град: </label>
+                        <input id="city" type="text"/>
+                        <p id="cityParagraph"></p>
+                    </div>
+                    <div class="canChange">
+                        <label for="country">Държава: </label>
+                        <input id="country" type="text"/>
+                        <p id="countryParagraph"></p>
+                    </div>
+                    <div class="canChange">
+                        <label for="birthDate">Дата на раждане: </label>
+                        <input id="birthDate" type="date"/>
+                        <p id="birthDateParagraph"></p>
+                    </div>
+                    <div id="buttons">
+                        <button id="save">Запази</button>
+                        <button id="change">Промени</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../JavaScript/Controller/Events/myBarScript.js"></script>
+<script src="../JavaScript/Controller/DoM/domchange.js"></script>
+<script type="text/javascript" src="../JavaScript/user.js"></script>
+<script src="../JavaScript/Model/mainJS.js"></script>
+<script src="../JavaScript/productHolder.js"></script>
+
+<script> 
+    var user = getUserSetProdHolders();
+    function setData(data){
+        user = getUserSetProdHolders();
+        if(user[data]){
+            document.getElementById(data + "Paragraph").innerHTML = user[data];
+        } else {
+         document.getElementById(data + "Paragraph").innerHTML = "Няма информация";
+     }
+ }
+
+ document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById("emailParagraph").innerHTML = user.email;
+    var data = ["firstName", "lastName", "city", "country", "birthDate"];
+    data.forEach(function(element) {
+        setData(element);
+    });
+
+    document.getElementById("change").addEventListener("click", function(event){
+        event.preventDefault();
+        data.forEach(function(element){
+            document.getElementById(element).style.display= "inline-block";
+            document.getElementById(element).placeholder = user[element] || "";
+            document.getElementById(element + "Paragraph").style.display = "none";
+        });
+        document.getElementById("change").style.display= "none";
+        document.getElementById("save").style.display = "inline-block";
+    }, false);
+
+    document.getElementById("save").addEventListener("click", function(event){
+        event.preventDefault();
+        var allInputs = document.querySelectorAll("form>div input");
+        allInputs.forEach(function(element){
+            if(element.value != "") {
+                user[element.id] = element.value;
+            }
+        });
+        sessionStorage.setItem("user", JSON.stringify(user));
+        data.forEach(function(element){
+            document.getElementById(element).style.display= "none";
+            document.getElementById(element + "Paragraph").style.display ="inline-block";
+        });
+        data.forEach(function(element) {
+            setData(element);
+        });
+
+        userManager.updateUser(userManager.getUserIndex(user.email), user);
+        userManager.updateUsers();
+        console.log(userManager.getUsers());
+
+        window.location = "myprofile.html";
+
+        document.getElementById("save").style.display= "none";
+        document.getElementById("change").style.display = "inline-block";
+    }, false);
+}, false);
+
+
+</script>
+
+</html>

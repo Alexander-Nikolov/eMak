@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>eMak</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/cartFavpage.css">
+    <link rel="stylesheet" href="../CSS/hoverWindow.css">
+    <link rel="stylesheet" href="../CSS/media380cartFavpage.css">
+    <link rel="stylesheet" href="../CSS/media600cartFavpage.css">
+    <link rel="stylesheet" href="../CSS/media800cartFavpage.css">
+    <link rel="stylesheet" href="../CSS/media1170cartFavpage.css">
+    <style> 
+        .prodBtnCont {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="fixedNav">
+        </div>
+        <header>
+
+            <div id="logo">
+                <div id="logoAndSearch">
+                    <div id="logoImg">
+                        <a href="./index.html">
+                            <img src="../Images/logo.png" alt="The logo of the site">
+                        </a>
+                    </div>
+                    <div id="search">
+                        <div id="searchForm">
+                            <form id="searchBar">
+                                <input type="text" name="searchBar" id="searchInput" placeholder="Какво търсиш днес?" />
+                                <div id="searchButton">
+                                    <a href=""><span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="myBar">
+                    <div id="myAccount">
+                        <a href="./login.html">
+                            <span class="glyphicon glyphicon-user icons"></span>
+                            <span class="textContent">Моят акаунт</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myFavorites">
+                        <a href="./favourites.html">
+                            <span class="glyphicon glyphicon-heart icons"></span>
+                            <span class="textContent">Любими</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                    <div id="myCart">
+                        <a href="./cartpage.html">
+                            <span class="glyphicon glyphicon-shopping-cart icons"></span>
+                            <span class="textContent">Моята количка</span>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="prodCont">
+                <h2>Вашите поръчки:</h2>
+                <div id="productsHolder">
+                </div>
+            </div>
+            <div id="container">
+                <h1>Нямаш поръчки</h1>
+                <div id="containerInfo">
+                    <p>Ако имаш акаунт в eMAG моля да влезеш в него, след което ще те препратим към продуктите от количката
+                        ти.
+                    </p>
+                </div>
+                <div id="logInvite">
+                    <a href="../login.html"><button id="button">Влез в акаунт</button></a>
+                    <p>или може <a href="../index.html">да се върнеш</a> за да продължиш с покупките.</p>
+                </div>
+            </div>
+
+        </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../JavaScript/Model/mainJS.js"></script>
+<script src="../JavaScript/productHolder.js"></script>
+<script src="../JavaScript/Controller/Events/myBarScript.js"></script>
+<script src="../JavaScript/Controller/DoM/domchange.js"></script>
+<script src="../JavaScript/Controller/DoM/orderspageDoM.js"></script>
+<script src="../JavaScript/Controller/Events/events.js"></script>
+
+</html>

@@ -15,11 +15,15 @@ ProductHolder.prototype.displayItems = function () {
     itemsHolder.innerHTML = '';
     var products = this.products;
     var holder = this;
+    console.log(this.products);
     function whichDoM() {
+        console.log(holder);
         if (holder instanceof Cart) {
             return updateDoMcart();
         } else if (holder instanceof FavouriteContainer) {
             return updateDoMfav();
+        } else if (holder instanceof Orders) {
+            return updateDoMord();
         }
 
     }
@@ -111,7 +115,19 @@ ProductHolder.prototype.displayItems = function () {
                 ele4.appendChild(ele42);
 
                 var ele421 = document.createElement('span');
-                ele421.textContent = 'Купи'
+                ele421.textContent = 'Купи';
+                ele42.addEventListener("click", function(event) {
+                    var user = getUserSetProdHolders();
+                    user.orders.addProduct({
+                        img: item.img,
+                        info: item.info,
+                        price: item.price,
+                        supPrice: item.supPrice
+                    });
+                    // kak da mahna ??? user.cart.removeProduct()
+                    sessionStorage.setItem('user', JSON.stringify(user));
+
+                }, false);
                 ele42.appendChild(ele421);
             } else if (this instanceof FavouriteContainer) {
                 var ele42 = document.createElement('span');
@@ -156,12 +172,25 @@ ProductHolder.prototype.displayItems = function () {
             var sum = this.getTotalPrice();
             document.querySelector('#buyAll span span span').textContent = sum[0];
             document.querySelector('#buyAll span span sup').textContent = sum[1];
+            document.querySelector("#buyAll").addEventListener("click", function(event) {
+                var user = getUserSetProdHolders();
+                for (var index = 0;index < user.cart.products.length; index++) {
+                    user.orders.addProduct({
+                        img: user.cart.products[index].img,
+                        info: user.cart.products[index].info,
+                        price: user.cart.products[index].price,
+                        supPrice: user.cart.products[index].supPrice
+                    });
+                }
+                for (var index = user.cart.products.length - 1;index >= 0; index--) {
+                    user.cart.removeProduct(index);
+                }
+                sessionStorage.setItem('user', JSON.stringify(user));
+                updateDoMcart();
+            }, false);
         }
-
     }
 }
-
-
 
 
 
@@ -205,19 +234,25 @@ function FavouriteContainer(products) {
 FavouriteContainer.prototype = Object.create(ProductHolder.prototype);
 FavouriteContainer.prototype.constructor = FavouriteContainer;
 
+function Orders(products) {
+    ProductHolder.call(this, products);
+}
 
+Orders.prototype = Object.create(ProductHolder.prototype);
+Orders.prototype.constructor = Orders;
 
 
 function getUserSetProdHolders() {
-
     try {
         var obj = JSON.parse(sessionStorage.user);
     } catch (e) {
         var obj = JSON.parse(sessionStorage.guest);
     }
     // obj = JSON.parse(obj);
+    console.log(obj);
     obj.cart = new Cart(obj.cart.products);
     obj.favCont = new FavouriteContainer(obj.favCont.products);
+    obj.orders = new Orders(obj.orders.products);
     return obj;
 }
 

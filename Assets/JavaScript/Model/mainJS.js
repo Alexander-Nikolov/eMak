@@ -258,17 +258,17 @@ var productSections = (function () {
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
-
+                    console.log(xhr.status);
                     if (xhr.status > 299 || xhr.status < 200) {
                         var xhr2 = new XMLHttpRequest();
                         xhr2.open('GET', '../JavaScript/jsonfiles/phones.json');
-                        xhr2.send();
+                        xhr2.send(null);
                         xhr2.addEventListener('load', function () {
                             lowerSection.products = (JSON.parse(xhr2.responseText));
                             productSections.setProducts(lowerSection, index);
                         })
                     } else {
-                        lowerSection.products = (JSON.parse(xhr.responseText));
+                        lowerSection.products = JSON.parse(xhr.responseText);
                         productSections.setProducts(lowerSection, index);
                     }
                 }
@@ -280,7 +280,7 @@ var productSections = (function () {
             //     xhr.open('GET', '../JavaScript/jsonfiles/phones.json');
             // }
             xhr.open('GET', '../JavaScript/jsonfiles/' + lowerSection.category + '.json');
-            xhr.send();
+            xhr.send(null);
         },
 
         getLowerSections: function (index) {

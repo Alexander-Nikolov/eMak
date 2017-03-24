@@ -37,7 +37,7 @@ for (var index = 0; index < otherImages.length; index++) {
 
 
 var addToCart = document.getElementById('addToCart');
-var addedToCart = false;
+var addedToCart = false; // трябва ли ни ? 
 addToCart.addEventListener('click', function () {
     var user = getUserSetProdHolders();
     if (!addedToCart) {

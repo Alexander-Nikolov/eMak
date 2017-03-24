@@ -46,23 +46,6 @@
                             <span class="textContent">Моят акаунт</span>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
-                        <div id="profileMenu" class="hoverWindow">
-                            <div class="hoverWindowContainer">
-                                <a href="./Profile/myorders.html">Моите поръчки</a>
-                                <a href="./Profile/myfavourites.html">Любими</a>
-                                <a href="./Profile/mydiscounts.html">Моите ваучери и отстъпки</a>
-                                <a href="./Profile/myguarantees.html">Моите гаранции</a>
-                                <a href="./Profile/return.html">Връщане и поправка</a>
-                                <a href="./Profile/myprofile.html">Лични данни</a>
-                                <a href="./Profile/myabonaments.html">Моите абонаменти</a>
-                            </div>
-                            <button id="logOutButton" class="hoverWindowButton">
-                                <span>
-                                    <span class="glyphicon glyphicon-log-out"></span> 
-                                    <span>Изход</span>
-                                </span>
-                            </button>
-                        </div>
                     </div>
                     <div id="myFavorites">
                         <a href="./favourites.html">
@@ -239,28 +222,28 @@
     <script src="../JavaScript/Controller/DoM/domchange.js"></script>
     <script src="../JavaScript/Model/mainJS.js"></script>
     <script src="../JavaScript/Controller/Events/events.js"></script>
+    <script src="../JavaScript/user.js"></script>
     <script type="text/javascript" src="../JavaScript/productHolder.js"></script>
-    <script>
-                        document.body.onload = function () {
-                            onBodyLoad()
-                            scrolling();
-                            productSections.onLoad();
+    <script> 
+        document.body.onload = function () {
+            onBodyLoad()
+            scrolling();
+            productSections.onLoad();
+        }
 
-                            document.getElementById('logOutButton').addEventListener('click', function (event) {
-                                localStorage.removeItem("user_id");
-                                window.location = "../HTML/index.html";
-                            }, false);
-                        }
+        if(!sessionStorage.user){
+            var cart = new Cart([]);
+            var favCont = new FavouriteContainer([]);
+            var orders = new Orders([]);
+            var guest = {
+                cart: cart,
+                favCont: favCont,
+                orders: orders
+            }
 
-                        var cart = new Cart([]);
-                        var favCont = new FavouriteContainer([]);
-
-                        var guest = {
-                            cart: cart,
-                            favCont: favCont
-                        }
-                        sessionStorage.setItem('guest', JSON.stringify(guest));
-                        var guest = getUserSetProdHolders();
+            sessionStorage.setItem('guest', JSON.stringify(guest));
+            var guest = getUserSetProdHolders();
+        }
     </script>
 </body>
 

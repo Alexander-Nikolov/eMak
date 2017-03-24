@@ -5,7 +5,6 @@
         var useremail = document.querySelector("#useremail");
         var email = useremail.value.trim();
         event.preventDefault();
-        console.log("mdm");
 
         if (userManager.isUserEmailExists(email)) {
             var user = userManager.getUserByEmail(email);
@@ -14,10 +13,16 @@
 
             document.getElementById('buttonSubmitPassword').addEventListener('click', function(event) {
                 event.preventDefault();
+
                 var userpassword = document.getElementById("password");
                 var password = userpassword.value.trim();
+
                 if (user.password === password) {
-                    localStorage.setItem("user_id", user.id);
+                    var loggedUser = getUserSetProdHolders();
+                    loggedUser.email = email;
+
+                    sessionStorage.setItem("user", JSON.stringify(loggedUser));
+                    sessionStorage.removeItem("guest");
                     window.location = "../HTML/index.html";
 
                 } else {
@@ -28,7 +33,6 @@
             }, false);
 
         } else {
-            console.log("msk");
             document.getElementById("registrationForm").style.display = "inline-block";
             document.getElementById("emailForm").style.display = "none";
 
@@ -43,15 +47,18 @@
                 var agreeIsChecked = agree.checked;
 
                 if (password === repeatPassword && agreeIsChecked == true) {
-                    var user = new User(3, email, password);
-                    userManager.addUser(user);
-                    localStorage.setItem("user_id", user.id);
+                    var loggedUser = getUserSetProdHolders();
+                    loggedUser.email = email;
+                    loggedUser.password = password;
+                    console.log(loggedUser);
+                    userManager.addUser(loggedUser);
+                    sessionStorage.removeItem("guest");
+                    sessionStorage.setItem("user", JSON.stringify(loggedUser));
                     window.location = "../HTML/index.html";
                 } else {
                     if (document.getElementById('errorDifferentPasswords')) {
                         document.getElementById('errorDifferentPasswords').parentElement.removeChild(document.getElementById('errorDifferentPasswords'));
                         repeatedPassword.style.border = "1px solid grey";
-                        
                     }
 
                     if (document.getElementById('errorNotChecked')) {

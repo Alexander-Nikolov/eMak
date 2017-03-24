@@ -4,8 +4,6 @@ function displayProducts(img, info, price, supPrice, parent, insertBefore, last)
     ele1.style.display = 'none';
     parent.insertBefore(ele1, insertBefore);
 
-
-
     var ele2 = document.createElement('div');
     ele2.className = 'productImg';
     ele2.addEventListener('click', function () {
@@ -116,7 +114,7 @@ function createHoverWindow(target, infoText, buttonInfo, type) {
 
         var links = [
             {
-                path: './Profile/myorders.html',
+                path: './myorders.html',
                 name: 'Моите поръчки'
             },
             {
@@ -136,7 +134,7 @@ function createHoverWindow(target, infoText, buttonInfo, type) {
                 name: 'Връщане и поправка'
             },
             {
-                path: './Profile/myprofile.html',
+                path: './myprofile.html',
                 name: 'Лични данни'
             },
             {
@@ -163,6 +161,17 @@ function createHoverWindow(target, infoText, buttonInfo, type) {
     ele4.className = 'hoverWindowButton';
     if (infoText == "links") {
         ele4.id = 'logOutButton';
+        ele4.addEventListener('click', function (event) {
+            sessionStorage.removeItem("user");
+            var cart = new Cart([]);
+            var favCont = new FavouriteContainer([]);
+            var guest = {
+                cart: cart,
+                favCont: favCont
+            }
+            sessionStorage.setItem("guest", JSON.stringify(guest));
+            window.location = "../HTML/index.html";
+        }, false);
     } else {
         ele4.addEventListener('click', function () {
             if (type == 'cart') {
