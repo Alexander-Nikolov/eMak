@@ -4,6 +4,7 @@
         "info": "Фитнес гривна Garmin Vivofit, Черна ",
         "price": "158",
         "supPrice": "99",
+        "brand":"Garmin",
         "tags": ["гривна", "фитнес", "черна"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Фитнес гривна Xiaomi Mi Band Fitness Monitor, Черна ",
         "price": "167",
         "supPrice": "00",
+        "brand":"Xiaomi",
         "tags": ["гривна", "фитнес", "черна"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Гривна Samsung Smart Charm, Розова ",
         "price": "63",
         "supPrice": "09",
+        "brand": "Samsung",
         "tags": ["гривна", "smart", "розова"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Фитнес гривна Smart A+ 07 ",
         "price": "42",
         "supPrice": "99",
+        "brand": "A+",
         "tags": ["гривна", "smart", "фитнес"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Фитнес гривна E-Boda Smart 101, Черна ",
         "price": "135",
         "supPrice": "99",
+        "brand":"E-Boda",
         "tags": ["гривна", "фитнес", "черна"]
     }
 ]

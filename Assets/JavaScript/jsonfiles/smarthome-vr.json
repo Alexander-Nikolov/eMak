@@ -4,6 +4,7 @@
         "info": "Smart LED крушка Smart Light JH101 с тонколона и контрол в/у цветовете, Бяла ",
         "price": "48",
         "supPrice": "99",
+        "brand":"Smart",
         "tags": ["smart", "крушка"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Датчик за движение за монтиране на таван HAMA Xavax, 111988 ",
         "price": "44",
         "supPrice": "00",
+        "brand":"HAMA Xavax",
         "tags": ["smart", "датчик"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Плосък детектор за врата и прозорец с аларма HAMA Xavax 111985 ",
         "price": "20",
         "supPrice": "09",
+        "brand":"HAMA Xavax",
         "tags": ["smart", "детектор"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Устройство Pro Smart Bboil за управление на електрически уреди през интернет ",
         "price": "79",
         "supPrice": "99",
+        "brand":"Smart",
         "tags": ["smart", "устройство"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Умна LED крушка Mimoodz, Консумира 6W , 40W, 2700 - 4000 К С промяна на цветовете, Цокъл Е27 ",
         "price": "99",
         "supPrice": "99",
+        "brand":"Mimoodz",
         "tags": ["smart", "крушка"]
     }
 ]

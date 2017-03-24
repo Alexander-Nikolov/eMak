@@ -4,6 +4,7 @@
         "info": "Клавиатура gaming Razer BlackWidow Tournament Chroma, Layout US ",
         "price": "269",
         "supPrice": "79",
+        "brand": "Razer",
         "tags": ["клавиетура", "gaming", "razer"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Клавиатура ultraslim A+ KO2, Безжична, Черна ",
         "price": "33",
         "supPrice": "00",
+        "brand": "UltraSlim",
         "tags": ["клавиетура", "черна", "безжична"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Безжична мишка Microsoft Sculpt Comfort, Bluetooth, Черна ",
         "price": "59",
         "supPrice": "09",
+        "brand": "Microsoft",
         "tags": ["мишка", "безжична", "черна"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Тонколони 5.1 A+ MS35, 35W RMS ",
         "price": "89",
         "supPrice": "99",
+        "brand": "A+",
         "tags": ["тонколони", "5.1", "а+"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Web камера Microsoft LifeCam Business HD-3000, HD, Черна ",
         "price": "34",
         "supPrice": "99",
+        "brand": "Microsoft",
         "tags": ["камера", "hd", "черна"]
     }
 ]

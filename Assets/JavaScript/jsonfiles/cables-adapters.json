@@ -4,6 +4,7 @@
         "info": "Кабел A+ High-Speed HDMI 1.4V, plug-plug, Ethernet, gold-plated, 1.5 м ",
         "price": "8",
         "supPrice": "79",
+        "brand": "A+",
         "tags": ["кабел", "златист", "1.5м"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Адаптер A+ HDMI-mini HDMI, Черен ",
         "price": "14",
         "supPrice": "00",
+        "brand": "A+",
         "tags": ["адаптер", "а+", "черен"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Кабел за монитор A+, VGA-VGA 15 pin, 1.8 м, Черен ",
         "price": "14",
         "supPrice": "09",
+        "brand": "A+",
         "tags": ["кабел", "а+", "черен"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Адаптер 3 in 1 A+ 2 Port USB 3.0 Hub + Gigabit Адаптер RJ45 + SD TF Card Reader ",
         "price": "140",
         "supPrice": "99",
+        "brand": "A+",
         "tags": ["адаптер", "а+", "usb"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Адаптер A+ USB 3.0 to RJ45 ",
         "price": "62",
         "supPrice": "99",
+        "brand": "A+",
         "tags": ["адаптер", "а+", "usb"]
     }
 ]

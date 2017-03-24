@@ -4,6 +4,7 @@
         "info": "Стол Smart, Черен ",
         "price": "64",
         "supPrice": "79",
+        "brand":"Smart",
         "tags": ["стол", "черен"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Стол Kring Edison, PU ",
         "price": "144",
         "supPrice": "00",
+        "brand": "Kring",
         "tags": ["стол", "kring"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Стол Kring Eco, Оранжев ",
         "price": "109",
         "supPrice": "09",
+        "brand": "Kring",
         "tags": ["стол", "оранжев"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Стол Kring Bokai, Ергономичен, Екологична кожа, Черен",
         "price": "199",
         "supPrice": "99",
+        "brand": "Kring",
         "tags": ["стол", "черен"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Стол Kring Kontur, Мрежа, Черен ",
         "price": "79",
         "supPrice": "99",
+        "brand": "Kring",
         "tags": ["стол", "черен"]
     }
 ]

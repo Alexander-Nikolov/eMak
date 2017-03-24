@@ -4,6 +4,7 @@
         "info": "Видео проектор Acer Pico C120 LED, WVGA, Черен ",
         "price": "499",
         "supPrice": "79",
+        "brand":"Acer",
         "tags": ["проектор", "черен"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Видео проектор ACER K138ST, LED DLP, WXGA, 800 лумена, Бял ",
         "price": "1.099",
         "supPrice": "00",
+        "brand":"Acer",
         "tags": ["проектор", "бял"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Видео проектор Hitachi CP-EW250, WXGA, Преносим, 2500 лумена, Бял ",
         "price": "800",
         "supPrice": "09",
+        "brand":"Hitachi", 
         "tags": ["проектор", "бял"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Проектор BenQ TH683, 3D Ready, DLP, Full HD (1920 x 1080), 10 000:1, 3200 lm, 2x HDMI, D-sub, USB A, USB mini(TypeB), RS232, RJ-45 ",
         "price": "1.699",
         "supPrice": "99",
+        "brand":"BenQ",
         "tags": ["проектор", "benq"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Видео проектор Acer Pico C205 LED, WVGA, Бял ",
         "price": "619",
         "supPrice": "99",
+        "brand":"Acer",
         "tags": ["проектор", "бял"]
     }
 ]

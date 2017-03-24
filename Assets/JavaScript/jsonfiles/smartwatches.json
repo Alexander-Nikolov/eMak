@@ -4,6 +4,7 @@
         "info": "Часовник Smartwacth E-Boda Smart Time 400 HR ",
         "price": "168",
         "supPrice": "79",
+        "brand":"E-Boda",
         "tags": ["smartwacth", "часовник"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Часовник smartwatch E-boda Time 330, Черен ",
         "price": "67",
         "supPrice": "00",
+        "brand":"E-Boda",
         "tags": ["smartwacth", "часовник", "черен"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Часовник Smartwatch Star Rush с черна силиконова каишка, Слот за SIM карта, Сребрист ",
         "price": "64",
         "supPrice": "09",
+        "brand":"Star Rush",
         "tags": ["smartwacth", "часовник", "сребрист"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Часовник Smartwatch iUni U8+, Bluetooth, Черен ",
         "price": "44",
         "supPrice": "99",
+        "brand":"iUni",
         "tags": ["smartwacth", "часовник", "черен"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Часовник Smartwatch Evolio X-watch Pro, Черен ",
         "price": "114",
         "supPrice": "99",
+        "brand":"Evolio",
         "tags": ["smartwacth", "часовник", "черен"]
     }
 ]

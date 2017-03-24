@@ -4,6 +4,7 @@
         "info": "Телевизор LED Smart Samsung, 40(101 cм), 40KU6072, 4K Ultra HD ",
         "price": "859",
         "supPrice": "79",
+        "brand":"Samsung",
         "tags": ["телевизор", "samsung"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Телевизор Smart LED Samsung 40KU6172, Извит, 40 (101 см), 4K Ultra HD ",
         "price": "1.099",
         "supPrice": "00",
+        "brand": "Samsung",
         "tags": ["телевизор", "samsung"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Телевизор LED Samsung 32J4000, 32 (80 см), HD ",
         "price": "419",
         "supPrice": "09",
+        "brand": "Samsung",
         "tags": ["телевизор", "samsung"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Телевизор LED LG 43LH541V, 43 (108 см), Game TV, Full HD ",
         "price": "699",
         "supPrice": "99",
+        "brand": "LG",
         "tags": ["телевизор", "led"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Телевизор LED Star-Light, 32 (80 см), 32DM3500, HD Ready ",
         "price": "319",
         "supPrice": "99",
+        "brand": "Star-Light",
         "tags": ["телевизор", "samsung"]
     }
 ]

@@ -4,6 +4,7 @@
         "info": "Външна батерия Hama Fuel Up, 6000 mAh, Fast Charging, 2.1 A x 2, Lithium Ion, Черна ",
         "price": "21",
         "supPrice": "00",
+        "brand":"Hama Fuel",
         "tags": ["батерия", "външна", "черна"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Външна батерия E-BODA Power 200, White ",
         "price": "34",
         "supPrice": "99",
+        "brand":"E-BODA",
         "tags": ["батерия", "външна", "бяла"]
     },
     {
@@ -18,13 +20,15 @@
         "info": "Външна батерия Trust, Primo, 10000 mAh, Черна ",
         "price": "54",
         "supPrice": "09",
+        "brand":"Trust",
         "tags": ["батерия", "външна", "черна"]
     },
     {
         "img": "../Images/Products/outbat4.jpg",
         "info": "Външна батерия Fresh & Rebel Powerbank Charging Station + Powerbank 6000 mAh Concrete външна батерия ",
         "price": "73",
-        "supPrice": "59",
+        "supPrice": "59",   
+        "brand":"Fresh & Rebel",
         "tags": ["батерия", "външна"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Външна батерия A+, 10500 mAh, Сива ",
         "price": "22",
         "supPrice": "99",
+        "brand":"A+",
         "tags": ["батерия", "външна", "сива"]
     }
 ]

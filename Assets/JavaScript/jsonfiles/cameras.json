@@ -4,6 +4,7 @@
         "info": "Дигитален фотоапарат Sony DSC-WX500, 18.2MP, Wi-Fi, NFC, White ",
         "price": "649",
         "supPrice": "79",
+        "brand": "Sony",
         "tags": ["фотоапарат", "бял"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Дигитален фотоапарат Sony Cyber-Shot DSC-RX100 II, 20.2MP, FullHD, Black ",
         "price": "1.148",
         "supPrice": "00",
+        "brand": "Sony",
         "tags": ["фотоапарат", "черен"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Комплект дигитален фотоапарат Polaroid Snap с 8GB MicroSD карта памет и Фотохартия Polaroid Zink Paper",
         "price": "299",
         "supPrice": "09",
+        "brand": "Polaroid",
         "tags": ["фотоапарат", "бял"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Дигитален фотоапарат Olympus TG-870, 16MP, Водоустойчив, Удароустойчив, Черен ",
         "price": "559",
         "supPrice": "99",
+        "brand": "Olympus",
         "tags": ["фотоапарат", "черен"]
     },
     {

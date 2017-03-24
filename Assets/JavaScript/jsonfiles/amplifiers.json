@@ -4,6 +4,7 @@
         "info": "Усилвател Pioneer A-20-K, 2.0, 100W RMS, Черен ",
         "price": "469",
         "supPrice": "79",
+        "brand": "Pioneer",
         "tags": ["усилвател", "черен", "100w"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Усилвател Akai AS005RA-750B, 375W RMS, Сребрист ",
         "price": "299",
         "supPrice": "00",
+        "brand": "Akai",
         "tags": ["усилвател", "сребрист", "375w"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Усилвател Harman Kardon HK3700, 2.0, 85W RMS, Черен ",
         "price": "770",
         "supPrice": "09",
+        "brand": "Harman",
         "tags": ["усилвател", "черен", "85w"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Усилвател Akai AS030RA-780, 5.1, 375W RMS, Златист ",
         "price": "399",
         "supPrice": "99",
+        "brand":"Akai",
         "tags": ["усилвател", "златист", "375w"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Усилвател Akai AS009RA-558 ",
         "price": "199",
         "supPrice": "99",
+        "brand":"Akai",
         "tags": ["усилвател", "akai"]
     }
 ]

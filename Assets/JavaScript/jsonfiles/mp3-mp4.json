@@ -4,6 +4,7 @@
         "info": "MP3 плеър Energy Sistem Stick 8GB 1408,Черен ",
         "price": "69",
         "supPrice": "79",
+        "brand":"Energy",
         "tags": ["mp3", "черен"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "MP3 плеър Philips MiniDot SA5DOT02BN/12, 2GB, Сив/Син ",
         "price": "48",
         "supPrice": "00",
+        "brand":"Energy",
         "tags": ["mp3", "син", "сив"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "MP3 плеър Philips MiniDot SA5DOT02WN/12, 2GB, Черен ",
         "price": "49",
         "supPrice": "09",
+        "brand":"Philips",
         "tags": ["mp3", "черен"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "MP3 плеър Sony NWZB183B, 4GB, Черен ",
         "price": "106",
         "supPrice": "99",
+        "brand": "Sony",
         "tags": ["mp3", "черен"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "MP4 Плеър Philips Vibe SA4VBE04KF, 4GB, FM, Черен ",
         "price": "85",
         "supPrice": "99",
+        "brand":"Philips",
         "tags": ["mp3", "черен"]
     }
 ]

@@ -4,6 +4,7 @@
         "info": "Сушилня Hotpoint-Ariston Aqualtis AQC92F7TM, 9 кг, 16 Програми, Клас A++ ",
         "price": "1.289",
         "supPrice": "79",
+        "brand":"Hotpoint-Ariston",
         "tags": ["сушилня", "бяла"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Сушилня за дрехи Heinner HCD-80B, Кондензация, 8 кг, 16 програми, Клас B, Бяла ",
         "price": "549",
         "supPrice": "00",
+        "brand": "Heinner",
         "tags": ["сушилня", "бяла"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Сушилня за дрехи Hotpoint-Ariston Aqualtis AQC82F7TM, 8 кг, 16 Програми, Клас A++ ",
         "price": "1.099",
         "supPrice": "09",
+        "brand":"Hotpoint-Ariston",
         "tags": ["сушилня", "бяла"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Сушилня Whirlpool Supreme Dryer DDLX 70110, 6 th Sense, 7 кг, Клас B ",
         "price": "999",
         "supPrice": "99",
+        "brand":"Whirlpool",
         "tags": ["сушилня", "бяла"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Сушилня за дрехи 6th Sense Colours Whirlpool Supreme Care HSCX 90420, Клас A++, Led, Бяла ",
         "price": "1.179",
         "supPrice": "99",
+        "brand":"Whirlpool",
         "tags": ["сушилня", "бяла"]
     }
 ]

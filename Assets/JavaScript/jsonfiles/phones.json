@@ -4,6 +4,7 @@
         "info": "Смартфон Samsung Galaxy J5 (2016), Dual Sim, 16GB, 4G, Black ",
         "price": "314",
         "supPrice": "99",
+        "brand":"Samsung",
         "tags": ["смартфон", "черен", "16gb"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Смартфон Wink City S, Dual SIM, 8GB, 3G, Black ",
         "price": "144",
         "supPrice": "99",
+        "brand":"Wink",
         "tags": ["смартфон", "черен", "8gb"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Смартфон Huawei P8 Lite, Dual Sim, 16 GB, 4G, Черен ",
         "price": "314",
         "supPrice": "09",
+        "brand":"Huawei",
         "tags": ["смартфон", "черен", "16gb"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Смартфон Wink World SE, Dual SIM, 8GB, 3G, Черен",
         "price": "414",
         "supPrice": "99",
+        "brand":"Wink",
         "tags": ["смартфон", "черен", "8gb"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Смартфон Apple iPhone 7, 32GB, Black ",
         "price": "214",
         "supPrice": "99",
+        "brand":"Apple",
         "tags": ["смартфон", "черен", "32gb", "iphone"]
     },
     {
@@ -39,6 +44,7 @@
         "info": "Смартфон Huawei P8 Lite, Dual Sim, 16 GB, 4G, Черен ",
         "price": "314",
         "supPrice": "09",
+        "brand":"Huawei",
         "tags": ["смартфон", "черен", "16gb"]
     },
     {
@@ -46,6 +52,7 @@
         "info": "Смартфон Wink World SE, Dual SIM, 8GB, 3G, Черен",
         "price": "414",
         "supPrice": "99",
+        "brand":"Wink",
         "tags": ["смартфон", "черен", "8gb"]
     }
 ]

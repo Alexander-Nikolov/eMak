@@ -4,6 +4,7 @@
         "info": "Хард диск за лаптоп Seagate Barracuda, 500GB, 5400 rpm, 2,5' SATA III ",
         "price": "104",
         "supPrice": "99",
+        "brand": "Seagate",
         "tags": ["хард", "диск", "500gb"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "SSHD за лаптоп Seagate FireCuda™ 2.5 500GB, 8GB NAND, 5400 об/мин, 128MB cache, SATA III ",
         "price": "130",
         "supPrice": "00",
+        "brand": "Seagate",
         "tags": ["sshd", "seagate", "500gb"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Хард диск за лаптоп 1TB Hitachi Travelstar, 7200, 32 MB, SATA 3",
         "price": "129",
         "supPrice": "09",
+        "brand":"Hitachi",
         "tags": ["хард", "диск", "1tb"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Хард диск за лаптоп WD Black WD7500BPKX 750GB, 7200 об/мин, 16 MB, SATA 3 ",
         "price": "146",
         "supPrice": "99",
+        "brand": "WD",
         "tags": ["хард", "диск", "750gb"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Хард диск за лаптоп SAMSUNG, 160 GB, 5400rpm, 8MB, SATA, HM161GI",
         "price": "64",
         "supPrice": "99",
+        "brand":"Samsung",
         "tags": ["хард", "диск", "160gb"]
     }
 ]

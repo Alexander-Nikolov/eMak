@@ -4,6 +4,7 @@
         "info": "Фризер Whirlpool AFB601AP, 88 л, 4 Отделения, Клас A+, Бял ",
         "price": "369",
         "supPrice": "79",
+        "brand": "Whirlpool",
         "tags": ["фризер", "бял"]
     },
     {
@@ -11,6 +12,7 @@
         "info": "Фризер Star-Light CF-86AP, 86 л, 3 Настройки, Клас A+, H 85 см, Бял ",
         "price": "274",
         "supPrice": "00",
+        "brand":"Star-Light",
         "tags": ["фризер", "бял"]
     },
     {
@@ -18,6 +20,7 @@
         "info": "Фризер Star-Light CF-157AP, 157 l, Клас A+, 5 рафта, H 142 cм, Бял ",
         "price": "349",
         "supPrice": "09",
+        "brand":"Star-Light",
         "tags": ["фризер", "бял"]
     },
     {
@@ -25,6 +28,7 @@
         "info": "Фризер Arctic ANC246+, 215 л, Клас A+, H 151 см, Бял ",
         "price": "499",
         "supPrice": "99",
+        "brand":"Arctic",
         "tags": ["фризер", "бял"]
     },
     {
@@ -32,6 +36,7 @@
         "info": "Фризер Arctic ANC195+, 162 Л, Клас A+, H 136.2 cм, Бял ",
         "price": "899",
         "supPrice": "99",
+        "brand":"Arctic",
         "tags": ["фризер", "бял"]
     }
 ]
